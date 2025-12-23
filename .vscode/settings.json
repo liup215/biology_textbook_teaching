@@ -1,0 +1,5 @@
+{
+    "tinymist.outputPath": "$dir/../output/$name",
+    "pasteImage.path": "${currentFileDir}/../fig/",
+    "pasteImage.basePath": "${currentFileDir}"
+}
