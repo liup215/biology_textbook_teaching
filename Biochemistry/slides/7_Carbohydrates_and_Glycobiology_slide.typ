@@ -1,6 +1,6 @@
 #import "@preview/touying:0.6.1": *
 #import themes.stargazer: *
-#import "../image_list/Carbohydrates_and_Glycobiology_images.typ": images
+#import "../image_list/7_Carbohydrates_and_Glycobiology_images.typ": images
 #import "@preview/typsium:0.3.0": *
 
 #set text(font: "Arial")
