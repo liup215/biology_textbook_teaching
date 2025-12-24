@@ -495,6 +495,17 @@
 )
 [Negative feedback control of PTH secretion maintains calcium homeostasis through coordinated effects on bone, kidney, and vitamin D activation]
 
+- *Osteoporosis* (骨质疏松症): Loss of bone mass
+  - Bone resorption exceeds bone deposition
+  - Risk factors: Aging, menopause (estrogen deficiency), inadequate calcium/vitamin D intake, physical inactivity, smoking, excessive alcohol
+  - Complications: Increased fracture risk (hip, vertebrae, wrist)
+  - Prevention/treatment: Adequate calcium and vitamin D, weight-bearing exercise, medications (*bisphosphonates*, *selective estrogen receptor modulators (SERMs)*, *denosumab*)
+
+#figure(
+  image(images.at("19-20").path, width: 70%),
+)
+[Comparison of normal and osteoporotic bone microarchitecture shows dramatic loss of trabecular connectivity and bone mass in osteoporosis]
+
 == 1,25-Dihydroxyvitamin D₃
 
 - *Vitamin D* (维生素D): Actually a prehormone
@@ -551,17 +562,6 @@
   image(images.at("19-23").path, width: 60%),
 )
 [Calcitonin secretion is stimulated by elevated calcium and acts antagonistically to PTH to lower blood calcium levels]
-
-- *Osteoporosis* (骨质疏松症): Loss of bone mass
-  - Bone resorption exceeds bone deposition
-  - Risk factors: Aging, menopause (estrogen deficiency), inadequate calcium/vitamin D intake, physical inactivity, smoking, excessive alcohol
-  - Complications: Increased fracture risk (hip, vertebrae, wrist)
-  - Prevention/treatment: Adequate calcium and vitamin D, weight-bearing exercise, medications (*bisphosphonates*, *selective estrogen receptor modulators (SERMs)*, *denosumab*)
-
-#figure(
-  image(images.at("19-20").path, width: 70%),
-)
-[Comparison of normal and osteoporotic bone microarchitecture shows dramatic loss of trabecular connectivity and bone mass in osteoporosis]
 
 #figure(
   image(images.at("table-19-6").path, width: 80%),
