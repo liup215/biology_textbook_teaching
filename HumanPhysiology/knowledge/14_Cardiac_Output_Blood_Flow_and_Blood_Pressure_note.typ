@@ -190,7 +190,7 @@
   - Stimulates *aldosterone* (醛固酮) secretion from adrenal cortex
   - Stimulates ADH release
   - Stimulates thirst
-- *Aldosterone* actions:
+- *Aldosterone* (醛固酮) actions:
   - Increases #ce("Na^+") reabsorption in kidney distal tubules and collecting ducts
   - Water follows #ce("Na^+") (osmotically) → increased blood volume
 - #figure(
