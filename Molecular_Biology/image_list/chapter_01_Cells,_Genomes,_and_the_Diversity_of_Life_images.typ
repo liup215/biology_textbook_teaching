@@ -1,0 +1,52 @@
+#set text(font: "Arial")
+
+- *Figure 1-1:* The hereditary information in the fertilized egg cell determines the nature of the whole multicellular organism that will develop from it.
+- *Figure 1-2:* DNA and its building blocks.
+- *Figure 1-3:* The copying of genetic information by DNA replication.
+- *Figure 1-4:* From DNA to protein.
+- *Figure 1-5:* Life as an autocatalytic process.
+- *Figure 1-6:* Behavior of phospholipid molecules in water.
+- *Figure 1-7:* How membrane protrusion is driven by a simple Brownian ratchet.
+- *Figure 1-8:* The small bacterium Mycoplasma genitalium.
+- *Figure 1-9:* A global tree of life, based on genome comparisons, shows the three major divisions (domains) of the living world.
+- *Figure 1-10:* Shapes and sizes of some bacteria.
+- *Figure 1-11:* Bacterial structure.
+- *Figure 1-12:* Photosynthetic bacteria.
+- *Figure 1-13:* The bacterium Beggiatoa.
+- *Figure 1-14:* The distribution of living biomass on Earth.
+- *Figure 1-15:* The geology of a hot hydrothermal vent in the ocean floor.
+- *Figure 1-16:* Organisms living at a depth of 2500 meters near a vent in the ocean floor.
+- *Figure 1-17:* Genetic information conserved since the days of the last universal common ancestor of all living things.
+- *Figure 1-18:* Four modes of genetic innovation and their effects on the DNA sequence of an organism.
+- *Figure 1-19:* Families of evolutionarily related genes in the genome of Bacillus subtilis.
+- *Figure 1-20:* Two types of gene homology based on different evolutionary pathways.
+- *Figure 1-21:* The major features of eukaryotic cells.
+- *Figure 1-22:* Phagocytosis.
+- *Figure 1-23:* Endocytosis and exocytosis across the plasma membrane.
+- *Figure 1-24:* Membrane-enclosed organelles are distributed throughout the eukaryotic cell cytoplasm.
+- *Figure 1-25:* A mitochondrion.
+- *Figure 1-26:* A scanning electron micrograph of an Asgard archaeon in culture.
+- *Figure 1-27:* A possible model for some early steps in eukaryotic cell evolution.
+- *Figure 1-28:* Chloroplasts.
+- *Figure 1-29:* A model for the evolution of eukaryotic cells in the tree of life.
+- *Figure 1-30:* Genome sizes compared.
+- *Figure 1-31:* Cell types can vary enormously in size and shape.
+- *Figure 1-32:* Genetic control of the program of multicellular development.
+- *Figure 1-33:* An assortment of single-cell eukaryotes.
+- *Figure 1-34:* A single-cell eukaryote that eats other cells.
+- *Figure 1-35:* A eukaryotic tree of life based on genome comparisons.
+- *Figure 1-36:* An alteration in organism shape resulting from a gene mutation.
+- *Figure 1-37:* The T4 bacteriophage.
+- *Figure 1-38:* The genome of E. coli.
+- *Figure 1-39:* The yeast Saccharomyces cerevisiae.
+- *Figure 1-40:* The reproductive cycles of the yeast S. cerevisiae.
+- *Figure 1-41:* Arabidopsis thaliana, the plant chosen as the primary model for studying plant molecular genetics.
+- *Figure 1-42:* Caenorhabditis elegans, the first multicellular organism to have its complete genome sequence determined.
+- *Figure 1-43:* Drosophila melanogaster.
+- *Figure 1-44:* Giant chromosomes from salivary gland cells of Drosophila.
+- *Figure 1-45:* The early stages of normal frog development.
+- *Figure 1-46:* Zebrafish as a model for studies of vertebrate development.
+- *Figure 1-47:* Times of divergence of different vertebrates.
+- *Figure 1-48:* Similar mutations produce the same effect in human and mouse.
+- *Figure 1-49:* The coronavirus.
+- *Figure 1-50:* A very simple gene regulatory circuit.

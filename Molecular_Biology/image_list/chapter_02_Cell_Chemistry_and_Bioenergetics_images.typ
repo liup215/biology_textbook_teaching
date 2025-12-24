@@ -1,0 +1,40 @@
+#set text(font: "Arial")
+
+- *Figure 2-1:* The relative abundances of the most common elements in living organisms.
+- *Figure 2-2:* The geometry of a water molecule.
+- *Figure 2-3:* Hydrogen bonds.
+- *Figure 2-4:* Covalent and ionic bonds.
+- *Figure 2-5:* The four major families of small organic molecules in cells.
+- *Figure 2-6:* Sugars and the bonds that join them.
+- *Figure 2-7:* Fatty acids and other lipids.
+- *Figure 2-8:* The 20 amino acids found in proteins.
+- *Figure 2-9:* The peptide bond.
+- *Figure 2-10:* Nucleotides and the bonds that join them.
+- *Figure 2-11:* The structure of ATP.
+- *Figure 2-12:* The four main types of noncovalent interactions that hold macromolecules together.
+- *Figure 2-13:* How a macromolecule folds into a specific conformation.
+- *Figure 2-14:* The synthesis of macromolecules.
+- *Figure 2-15:* The first and second laws of thermodynamics.
+- *Figure 2-16:* Photosynthesis and cellular respiration as complementary processes.
+- *Figure 2-17:* The relationship between free energy, enthalpy, and entropy.
+- *Figure 2-18:* The standard free-energy change for a reaction.
+- *Figure 2-19:* Reaction coupling can drive an energetically unfavorable reaction.
+- *Figure 2-20:* ATP as an energy carrier.
+- *Figure 2-21:* The hydrolysis of ATP to ADP and inorganic phosphate.
+- *Figure 2-22:* An enzyme lowers the activation energy of a reaction.
+- *Figure 2-23:* The catalytic cycle of an enzyme.
+- *Figure 2-24:* The relationship between the free-energy change and the equilibrium constant.
+- *Figure 2-25:* The effect of an enzyme on the rate of a reaction.
+- *Figure 2-26:* The Michaelis-Menten model of enzyme kinetics.
+- *Figure 2-27:* Activated carriers and biosynthesis.
+- *Figure 2-28:* The synthesis of polysaccharides, proteins, and nucleic acids.
+- *Figure 2-29:* An overview of catabolism and anabolism.
+- *Figure 2-30:* The three stages of cellular metabolism.
+- *Figure 2-31:* Glycolysis.
+- *Figure 2-32:* The citric acid cycle.
+- *Figure 2-33:* The electron-transport chain and oxidative phosphorylation.
+- *Figure 2-34:* How cells obtain energy from food.
+- *Figure 2-35:* Gluconeogenesis.
+- *Figure 2-36:* The storage of glucose as glycogen in animals and starch in plants.
+- *Figure 2-37:* The storage of fatty acids as triacylglycerols.
+- *Figure 2-38:* The regulation of metabolic pathways.

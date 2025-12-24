@@ -1,0 +1,86 @@
+// Image List for Chapter 3: Proteins
+
+- Figure 3-1: The components of a protein.
+- Figure 3-2: The 20 amino acids commonly found in proteins.
+- Figure 3-3: Steric limitations on the bond angles in a polypeptide chain.
+- Panel 3-1: The 20 Amino Acids Found in Proteins.
+- Figure 3-4: Three types of noncovalent bonds help proteins fold.
+- Figure 3-5: How a protein folds into a compact conformation.
+- Figure 3-6: The regular conformation of the polypeptide backbone in the α helix and the β sheet.
+- Figure 3-7: Two types of β sheet structures.
+- Figure 3-8: A coiled-coil.
+- Figure 3-9: Four representations that are commonly used to describe the structure of a protein.
+- Figure 3-10: Ribbon models of three different protein domains.
+- Figure 3-11: A protein formed from multiple domains.
+- Figure 3-12: A folded protein molecule exists as an ensemble of closely related substructures, or conformers, as displayed here for ubiquitin.
+- Figure 3-13: A comparison of the conformations of two serine proteases.
+- Figure 3-14: A comparison of a class of DNA-binding domains, called homeodomains.
+- Figure 3-15: Domain shuffling.
+- Figure 3-16: The three-dimensional structures of three commonly used protein domains.
+- Figure 3-17: An extended structure formed from a series of protein domains.
+- Figure 3-18: Domains in a group of evolutionarily related proteins that have a similar function.
+- Figure 3-19: Many protein molecules contain multiple copies of the same protein subunit.
+- Figure 3-20: Hemoglobin is a protein formed as a symmetrical assembly using two each of two different subunits.
+- Figure 3-21: Protein assemblies.
+- Figure 3-22: Globular actin monomers assemble to produce an actin filament.
+- Figure 3-23: Some properties of a helix.
+- Figure 3-24: The fibrous protein collagen.
+- Figure 3-25: Disulfide bonds.
+- Figure 3-26: Single protein subunits form protein assemblies that feature multiple protein-protein contacts.
+- Figure 3-27: The protein capsid of a virus.
+- Figure 3-28: The structure of a spherical virus.
+- Figure 3-29: The structure of tobacco mosaic virus (TMV).
+- Figure 3-30: Proteolytic cleavage in insulin assembly.
+- Figure 3-31: How an amyloid fibril forms from a protein associated with Parkinson’s disease.
+- Figure 3-32: The structure of an amyloid fibril.
+- Figure 3-33: Prion diseases are caused by proteins whose misfolding is infectious.
+- Figure 3-34: Two normal functions for amyloid fibrils.
+- Figure 3-35: The selective binding of a protein to another molecule.
+- Figure 3-36: The binding site of a protein.
+- Figure 3-37: An unusually reactive amino acid at the active site of an enzyme.
+- Figure 3-38: The evolutionary trace method applied to a protein domain.
+- Figure 3-39: Three ways in which two proteins can bind to each other.
+- Figure 3-40: An antibody is Y-shaped and has two identical antigen-binding sites.
+- Figure 3-41: How noncovalent bonds mediate interactions between macromolecules.
+- Figure 3-42: Relating standard free-energy difference (ΔG°) to the equilibrium constant (K).
+- Figure 3-43: Small changes in the number of weak bonds can have drastic effects on a binding interaction.
+- Figure 3-44: Enzyme kinetics.
+- Figure 3-45: Enzymes accelerate chemical reactions by decreasing the activation energy.
+- Figure 3-46: The rate accelerations caused by five different enzymes.
+- Figure 3-47: Simultaneous acid catalysis and base catalysis by an enzyme.
+- Figure 3-48: The overall reaction catalyzed by lysozyme.
+- Figure 3-49: Events at the active site of lysozyme.
+- Figure 3-50: Some general strategies used for enzyme catalysis.
+- Figure 3-51: Retinal and heme.
+- Figure 3-52: Feedback inhibition of a single biosynthetic pathway.
+- Figure 3-53: Multiple feedback inhibition.
+- Figure 3-54: Positive regulation caused by conformational coupling between two separate binding sites.
+- Figure 3-55: Negative regulation caused by conformational coupling between two separate binding sites.
+- Figure 3-56: Enzyme activity versus the concentration of inhibitory ligand for single-subunit and multisubunit allosteric enzymes.
+- Figure 3-57: A cooperative allosteric transition in an enzyme composed of two identical subunits.
+- Figure 3-58: Protein phosphorylation.
+- Figure 3-59: An evolutionary tree of selected protein kinases.
+- Figure 3-60: The domain structure of the Src family of protein kinases.
+- Figure 3-61: The activation of a Src-type protein kinase by two sequential events.
+- Figure 3-62: How a Src-type protein kinase acts as a signal-integrating device.
+- Figure 3-63: Many different GTP-binding proteins function as molecular switches.
+- Figure 3-64: The structure of the Ras protein in its GTP-bound form.
+- Figure 3-65: The marking of proteins by ubiquitin.
+- Figure 3-66: How ubiquitin is added to proteins.
+- Figure 3-67: The structure and mode of action of a ubiquitin ligase.
+- Figure 3-68: The large conformational change in EF-Tu caused by GTP hydrolysis.
+- Figure 3-69: An aminoacyl tRNA molecule bound to EF-Tu.
+- Figure 3-70: Changes in conformation can cause a protein to “walk” along a cytoskeletal filament.
+- Figure 3-71: How a protein can walk in one direction.
+- Figure 3-72: Schematic example showing how protein machines can carry out complex functions.
+- Figure 3-73: Intrinsically disordered protein sequences provide versatile binding sites.
+- Figure 3-74: Intrinsically disordered protein chains are used to produce elastic structures.
+- Figure 3-75: How unstructured regions of polypeptide chain can serve as tethers.
+- Figure 3-76: How the proximity created by scaffold proteins can greatly speed reactions in a cell.
+- Figure 3-77: The multivalent interactions between scaffold macromolecules that drive the formation of biomolecular condensates.
+- Figure 3-78: Spherical, liquid-droplet-like nucleoli can be seen to fuse in the light microscope.
+- Figure 3-79: The formation of a biomolecular condensate in response to DNA damage.
+- Figure 3-80: How phase diagrams are used to describe phase separations.
+- Figure 3-81: Multisite protein modification and its effects.
+- Figure 3-82: A network of protein-binding interactions in the cells of the fruit fly, Drosophila.
+- Figure 3-83: Some examples of designed proteins.
