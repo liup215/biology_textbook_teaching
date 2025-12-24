@@ -1,0 +1,202 @@
+#let images = (
+  "11-1": (
+    caption: [A Comparison of Inorganic Ion Concentrations Inside and Outside a Typical Mammalian Cell*],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-1": (
+    caption: [and see Movie 10.3). By contrast, lipid bilayers are essentially impermeable to charged molecules (ions), no matter how small: the charge and high degree of hydration of such molecules prevent them from entering the hydrocarbon phase of the bilayer (Figure 11–2).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-1": (
+    caption: [The relative permeability of a synthetic lipid bilayer to different classes of molecules. The smaller the molecule and, more important, the less strongly it associates with water, the more rapidly the molecule diffuses across the bilayer.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-2": (
+    caption: [Permeability coefficients for the passage of various molecules through synthetic, protein-free lipid bilayers. The rate of flow of a solute across the bilayer is directly proportional to the difference in its concentration on the two sides of the membrane. Multiplying this concentration difference (in mol/cm3) by the permeability coefficient (in cm/sec), which is an experimentally determined constant characteristic of each solute, gives the flow of solute in moles per second per square centimeter of bilayer. A concentration difference of tryptophan of 10–4 mol/ cm3 (10–4 mol/10–3 L = 0.1 M), for example, would cause a flow of 10–4 mol/cm3 × 10–7 cm/ sec = 10–11 mol/sec through 1 cm2 of bilayer, or 6 × 104 molecules/sec through 1 μm2 of bilayer. (including cystine, the disulfide-linked dimer of cysteine) from either the urine or the intestine into the blood; the resulting accumulation of cystine in the urine leads to the formation of cystine stones in the kidneys.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-3": (
+    caption: [Transporters and channel proteins. (A) A transporter alternates between two conformations, so that the solute-binding site of the transporter is sequentially accessible on one side of the bilayer and then on the other. (B) In contrast, a channel protein forms a pore across the bilayer through which specific solutes can passively diffuse.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-4": (
+    caption: [Different forms of membrane transport and the influence of the membrane. (A) Passive transport down a concentration gradient (or an electrochemical gradient—see panel B) occurs spontaneously, by diffusion, either through the lipid bilayer directly or through channels or passive transporters. By contrast, active transport involves movement of the solute against its concentration or electrochemical gradient and hence requires an input of metabolic energy. (B) The electrochemical gradient of a charged solute (an ion) affects its transport. This gradient (green) combines the membrane potential and the concentration gradient of the solute. The electrical and chemical gradients can work additively to increase the driving force on an ion across the membrane (middle) or they can work against each other (right).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-5": (
+    caption: [to link a transporter to a source of energy in order to pump a solute uphill against its electrochemical gradient. Cells carry out such active transport in three main ways (Figure 11–7): 1. Coupled transporters harness the energy stored in concentration gradients to couple the uphill transport of one solute across the membrane to the downhill transport of another. 2. ATP-driven pumps couple uphill transport to the hydrolysis of ATP. 3. Light- or redox-driven pumps, which are known in bacteria, archaea, mito- chondria, and chloroplasts, couple uphill transport to an input of energy from light, as with bacteriorhodopsin and photosystem II (discussed in Chapters 10 and 14, respectively), or from a redox reaction, as with cyto- chrome c oxidase (discussed in Chapter 14).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-5": (
+    caption: [A model of how a conformational change in a transporter mediates the passive movement of a solute. The transporter is shown in three conformational states: in the outward- open state, the binding sites for solute are exposed on the outside; in the occluded state, the same sites are not accessible from either side; and in the inward-open state, the sites are exposed on the inside. The transitions between the states occur randomly. They are completely reversible and do not depend on whether the solute- binding site is occupied. Therefore, if the solute concentration is higher on the outside of the bilayer, more solute binds to the transporter in the outward-open conformation than in the inward-open conformation, and there is a net transport of solute down its concentration gradient (or, if the solute is an ion, down its electrochemical gradient). t r o p s n a r t f o e t a r],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-6": (
+    caption: [The kinetics of simple diffusion compared with transporter- mediated diffusion. Whereas the rate of simple diffusion and of channel-mediated transport is directly proportional to the solute concentration (within the physical limits imposed by total surface area or total channels available), the rate of transporter- mediated diffusion approaches a maximum (Vmax) as the transporter reaches saturation. The solute concentration when the transport rate is at half its maximal value is termed its Km and is analogous to the Km of an enzyme for its substrate. Note that, while the graph illustrates the shape of the curves, their absolute scale on the Y axis is very different. A typical channel conducts water or ions at rates of up to 108 per second, whereas a typical transporter moves solutes at rates between 102 and 104 molecules per second.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-7": (
+    caption: [Three ways of driving active transport. The actively transported molecule is shown in orange, and the energy source is shown in red. Redox- driven active transport is discussed in Chapter 14 (see Figures 14–18 and 14–19).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-8": (
+    caption: [This schematic diagram shows transporters functioning as uniporters, symporters, and antiporters (Movie 11.1).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-9": (
+    caption: [Mechanism of glucose transport fueled by an Na+ gradient. As in the model shown in Figure 11–5, the transporter alternates between inward-open and outward-open states via occluded intermediate states. Binding of Na+ and glucose is cooperative; that is, the binding of either solute increases the protein’s affinity for the other. Because the Na+ concentration is much higher in the extracellular space than in the cytosol, glucose is more likely to bind to the transporter in the outward-facing state. The transition to the occluded state occurs only when both Na+ and glucose are bound; their precise interactions in the solute-binding sites slightly stabilize the occluded state and thereby make this transition energetically favorable. Stochastic fluctuations caused by thermal energy drive the transporter randomly into the inward-open or outward-open conformation. If it opens outwardly, nothing is achieved, and the process starts all over. However, whenever it opens inwardly, Na+ dissociates quickly in the low-Na+-concentration environment of the cytosol. Glucose dissociation is likewise enhanced when Na+ is lost, because of cooperativity in binding of the two solutes. The overall result is the net transport of both Na+ and glucose into the cell. Because the occluded state is not formed when only one of the solutes is bound, the transporter switches conformation only when it is fully occupied or fully empty, thereby ensuring strict coupling of the transport of Na+ and glucose.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-10": (
+    caption: [Transporters are built from inverted repeats. (A) LeuT, a bacterial Na+/leucine symporter related to human neurotransmitter transporters, such as the serotonin transporter, is shown. The core of the transporter is built from two bundles, each composed of six α helices (blue and yellow). The helices shown in light gray are additions to the conserved core structure and differ among members of this transporter family. They are thought to play regulatory roles that are specific to a particular transporter. (B) Both core helix bundles are packed in a similar arrangement, but the second bundle is inverted with respect to the first (shown as two right hands, with the broken helices as the thumbs). The transporter’s structural pseudosymmetry reflects its functional symmetry: the transporter can work in either direction, depending on the direction of the ion gradient. (A, PDB code: 3F3E.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-11": (
+    caption: [Transcellular transport. The transcellular transport of glucose across an intestinal epithelial cell depends on the nonuniform distribution of transporters in the cell’s plasma membrane. The process shown here results in the transport of glucose from the intestinal lumen to the extracellular fluid (from where it passes into the blood). Glucose is pumped into the cell through the apical domain of the membrane by an Na+-powered glucose symporter (see Figure 11–9). Glucose passes out of the cell (down its concentration gradient) by passive movement through a glucose uniporter in the basal and lateral membrane domains. The Na+ gradient driving the glucose symport is maintained by the Na+-K+ pump in the basal and lateral plasma membrane domains, which keeps the internal concentration of Na+ low (Movie 11.2). Adjacent cells are connected by impermeable tight junctions, which have a dual function in the transport process illustrated: they prevent solutes from crossing the epithelium between cells, allowing a concentration gradient of glucose to be maintained across the cell sheet (see Figure 19–19). They also serve as diffusion barriers (fences) within the plasma membrane, which help confine the various transporters to their respective membrane domains (see Figure 10–34). (Micrograph from Dennis Kunkel/Science Source.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-12": (
+    caption: [Three types of ATP-driven pumps. Like any enzyme, all ATP-driven pumps can work in either direction, depending on the electrochemical gradients of their solutes and the ATP/ADP ratio. When the ATP/ADP ratio is high, they hydrolyze ATP; when the ATP/ADP ratio is low, they can synthesize ATP. The F-type ATPases in mitochondria and chloroplasts normally work in this “reverse” mode to make most of the cell’s ATP.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-13": (
+    caption: [The structure of the sarcoplasmic reticulum Ca2+ pump. The ribbon model (left), derived from x-ray crystallographic analyses, shows the pump in its phosphorylated, ATP-bound state. The three globular cytosolic domains of the pump—the nucleotide-binding domain (dark green), the actuator domain (blue), and the phosphorylation domain (pink), also shown schematically on the right—change conformation dramatically during the pumping cycle. These changes in turn alter the arrangement of the transmembrane helices, which allows the Ca2+ to be released from its binding cavity into the SR lumen (Movie 11.3). (PDB code: 3B9B.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-14": (
+    caption: [The pumping cycle of the sarcoplasmic reticulum Ca21 pump. Ion pumping proceeds by a series of stepwise conformational changes in which movements of the pump’s three cytosolic domains \[the nucleotide-binding domain (N), the phosphorylation domain (P), and the actuator domain (A)\] are mechanically coupled to movements of the transmembrane α helices. Helix movement opens and closes passageways through which Ca2+ enters from the cytosol and binds to the two centrally located Ca2+- binding sites. The two Ca2+ then exit into the SR lumen and are replaced by two H+, which are transported in the opposite direction. The ion-dependent (Ca2+ and H+ in the case of the SR Ca2+ pump) phosphorylation and dephosphorylation of an aspartate are universally conserved steps in the reaction cycle of all P-type pumps: they cause the conformational transitions to occur in an orderly manner, enabling the proteins to do useful work. (Adapted from C. Toyoshima et al., Nature 432:361–368, 2004; and J.V. Møller et al., Q. Rev. Biophys. 43:501–566, 2010.) 2H+ 2Ca2+],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-15": (
+    caption: [The function of the Na1-K1 pump. This P-type ATPase actively pumps Na+ out of and K+ into a cell against their electrochemical gradients. It is structurally closely related to the Ca2+ ATPase but differs in its selectivity for ions: for every molecule of ATP hydrolyzed by the pump, three Na+ are pumped out and two K+ are pumped in. As in the Ca2+ pump, an aspartate is phosphorylated and dephosphorylated during the pumping cycle (Movie 11.4).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-16": (
+    caption: [Small-molecule transport by typical ABC transporters. ABC transporters consist of multiple domains. Typically, two hydrophobic domains, each built of six membrane-spanning α helices, together form the translocation pathway and provide substrate specificity. Two ATPase domains protrude into the cytosol. In some cases, the two halves of the transporter are formed by a single polypeptide, whereas in other cases they are formed by two or more separate polypeptides that assemble into a similar structure. Without ATP bound, the transporter exposes a substrate-binding site on one side of the membrane. ATP binding induces a conformational change that exposes the substrate-binding site on the opposite side; ATP hydrolysis followed by ADP dissociation returns the transporter to its original conformation. Most individual ABC transporters are unidirectional. (A) Both importing and exporting ABC transporters are found in bacteria; an ABC importer is shown in this diagram. (B) In eukaryotes, most ABC transporters export substances—either from the cytosol to the extracellular space or from the cytosol to a membrane-bound intracellular compartment such as the endoplasmic reticulum—or from the mitochondrial matrix to the intermembrane space.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-17": (
+    caption: [A small section of the double membrane of an E. coli bacterium. The inner membrane is the cell’s plasma membrane. Between the inner and outer membranes is a highly porous, rigid peptidoglycan layer, composed of protein and polysaccharide that constitute the bacterial cell wall. It is attached to lipoprotein molecules in the outer membrane and fills the periplasmic space (only a little of the peptidoglycan layer is shown). This space also contains a variety of soluble protein molecules. The dashed threads (shown in green) at the top represent the polysaccharide chains of the special lipopolysaccharide molecules that form the external monolayer of the outer membrane; for clarity, only a few of these chains are shown. Bacteria with double membranes are called Gram negative because they do not retain the dark blue dye used in Gram staining. Bacteria with single membranes (but thicker peptidoglycan cell walls), such as staphylococci and streptococci, retain the dark blue dye and are therefore called Gram positive; their single membrane is analogous to the inner (plasma) membrane of Gram-negative bacteria.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-18": (
+    caption: [The auxiliary transport system associated with transport ATPases in bacteria with double membranes. The solute diffuses through channel proteins (porins) in the outer membrane and binds to a periplasmic substrate-binding protein that delivers it to the ABC transporter, which pumps it across the plasma membrane. The peptidoglycan layer is omitted for simplicity; its porous structure allows the substrate-binding proteins and water-soluble solutes to move freely through it by diffusion.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-19": (
+    caption: [The role of aquaporins in fluid secretion. Cells lining the ducts of exocrine glands (as found, for example, in the pancreas and liver, and in mammary, sweat, and salivary glands) secrete large volumes of body fluids. These cells are organized into epithelial sheets in which their apical plasma membrane faces the lumen of the duct. Ion pumps and channels situated in the basolateral and apical plasma membranes move ions (mostly Na+ and Cl–) into the ductal lumen, creating an osmotic gradient between the surrounding tissue and the duct. Water molecules rapidly follow the osmotic gradient through aquaporins that are present in high concentrations in both the apical and basolateral plasma membranes.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-20": (
+    caption: [The structure of aquaporins. (A) A ribbon diagram of an aquaporin monomer. In the membrane, aquaporins form tetramers, with each monomer containing an aqueous pore in its center (not shown). Each individual aquaporin channel passes about 109 water molecules per second. (B) A longitudinal cross section through one aquaporin monomer, in the plane of the central pore. One face of the pore is lined with hydrophilic amino acids, which provide transient hydrogen bonds to water molecules; these bonds help line up the transiting water molecules in a single row and orient them as they traverse the pore. (C and D) A model explaining why aquaporins are impermeable to H+. (C) In water, H+ diffuses extremely rapidly by being relayed from one water molecule to the next. (D) Carbonyl groups (C“O) lining the hydrophilic face of the pore align water molecules, and two strategically placed asparagines in the center are thought to tether a central water molecule such that both valences on its oxygen are occupied. This arrangement bipolarizes the entire column of water molecules, with each water molecule acting as a hydrogen- bond acceptor from its inner neighbor (Movie 11.6). (PDB code: 3GD8.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-21": (
+    caption: [A typical ion channel, which fluctuates between closed and open conformations. The ion channel shown here in cross section forms a pore across the lipid bilayer only in the “open” conformational state. The pore narrows to atomic dimensions in one region (the selectivity filter), where the ion selectivity of the channel is largely determined. Another region of the channel forms the gate.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-22": (
+    caption: [The gating of ion channels. This schematic drawing shows several kinds of stimuli that open ion channels. Mechanically gated channels often have cytoplasmic extensions (not shown) that link the channel to the cytoskeleton.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-23": (
+    caption: [The ionic basis of a membrane potential. A small flow of inorganic ions through an ion channel carries sufficient charge to cause a large change in the membrane potential. The ions that give rise to the membrane potential lie in a thin (<1 nm) surface layer close to the membrane, held there by their electrical attraction to their oppositely charged counterparts (counterions) on the other side of the membrane. For a typical cell, 1 microcoulomb of charge (6 × 1012 monovalent ions) per square centimeter of membrane, transferred from one side of the membrane to the other side, changes the membrane potential by roughly 1 V. This means, for example, that in a spherical cell of diameter 10 μm, the number of K+ ions that have to flow out to alter the membrane potential by 100 mV is only about 1/100,000 of the total number of K+ ions in the cytosol. This amount is so minute that the intracellular K+ concentration remains virtually unchanged. \[K+\] = \[K+\] \[K+\] >> \[K+\] + _ + _ + _ + _ + _ + _ + + _ + _ _ + _ + _ + _ + + _ + _ _ + _ + _ + _ + + _ + _ _ + _ + _ + _ + + _ + _ _ + _ + _ + _ + + _ + _ _ + _ + _ + _ + + _ + _ _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _ + _],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-24": (
+    caption: [The structure of a bacterial K1 channel. (A) The transmembrane α helices from only two of the four identical subunits are shown. From the cytosolic side, the pore (schematically shaded in blue) opens up into a vestibule in the middle of the membrane. The pore vestibule facilitates transport by allowing the K+ ions to remain hydrated even though they are more than halfway across the membrane. The narrow selectivity filter of the pore links the vestibule to the outside of the cell. Carbonyl oxygens line the walls of the selectivity filter and form transient binding sites for partially dehydrated K+ ions. Two K+ ions occupy different sites in the selectivity filter, while a third K+ ion is located in the center of the vestibule, where it is stabilized by electrical interactions including those contributed by the more negatively charged ends of the pore helices. The ends of the four short “pore helices” (only two of which are shown) point precisely toward the center of the vestibule, thereby guiding K+ ions into the selectivity filter (Movie 11.8). (B) Peptide bonds have an electric dipole, with more negative charge accumulated at the oxygen of the C“O bond and at the nitrogen of the N¬H bond. In an α helix, hydrogen bonds (red) align the dipoles. As a consequence, every α helix has an electric dipole along its axis, resulting from summation of the dipoles of the individual peptide bonds, with a more negatively charged C-terminal end (δ–) and a more positively charged N-terminal end (δ+). (A, adapted from D.A. Doyle et al., Science 280:69–77, 1998.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-25": (
+    caption: [K1 specificity of the selectivity filter in a K1 channel. The drawings show K+ and Na+ ions (A) in the vestibule and (B) in the selectivity filter of the pore, viewed in cross section. In the vestibule, the ions are hydrated. In the selectivity filter, they have lost their water, and the carbonyl oxygens are placed to accommodate a dehydrated K+ ion. The dehydration of the K+ ion requires energy, which is precisely balanced by the energy regained by the interaction of the ion with all of the carbonyl oxygens that serve as surrogate water molecules. Because the Na+ ion is too small to interact with all the oxygens, it can enter the selectivity filter only at a great energetic expense. The filter therefore selects K+ ions with high specificity. (A, adapted from Y. Zhou et al., Nature 414:43–48, 2001.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-26": (
+    caption: [A model for the gating of a bacterial K1 channel. The channel is viewed in cross section. To adopt the closed conformation, the four inner transmembrane helices that line the pore on the cytosolic side of the selectivity filter (see Figure 11–24) rearrange to close the cytosolic entrance to the channel. (Adapted from E. Perozo et al., Science 285:73–78, 1999.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-27": (
+    caption: [Stretch-activated Piezo channels. (A) The structure of Piezo1. Three identical subunits surround the central pore (left). The three large arm domains extend from the center and bend the membrane into a dome (right). (B) When the membrane is stretched, the dome-like protrusion flattens and the central pore opens. (C) By coupling Piezo channels to tethers on either side of the membrane (for example, to the extracellular matrix or the cytoskeleton), Piezo channels can be opened in response to extracellular or intracellular mechanical forces (arrows). (A, PDB code: 6B3R. Adapted from Y.R. Guo and R. MacKinnon, eLife 6:e33660, 2017. This article is distributed under the terms of the Creative Commons Attribution License.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-28": (
+    caption: [The structure of bacterial mechanosensitive channels. The crystal structures of MscS in its (A) closed and (B) open conformation are shown. The side views (lower panels) show the entire protein, including the large intracellular domain. The face views (upper panels) show the transmembrane domains only. The open structure occupies more area in the lipid bilayer and is energetically favored when a membrane is stretched. This may explain why the MscS channel opens as pressure builds up inside the cell. (PDB codes: 2OAU, 2VV5.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-29": (
+    caption: [A typical vertebrate neuron. The arrows indicate the direction in which signals are conveyed. The single axon conducts signals away from the cell body, while the multiple dendrites (and the cell body) receive signals from the axons of other neurons. The axon terminals end on the dendrites or cell body of other neurons or on other cell types, such as muscle or gland cells.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-30": (
+    caption: [Structural models of voltage-gated Na1 channels. (A) The channel in animal cells is built from a single polypeptide chain that contains four homologous domains. Each domain contains two transmembrane α helices (green) that surround the central ion- conducting pore. They are separated by sequences (dark green) that form the selectivity filter. Four additional α helices (blue and gray) in each domain constitute the voltage sensor. The S4 helices (blue) are unique in that they contain an abundance of positively charged arginines. An inactivation gate that is part of a flexible loop connecting the third and fourth domains acts as a plug that obstructs the pore in the channel’s inactivated state, as shown in Figure 11–32C. (B) Side and top views of a channel protein showing its arrangement within the membrane. (C) A cross section of the pore domain of the channel shown in B shows lateral portals, through which the central cavity is accessible from the hydrophobic core of the lipid bilayer. In the crystals, lipid acyl chains were found to intrude into the pore. These lateral portals are large enough to allow entry of small, hydrophobic, pore-blocking drugs that are commonly used as local anesthetics and block ion conductance. (PDB code: 6AGF.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-31": (
+    caption: [Model for the mechanism of voltage-gating. The voltage-sensing domain oscillates between two conformational states that expose positively charged arginines on one helix (corresponding to the S4 helix in Figure 11–30) to alternate sides of the membrane. Exposure to the more negatively charged side of the membrane is thermodynamically favored and hence stabilizes that state. Conformational coupling closes or opens the gate in the central pore domain of the channel. (Adapted from A.F. Kintzer et al., Proc. Natl. Acad. Sci. USA 115:E9095–E9104, 2018.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-32": (
+    caption: [Na1 channels and an action potential. (A) An action potential is triggered by a brief pulse of current, which (B) partially depolarizes the membrane, as shown in the plot of membrane potential versus time. The green curve shows how the membrane potential would have simply relaxed back to the resting value after the initial depolarizing stimulus if there had been no voltage-gated Na+ channels in the membrane. The ascending part of the red curve shows the course of the action potential that is caused by the opening of voltage-gated Na+ channels. Delayed voltage-gated K+ channels open and Na+ channels become inactivated, allowing membrane repolarization (the descending part of the red curve). The states of the Na+ and K+ channels are indicated in the schematic in the bottom part of panel B. The membrane cannot fire a second action potential until the Na+ channels have returned from the inactivated to the closed conformation; until then, the membrane is refractory to stimulation. (C) The three states of the Na+ channel. When the membrane is at rest (highly polarized), the closed conformation of the channel has the lowest free energy and is therefore most stable; when the membrane is depolarized, the energy of the open conformation is lower, so the channel has a high probability of opening. But the free energy of the inactivated conformation is lower still; therefore, after a randomly variable period spent in the open state, the channel becomes inactivated. Thus, the open conformation corresponds to a metastable state that can exist only transiently when the membrane depolarizes (Movie 11.11).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-33": (
+    caption: [The propagation of an action potential along an axon. (A) The voltages that would be recorded from a set of intracellular electrodes placed at intervals along the axon. (B) The changes in the Na+ channels, voltage-gated K+ channels, and current flows (red and blue arrows) that give rise to a traveling action potential. The region of the axon with a depolarized membrane is shaded in orange. Note that once an action potential has started to progress, it has to continue in the same direction, traveling only away from the site of depolarization, because Na+-channel inactivation prevents the depolarization from spreading backward.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-34": (
+    caption: [These scans noninvasively image the radiation signal derived from an injected tracer molecule. The images report on brain regions with the highest metabolic energy expenditure (red), which reflects the activity of the Na+-K+ pump consuming ATP while laboring to restore the membrane potential in axons engaged in massive electrical signaling. (Courtesy of Michael Phelps.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-35": (
+    caption: [Myelination. (A) A myelinated axon from a peripheral nerve. Each Schwann cell wraps its plasma membrane spirally around the axon to form a segment of myelin sheath about 1 mm long. For clarity, the membrane layers of the myelin are shown less compacted than they are in reality (see panel B). (B) An electron micrograph of a nerve in the leg of a young rat. Two Schwann cells can be seen: one near the bottom is just beginning to myelinate its axon; the one above it has formed an almost mature myelin sheath. (C) Fluorescence micrograph and diagram of an individual myelinated axon teased apart in a rat optic nerve, showing the confinement of the voltage-gated Na+ channels (green) to the axonal membrane at the node of Ranvier. A protein called Caspr (red) marks the junctions where the myelinating glial-cell plasma membrane tightly abuts the axon on either side of the node. Voltage-gated K+ channels (blue) localize to regions in the axonal plasma membrane well away from the node. \[B, from C.S. Raine, in Myelin, 2nd ed. (P. Morell, ed.). New York: Plenum, 1984. With permission from Springer Nature; C, from M.N. Rasband and P. Shrager, J. Physiol. 525:63–73, 2000. With permission from John Wiley & Sons.\]],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-37": (
+    caption: [Patch-clamp measurements for a single voltage-gated Na1 channel. A tiny patch of plasma membrane was detached from an embryonic rat muscle cell, as in Figure 11–36. (A) The membrane was depolarized by an abrupt shift of potential from –90 to about –40 mV. (B) Three current records from three experiments performed on the same patch of membrane. Each major current step in panel B represents the opening and closing of a single channel. A comparison of the three records shows that, whereas the durations of channel opening and closing vary greatly, the rate at which current flows through an open channel (its conductance) is practically constant. The minor fluctuations in the current records arise largely from electrical noise in the recording apparatus. Current flowing into the cell, measured in picoamperes (pA), is shown as a downward deflection of the curve. By convention, the electrical potential on the outside of the cell is defined as zero. (C) The sum of the currents measured in 144 repetitions of the same experiment. This aggregate current is equivalent to the usual Na+ current that would be observed flowing through a relatively large region of membrane containing 144 channels. A comparison of panels B and C reveals that the time course of the aggregate current reflects the probability that any individual channel will be in the open state; this probability decreases with time as the channels in the depolarized membrane adopt their inactivated conformation. (Data from J. Patlak and R. Horn, J. Gen. Physiol. 79:333–351, 1982.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-36": (
+    caption: [The technique of patch-clamp recording. Because of the extremely tight seal between the micropipette and the membrane, current can enter or leave the micropipette only by passing through the ion channels in the patch of membrane covering its tip. The term clamp is used because an electronic device is employed to maintain, or “clamp,” the membrane potential at a set value while recording the ionic current through individual channels. The current through these channels can be recorded with the patch still attached to the rest of the cell, as in (A), or detached, as in (B). The advantage of the detached patch is that it is easy to alter the composition of the solution on either side of the membrane to test the effect of various solutes on channel behavior. A detached patch can also be produced with the opposite orientation, so that the cytoplasmic surface of the membrane faces the inside of the pipette. (A) membrane potential (mV) –40 –90 (B)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-38": (
+    caption: [A chemical synapse. (A) When an action potential reaches the nerve terminal in a presynaptic cell, it stimulates the terminal to release its neurotransmitter. The neurotransmitter molecules are contained in synaptic vesicles and are released to the cell exterior when the vesicles fuse with the plasma membrane of the nerve terminal. The released neurotransmitter binds to and opens the transmitter-gated ion channels concentrated in the plasma membrane of the postsynaptic target cell at the synapse. The resulting ion flows alter the membrane potential of the postsynaptic membrane, thereby transmitting a signal from the excited nerve (Movie 11.12). (B) A thin-section electron micrograph and an interpretive drawing of two nerve terminal synapses on a dendrite of a postsynaptic cell. (B, micrograph courtesy of Cedric Raine.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-39": (
+    caption: [The neuromuscular junction. (A) A low-magnification scanning electron micrograph of a neuromuscular junction in a frog. The termination of a single axon on a skeletal muscle cell is shown. (B) A schematic of the specialized anatomy of the neuron–muscle synaptic cleft. Schwann (glial) cells wrap around the neuron outside the region of synaptic contact to provide myelination. (C) Transmission electron micrograph of the region of synaptic contact. \[A, from J. Desaki and Y. Uehara, J. Neurocytol. 10:101–110, 1981. With permission from Springer Nature; C, from J. Heuser, J. Electron Microsc. (Tokyo) 60 (Suppl. 1): S3–S29, 2011.\] (A) muscle cell],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-40": (
+    caption: [A model for the structure of the skeletal muscle acetylcholine receptor. (A) Five homologous subunits (α, α, β, γ, δ) combine to form a transmembrane pore. Both of the α subunits contribute an acetylcholine- binding site nestled between adjoining subunits. (B) The pore is lined by a ring of five transmembrane α helices, one contributed by each subunit (just the two α subunits are shown). In its closed conformation, the pore is occluded by the hydrophobic side chains of five leucines (green), one from each α helix, which form a gate near the middle of the lipid bilayer. When both α subunits bind acetylcholine, the channel undergoes a conformational change that opens the gate by an outward rotation of the helices containing the occluding leucines. Negatively charged side chains (indicated by the “–” signs) at either end of the pore ensure that only positively charged ions pass through the channel. (PDB code: 2BG9.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-41": (
+    caption: [The system of ion channels at a neuromuscular junction. These gated ion channels are essential for the stimulation of muscle contraction by a nerve impulse. The various channels are numbered in the sequence in which they are activated, as described in the text.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-42": (
+    caption: [A motor neuron in the spinal cord. (A) Many thousands of nerve terminals synapse on the cell body and dendrites. These deliver signals from other parts of the organism to control the firing of action potentials along the single axon of this large cell. (B) Fluorescence micrograph showing a nerve-cell body in cell culture. Its dendrites are stained with a fluorescent antibody that recognizes a cytoskeletal protein (green) that is not present in axons. Thousands of axon terminals (red) from other nerve cells (not visible) make synapses on the cell body and dendrites; the terminals are stained with a fluorescent antibody that recognizes a protein in synaptic vesicles. (B, courtesy of Olaf Mundigl and Pietro de Camilli.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-43": (
+    caption: [The magnitude of the combined postsynaptic potential (PSP) is reflected in the frequency of firing of action potentials. The mix of excitatory and inhibitory PSPs produces a summed PSP at the initial segment. A comparison of (A) and (B) shows how the firing frequency of an axon increases with an increase in the combined PSP, while (C) summarizes the general relationship.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-44": (
+    caption: [Structure of a Ca21- activated K1 channel. The channel contains four identical subunits (which are shown in different colors for clarity). It is both voltage- and Ca2+-gated. MBoC7 m11.42/11.44 The structure shown is a composite of the cytosolic and membrane portions of the channel that were separately crystallized. Note the large ligand-binding domains in the cytosol. (PDB code: 1LNQ.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-45": (
+    caption: [The structure of the AMPA receptor. This ionotropic glutamate receptor (named after the glutamate analog α-amino-3-hydroxy-5- methyl-4-isoxazolepropionic acid) is the most common mediator of fast, excitatory synaptic transmission in the central nervous system (CNS). Note the large ligand- binding domains in the extracellular space. (PDB code: 3KG2.)],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-46": (
+    caption: [The signaling events in long-term potentiation. Although not shown, transmission-enhancing changes can also occur in the presynaptic nerve terminals in LTP, which may be induced by retrograde signals from the postsynaptic cell. + + + – – – + – + + + – – –],
+    path: "../fig/image_place_holder.png"
+  ),
+  "11-47": (
+    caption: [Optogenetic control of aggression neurons in a living mouse. A gene encoding channelrhodopsin was introduced into a subpopulation of neurons in the hypothalamus of a mouse. When the neurons were exposed to flashing blue light using a tiny, implanted fiber-optic cable, the channelrhodopsin channels opened, depolarizing and activating the cells. When the light was switched on, the mouse immediately became aggressive and attacked the inflated rubber glove; when the light was switched off, its behavior immediately returned to normal (Movie 11.13). (Adapted from D. Lin et al., Nature 470:221–226, 2011. With permission from the authors.)],
+    path: "../fig/image_place_holder.png"
+  ),
+)
