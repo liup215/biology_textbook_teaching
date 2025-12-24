@@ -1,0 +1,125 @@
+import os
+import re
+import xml.etree.ElementTree as ET
+from pypdf import PdfReader, PdfWriter
+
+def sanitize_filename(name):
+    """Remove invalid characters from a string to make it a valid filename."""
+    # Replace spaces and invalid chars with underscores
+    name = re.sub(r'[\\/*?:"<>|]', "_", name)
+    name = name.replace(" ", "_")
+    return name
+
+def split_pdf_by_bookmarks(bookmark_file, pdf_file):
+    """
+    Splits a PDF file into chapters based on an XML bookmark file.
+
+    Args:
+        bookmark_file (str): Path to the XML bookmark file.
+        pdf_file (str): Path to the source PDF file.
+    """
+    # 1. Parse the XML bookmark file
+    tree = ET.parse(bookmark_file)
+    root = tree.getroot()
+
+    bookmarks = []
+    # Using XPath to find all ITEM elements that are chapters
+    for item in root.findall('.//ITEM'):
+        name = item.get('NAME')
+        page_str = item.get('PAGE')
+        indent = item.get('INDENT')
+        
+        # Filter for chapters: INDENT == '2' and name starts with 'CHAPTER'
+        if name and page_str and indent == '2' and name.strip().startswith('CHAPTER'):
+            try:
+                page = int(page_str) + 1
+                if page < 1:
+                    print(f"Skipping chapter with invalid page number (< 0): {name}")
+                    continue
+                bookmarks.append({'name': name.strip(), 'page': page})
+            except (ValueError, TypeError):
+                print(f"Skipping chapter with invalid page number: {name}")
+
+    if not bookmarks:
+        print("No valid chapter bookmarks found. Please check the XML file and filtering logic.")
+        return
+
+    # Remove duplicates based on name and page, then sort
+    unique_bookmarks = []
+    seen = set()
+    for bookmark in bookmarks:
+        identifier = (bookmark['name'], bookmark['page'])
+        if identifier not in seen:
+            unique_bookmarks.append(bookmark)
+            seen.add(identifier)
+    
+    # Sort bookmarks by page number to handle them in order
+    unique_bookmarks.sort(key=lambda x: x['page'])
+    bookmarks = unique_bookmarks
+    print(f"Found {len(bookmarks)} unique chapter bookmarks to process.")
+
+    # 2. Create output directory
+    output_dir = 'chapters'
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        print(f"Created directory: {output_dir}")
+
+    # 3. Get total pages using streaming to conserve memory
+    try:
+        with open(pdf_file, "rb") as f:
+            reader_for_pages = PdfReader(f)
+            total_pages = len(reader_for_pages.pages)
+        print(f"PDF '{pdf_file}' contains {total_pages} pages.")
+    except Exception as e:
+        print(f"An exception occurred while trying to open '{pdf_file}':")
+        import traceback
+        traceback.print_exc()
+        return
+
+    # 4. Split the PDF chapter by chapter
+    for i, bookmark in enumerate(bookmarks):
+        try:
+            # The start page should be the page number from the bookmark (0-based).
+            # To avoid overlap, set start_page_index to the bookmark page, unless it's the first chapter.
+            if i == 0:
+                start_page_index = bookmarks[i]['page'] - 1
+            else:
+                start_page_index = bookmarks[i]['page'] - 1
+
+            # The end page is the page before the next chapter's start page.
+            if i + 1 < len(bookmarks):
+                end_page_index = bookmarks[i+1]['page'] - 2
+            else:
+                end_page_index = total_pages - 1
+
+            if start_page_index >= total_pages or end_page_index >= total_pages or start_page_index > end_page_index:
+                print(f"Skipping chapter '{bookmark['name']}' due to invalid page range: {start_page_index+1}-{end_page_index+1}")
+                continue
+
+            writer = PdfWriter()
+            
+            # Use streaming for reading to avoid MemoryError
+            with open(pdf_file, "rb") as f:
+                reader = PdfReader(f)
+                for page_num in range(start_page_index, end_page_index + 1):
+                    writer.add_page(reader.pages[page_num])
+
+        except Exception as e:
+            print(f"An error occurred while processing chapter '{bookmark['name']}':")
+            import traceback
+            traceback.print_exc()
+            continue # Move to the next chapter
+
+        # Sanitize filename and save the new PDF
+        output_filename = f"{sanitize_filename(bookmark['name'])}.pdf"
+        output_path = os.path.join(output_dir, output_filename)
+        
+        try:
+            with open(output_path, 'wb') as output_pdf:
+                writer.write(output_pdf)
+            print(f"Successfully created '{output_path}' ({end_page_index - start_page_index + 1} pages)")
+        except Exception as e:
+            print(f"Error writing PDF file '{output_path}': {e}")
+
+if __name__ == '__main__':
+    split_pdf_by_bookmarks('Zoology_BookMark.xml', 'Zoology.pdf')
