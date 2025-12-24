@@ -61,7 +61,7 @@
 
 == Taproot vs. Fibrous Root Systems
 
-#slide[
+#slide(composer: (5fr, 4fr))[
   - *Taproot System* (主根系):
     - Derived from the *radicle* (胚根) (embryonic root).
     - Consists of one main *taproot* (主根) and numerous smaller *lateral roots* (侧根).

@@ -81,12 +81,11 @@
 == Sheathing Base
 
 #slide[
+  #figure(
+    image(images.at("figure-6-4").path, width: 80%),
+  )
 - *Sheathing leaf base* (叶鞘): The base of the leaf expands to wrap around the stem.
 - Occurrence: Characteristic of many monocots (e.g., grasses, lilies), providing support and protection for the stem.
-][
-  #figure(
-    image(images.at("figure-6-4").path),
-  )
 ]
 
 == Broad Monocot Leaves
@@ -113,7 +112,7 @@
 
 == Compound Leaf
 
-#slide[
+#slide(composer: ())[
 - *Compound leaf* (复叶): The blade is divided into multiple distinct parts called *leaflets*.
 - *Petiolule* (小叶柄): The stalk attaching a leaflet to the rachis.
 - *Rachis* (叶轴): The extension of the petiole bearing the leaflets.
