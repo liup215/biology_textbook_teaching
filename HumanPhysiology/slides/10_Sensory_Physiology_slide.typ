@@ -30,18 +30,6 @@
 - Receptors can be *exteroceptors* (外感受器) or *interoceptors* (内感受器)
 ]
 
-#slide[
-- *Cutaneous sensory receptors* (皮肤感觉受体) include various specialized structures
-- *Free nerve endings* (游离神经末梢) detect pain, temperature, and light touch
-- *Encapsulated receptors* (包裹性受体) include:
-  - *Pacinian corpuscles* (环层小体): Deep pressure
-  - *Meissner's corpuscles* (迈斯纳小体): Light touch and texture
-][
-  #figure(
-    image(images.at("10.4").path),
-  )
-]
-
 == Phasic and Tonic Receptors
 
 #slide[
@@ -108,6 +96,18 @@
 - *Sensory acuity* (感觉敏锐度) depends on receptive field size
 - Smaller fields = greater acuity
 - Fingertips have small fields (high acuity); back has large fields (low acuity)
+]
+
+#slide[
+- *Cutaneous sensory receptors* (皮肤感觉受体) include various specialized structures
+- *Free nerve endings* (游离神经末梢) detect pain, temperature, and light touch
+- *Encapsulated receptors* (包裹性受体) include:
+  - *Pacinian corpuscles* (环层小体): Deep pressure
+  - *Meissner's corpuscles* (迈斯纳小体): Light touch and texture
+][
+  #figure(
+    image(images.at("10.4").path),
+  )
 ]
 
 #slide[

@@ -24,15 +24,6 @@
 - *Cutaneous receptors* (皮肤感受器) include touch and pressure receptors, temperature receptors, and pain receptors
 - *Special senses* (特殊感觉) include sight, hearing, equilibrium, taste, and smell
 
-#figure(
-  image(images.at("10.4").path, width: 50%),
-)
-
-- *Cutaneous sensory receptors* include various structures:
-  - *Free nerve endings* (游离神经末梢): Naked dendritic branches serving heat, cold, and pain sensations
-  - *Pacinian corpuscles* (环层小体): Provide deep pressure sensation
-  - *Meissner's corpuscles* (迈斯纳小体): Detect changes in texture and light touch
-
 == Tonic and Phasic Receptors: Sensory Adaptation
 
 - *Phasic receptors* (相位感受器) respond with a burst of activity when a stimulus is first applied, then quickly adapt if the stimulus is maintained
@@ -85,6 +76,15 @@
 - *Somatesthetic sensations* (躯体感觉) include touch, pressure, temperature, and pain from the skin
 - Sensory information travels through the spinal cord to the brain via ascending tracts
 - The pathways maintain *somatotopic organization* (体表定位组织) - different body regions are represented in specific areas of the cerebral cortex
+
+#figure(
+  image(images.at("10.4").path, width: 50%),
+)
+
+- *Cutaneous sensory receptors* include various structures:
+  - *Free nerve endings* (游离神经末梢): Naked dendritic branches serving heat, cold, and pain sensations
+  - *Pacinian corpuscles* (环层小体): Provide deep pressure sensation
+  - *Meissner's corpuscles* (迈斯纳小体): Detect changes in texture and light touch
 
 == Receptive Fields and Sensory Acuity
 
@@ -278,6 +278,15 @@
 
 - The scala vestibuli and scala tympani connect at the apex of the cochlea at the *helicotrema* (蜗孔)
 
+- *Pitch discrimination* (音调辨别) is based on the *place theory* (位置理论):
+  - Different frequencies cause maximum vibration at different locations along the basilar membrane
+  - High frequencies (high pitch): Base of cochlea (near oval window) - basilar membrane is narrow and stiff
+  - Low frequencies (low pitch): Apex of cochlea - basilar membrane is wide and flexible
+
+#figure(
+  image(images.at("10.21").path, width: 50%),
+)
+
 == Spiral Organ (Organ of Corti)
 
 - The *spiral organ* (螺旋器) or *organ of Corti* (柯蒂器) is the functional unit of hearing
@@ -296,20 +305,11 @@
 - Sound transmission pathway:
   - Sound waves → tympanic membrane → ossicles → oval window → scala vestibuli perilymph → basilar membrane vibration → hair cell stereocilia bend against tectorial membrane → depolarization → neurotransmitter release → auditory nerve activation
 
-- *Pitch discrimination* (音调辨别) is based on the *place theory* (位置理论):
-  - Different frequencies cause maximum vibration at different locations along the basilar membrane
-  - High frequencies (high pitch): Base of cochlea (near oval window) - basilar membrane is narrow and stiff
-  - Low frequencies (low pitch): Apex of cochlea - basilar membrane is wide and flexible
-
-#figure(
-  image(images.at("10.21").path, width: 50%),
-)
+- *Tonotopic organization* (音调定位组织): The cochlea maps frequencies spatially along its length
 
 #figure(
   image(images.at("10.23").path, width: 50%),
 )
-
-- *Tonotopic organization* (音调定位组织): The cochlea maps frequencies spatially along its length
 
 #figure(
   image(images.at("10.24").path, width: 50%),
