@@ -659,7 +659,7 @@
 - *Pheromones* (信息素) may synchronize cycles among women
 - Stress disrupts cycles through effects on GnRH
 - Body fat affects reproduction:
-  - Very low fat (<17%) can cause *amenorrhea* (闭经)
+  - Very low fat ($<$17%) can cause *amenorrhea* (闭经)
   - Obesity disrupts cycles through hormone metabolism
 - Minimum body fat required for normal cycles
 ]

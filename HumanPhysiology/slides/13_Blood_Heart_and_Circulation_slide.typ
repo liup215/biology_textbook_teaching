@@ -595,8 +595,8 @@
 - Capillaries are exchange vessels
 - Wall structure: Single layer of endothelial cells
 - Diameter: 5-10 μm (barely wide enough for RBCs)
-- Thin wall (<1 μm) allows efficient diffusion
-- Total surface area: ~600 m²
+- Thin wall ($<$1 μm) allows efficient diffusion
+- Total surface area: $~$600 m²
 ][
   #figure(
     image(images.at("13-28").path),
@@ -718,7 +718,7 @@
 #slide[
 - *Arrhythmias* (心律失常) are abnormal heart rhythms
 - (a) *Sinus rhythm* (窦性心律): Normal or abnormal rates
-  - *Bradycardia* (心动过缓): <60 bpm
+  - *Bradycardia* (心动过缓): $lt$ 60 bpm
   - *Tachycardia* (心动过速): >100 bpm
 - (b) *Atrial flutter* (心房扑动): Rapid atrial contractions (250-350 bpm)
 - (c) *Ventricular tachycardia* (室性心动过速): Life-threatening rapid ventricular rhythm

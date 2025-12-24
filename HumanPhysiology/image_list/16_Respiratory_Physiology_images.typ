@@ -196,7 +196,7 @@
     path: "../fig/image_place_holder.png"
   ),
   "table-16-10": (
-    caption: [Terms used to describe *acid-base balance*. Definitions include: *acidosis* (blood pH <7.35), *alkalosis* (blood pH >7.45), *metabolic acidosis/alkalosis* (caused by changes in bicarbonate concentration), and *respiratory acidosis/alkalosis* (caused by changes in P_CO₂ from altered ventilation).],
+    caption: [Terms used to describe *acid-base balance*. Definitions include: *acidosis* (blood pH $<$7.35), *alkalosis* (blood pH >7.45), *metabolic acidosis/alkalosis* (caused by changes in bicarbonate concentration), and *respiratory acidosis/alkalosis* (caused by changes in P_CO₂ from altered ventilation).],
     path: "../fig/image_place_holder.png"
   ),
   "table-16-11": (

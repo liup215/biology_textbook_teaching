@@ -1,3 +1,4 @@
+#import "@preview/typsium:0.3.0": *
 #let images = (
   "19-1": (
     caption: [*Reactive oxygen species (ROS) production and defense.* Normal physiology requires that reactive oxygen species (those containing oxygen with an unpaired electron) be kept in balance. Excessive ROS can cause oxidative stress leading to cellular damage, while inadequate ROS impairs immune function and cell proliferation. The figure illustrates enzymatic defenses (SOD, catalase, glutathione peroxidase) and nonenzymatic antioxidants (vitamins C and E, glutathione) that maintain this balance.],
