@@ -587,6 +587,7 @@
 - Form oligomeric *resistosomes* (抗病体)
 - Wheel-like pentameric structures
 - May function as membrane pores
+- Trigger *hypersensitive response* (HR, 过敏反应)
 
 #slide[
   - Cryo-EM structures of activated NLR proteins
@@ -595,6 +596,7 @@
   - Induces conformational change
   - Oligomerization forms pentameric wheel structure
   - May insert into membranes causing cell death
+  - Triggers hypersensitive response: rapid programmed cell death
   - Direct and indirect effector recognition mechanisms
 ][
   #figure(
