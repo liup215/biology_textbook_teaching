@@ -220,26 +220,126 @@
   - 脂溶性激素：穿过细胞膜，与细胞内受体结合
   - 水溶性激素：与细胞膜受体结合，激活*second messengers* (第二信使)如*cAMP*
 
+== 下丘脑-垂体调控机制 (Hypothalamic-Pituitary Control)
+
+- *Hypothalamo-hypophyseal portal system* (下丘脑-垂体门脉系统)：特殊血管系统，连接下丘脑与腺垂体
+- 下丘脑释放激素和抑制激素控制腺垂体分泌
+
+=== 下丘脑激素 (Hypothalamic Hormones)
+
+- *TRH* (促甲状腺激素释放激素)：刺激TSH和催乳素释放
+- *CRH* (促肾上腺皮质激素释放激素)：刺激ACTH释放
+- *GnRH* (促性腺激素释放激素)：刺激FSH和LH释放
+- *GHRH* (生长激素释放激素)：刺激GH释放
+- *Somatostatin* (生长抑素/GHIH)：抑制GH和TSH释放
+- *PIH* (催乳素抑制激素，即dopamine多巴胺)：抑制催乳素释放
+
+=== 下丘脑-垂体-靶腺轴 (Hypothalamic-Pituitary-Target Gland Axes)
+
+1. **下丘脑-垂体-甲状腺轴**：
+   - 下丘脑(TRH) → 腺垂体(TSH) → 甲状腺(#ce("T3"), #ce("T4"))
+   - 负反馈：#ce("T3"), #ce("T4")抑制TRH和TSH分泌
+
+2. **下丘脑-垂体-肾上腺轴 (HPA轴)**：
+   - 下丘脑(CRH) → 腺垂体(ACTH) → 肾上腺皮质(cortisol)
+   - 负反馈：cortisol抑制CRH和ACTH分泌
+   - 应激反应的核心机制
+
+3. **下丘脑-垂体-性腺轴 (HPG轴)**：
+   - 下丘脑(GnRH) → 腺垂体(FSH, LH) → 性腺(性激素)
+   - 负反馈：性激素抑制GnRH, FSH, LH分泌
+   - 例外：排卵前正反馈(雌激素高峰→LH激增)
+
+4. **下丘脑-垂体-生长轴**：
+   - 下丘脑(GHRH, Somatostatin) → 腺垂体(GH) → 肝脏/组织(IGF-1/somatomedins)
+   - 负反馈：GH和IGF-1抑制GHRH，刺激somatostatin
+
+5. **下丘脑-垂体-泌乳调控**：
+   - 下丘脑(PIH/dopamine, TRH) → 腺垂体(Prolactin)
+   - 独特：主要受抑制性控制(dopamine持续抑制)
+
 == 垂体 (Pituitary Gland)
 
 - *Anterior pituitary* (腺垂体)：
-  - *Growth hormone* (GH, 生长激素)：促进生长
-  - *Prolactin* (PRL, 催乳素)：刺激乳汁分泌
-  - *ACTH* (促肾上腺皮质激素)：刺激肾上腺皮质
-  - *TSH* (促甲状腺激素)：刺激甲状腺
-  - *FSH* (促卵泡激素)和*LH* (黄体生成素)：生殖
+  - *Growth hormone* (GH, 生长激素)：促进生长，蛋白质合成，脂解，糖异生
+  - *Prolactin* (PRL, 催乳素)：刺激乳汁分泌，抑制GnRH
+  - *ACTH* (促肾上腺皮质激素)：刺激肾上腺皮质分泌cortisol
+  - *TSH* (促甲状腺激素)：刺激甲状腺分泌#ce("T3")和#ce("T4")
+  - *FSH* (促卵泡激素)：女性-卵泡发育/雌激素；男性-精子发生
+  - *LH* (黄体生成素)：女性-排卵/黄体形成/孕激素；男性-睾酮分泌
 
-- *Posterior pituitary* (神经垂体)：
-  - *ADH* (抗利尿激素/vasopressin)：保水，升压
-  - *Oxytocin* (催产素)：子宫收缩、射乳
+- *Posterior pituitary* (神经垂体)：储存和释放下丘脑神经元产生的激素
+  - *ADH* (抗利尿激素/vasopressin)：保水(集合管)，升压(血管收缩)
+  - *Oxytocin* (催产素)：子宫收缩(分娩)，射乳反射，正反馈机制
 
-== 甲状腺与甲状旁腺 (Thyroid and Parathyroid)
+== 甲状腺 (Thyroid)
 
 - *Thyroid hormones* (#ce("T3")和#ce("T4"))：调节代谢率、生长发育
   - 需要碘合成
-- *Calcitonin* (降钙素)：降低血钙
-- *Parathyroid hormone* (PTH, 甲状旁腺激素)：升高血钙
-  - 促进骨吸收、肾钙重吸收、肠钙吸收(通过维生素D)
+  - 受下丘脑-垂体-甲状腺轴调控
+  - 负反馈抑制TRH和TSH
+- *Calcitonin* (降钙素)：由C细胞(parafollicular cells)分泌
+  - 降低血钙：抑制破骨细胞(osteoclasts)活性
+  - 在人体中作用较小
+
+== 甲状旁腺与钙离子调控 (Parathyroid and Calcium Regulation)
+
+=== 钙稳态的重要性 (Importance of Calcium Homeostasis)
+
+- #ce("Ca2+")功能：
+  - 骨骼和牙齿结构
+  - 肌肉收缩
+  - 神经兴奋性
+  - 血液凝固
+  - 细胞信号传导(第二信使)
+  - 酶辅因子
+
+- 正常血钙：8.5-10.5 mg/dL
+- 低钙血症(*hypocalcemia*)：肌肉痉挛(tetany)、惊厥
+- 高钙血症(*hypercalcemia*)：肌无力、肾结石、心律失常
+
+=== 钙调节激素 (Calcium-Regulating Hormones)
+
+1. **Parathyroid Hormone (PTH, 甲状旁腺激素)**：
+   - 主要升高血钙的激素
+   - 分泌调节：低血钙刺激PTH分泌(负反馈)
+   - 作用机制：
+     - **骨骼**：刺激破骨细胞活性 → 骨吸收 → 释放#ce("Ca2+")和#ce("PO4^{3-}")
+     - **肾脏**：
+       - 增加#ce("Ca2+")重吸收(远端小管)
+       - 减少#ce("PO4^{3-}")重吸收(增加尿磷排泄)
+       - 激活1α-hydroxylase → 维生素#ce("D3")活化
+     - **肠道**(间接)：通过活化维生素D增加#ce("Ca2+")吸收
+
+2. **1,25-Dihydroxyvitamin #ce("D3")** (活性维生素D/骨化三醇/calcitriol)：
+   - 合成途径：
+     - 皮肤(紫外线)：7-dehydrocholesterol → 维生素#ce("D3")
+     - 肝脏：维生素#ce("D3") → 25-hydroxyvitamin #ce("D3")
+     - 肾脏(PTH刺激)：25-hydroxyvitamin #ce("D3") → 1,25-dihydroxyvitamin #ce("D3")
+   - 作用：
+     - **肠道**：促进#ce("Ca2+")和#ce("PO4^{3-}")吸收(主要作用)
+     - **骨骼**：与PTH协同促进骨吸收
+     - **肾脏**：促进#ce("Ca2+")重吸收
+   - 本质：类固醇激素(脂溶性)
+
+3. **Calcitonin (降钙素)**：
+   - 降低血钙(作用相对较弱)
+   - 抑制破骨细胞活性
+   - 分泌调节：高血钙刺激分泌
+
+=== 钙磷代谢整合调控 (Integrated Calcium-Phosphate Regulation)
+
+- PTH和维生素D协同作用：
+  - 共同目标：维持血钙稳定
+  - PTH：快速反应，增加骨吸收和肾重吸收
+  - 维生素D：较慢，增加肠道吸收(长期调节)
+  
+- 磷酸盐调控：
+  - PTH降低血磷(增加尿磷排泄)
+  - 维生素D升高血磷(增加肠道吸收)
+  - *FGF23* (成纤维细胞生长因子23)：抑制磷重吸收和维生素D活化
+
+- 钙磷乘积：维持在安全范围，防止异位钙化
 
 == 肾上腺 (Adrenal Glands)
 
