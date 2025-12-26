@@ -42,11 +42,11 @@
 
 == Phytomer Structure
 
+#slide[
 - [Illustration shows the modular organization of shoot systems]
 - [The phytomer includes all structures from one node to the next]
 - [Axillary buds develop in leaf axils and can form branches]
 - [This repetitive structure allows flexible architectural patterns]
-
 ][
   #figure(
     image(images.at("19.1").path),
@@ -55,11 +55,11 @@
 
 == Branch Architecture Patterns
 
+#slide[
 - [Different tree species exhibit characteristic branch angles]
 - [Gravitropic setpoint angles create distinctive growth forms]
 - [Upright, spreading, and weeping habits result from angle control]
 - [Both genetic and environmental factors influence branch angles]
-
 ][
   #figure(
     image(images.at("19.2").path),
@@ -75,11 +75,11 @@
 
 == Hormone Transport Pathways
 
+#slide[
 - [Auxin synthesized in young leaves and shoot apex]
 - [*Basipetal transport* (向基运输) via *PIN proteins* (PIN蛋白) in stems]
 - [Strigolactones and cytokinins from roots move *acropetally* (向顶运输)]
 - [Xylem and phloem serve as transport pathways]
-
 ][
   #figure(
     image(images.at("19.3").path),
@@ -95,11 +95,11 @@
 
 == Auxin and Apical Dominance
 
+#slide[
 - [Auxin from shoot tip inhibits axillary bud outgrowth]
 - [Applying auxin to decapitated shoots restores inhibition]
 - [*Auxin transport inhibitors* (生长素运输抑制剂) release buds from dominance]
 - [Classic experiments demonstrate auxin's central role]
-
 ][
   #figure(
     image(images.at("19.4").path),
@@ -108,11 +108,11 @@
 
 == Molecular Network Regulating Branching
 
+#slide[
 - [Auxin stimulates *strigolactone synthesis* (独脚金内酯合成) in nodal regions]
 - [Strigolactones activate *BRANCHED 1* (BRC1), suppressing bud growth]
 - [Auxin up-regulates BRC1 and down-regulates cytokinin biosynthesis genes]
 - [Cytokinins promote bud outgrowth by antagonizing inhibitory signals]
-
 ][
   #figure(
     image(images.at("19.5").path),
@@ -128,11 +128,11 @@
 
 == Teosinte to Maize Transformation
 
+#slide[
 - [Teosinte is highly branched with many tillers]
 - [Modern maize has reduced branching for higher yield]
 - [TB1 gene encodes a transcription factor suppressing axillary meristems]
 - [This transformation represents a major domestication event]
-
 ][
   #figure(
     image(images.at("19.6").path),
@@ -148,11 +148,11 @@
 
 == Types of Dormant Buds
 
+#slide[
 - [*Sequential buds* (顺序芽) occur at the same node]
 - [*Accessory buds* (副芽) and *secondary accessory buds* (次级副芽) serve as backups]
 - [Some buried buds remain viable for years]
 - [Bud scales provide physical protection]
-
 ][
   #figure(
     image(images.at("19.7").path),
@@ -170,11 +170,11 @@
 
 == Vascular Tissue Patterns
 
+#slide[
 - [Different eudicot roots show varied xylem-phloem arrangements]
 - [Xylem poles alternate with phloem regions]
 - [This pattern determines where lateral roots can form]
 - [Species-specific arrangements optimize function]
-
 ][
   #figure(
     image(images.at("19.8").path),
@@ -190,11 +190,11 @@
 
 == Lateral Root Formation Process
 
+#slide[
 - [*Lateral root founder cells* (侧根创始细胞) arise from pericycle]
 - [Cells undergo *priming* (引发) to become competent]
 - [Coordinated divisions form lateral root primordia]
 - [Developing root penetrates outer tissues to emerge]
-
 ][
   #figure(
     image(images.at("19.9").path),
@@ -210,11 +210,11 @@
 
 == Visualizing Auxin Oscillations
 
+#slide[
 - [Luciferase reporter shows periodic luminescence in oscillation zone]
 - [Auxin maxima correspond to future lateral root positions]
 - [Oscillating pattern creates evenly spaced root branches]
 - [This temporal control produces ordered root architecture]
-
 ][
   #figure(
     image(images.at("19.10").path),
@@ -230,11 +230,11 @@
 
 == Maize Root System Components
 
+#slide[
 - [*Primary root* (初生根) from embryonic radicle]
 - [*Seminal roots* (种子根) from scutellar node]
 - [*Crown roots* (冠根) from stem nodes]
 - [Multiple orders of lateral roots]
-
 ][
   #figure(
     image(images.at("19.11").path),
@@ -250,11 +250,11 @@
 
 == Soybean Root Architecture
 
+#slide[
 - [Primary taproot extends deep into soil]
 - [Branch roots of various orders provide exploration]
 - [Basal roots enhance anchorage]
 - [Adventitious roots increase nutrient uptake capacity]
-
 ][
   #figure(
     image(images.at("19.12").path),
@@ -270,11 +270,11 @@
 
 == Genetic Control of Growth Angles
 
+#slide[
 - [*tac1 mutants* (tac1突变体) show more upright angles]
 - [*lazy1/dro1 double mutants* have horizontal growth]
 - [TAC1 overexpression produces horizontal organs]
 - [Architecture modifications improve crop performance]
-
 ][
   #figure(
     image(images.at("19.13").path),
@@ -292,11 +292,11 @@
 
 == Structure of Woody Stems
 
+#slide[
 - [Vascular cambium between secondary xylem and phloem]
 - [*Periderm* (周皮) includes phellogen, phelloderm, and phellem]
 - [*Ray cells* (射线细胞) facilitate radial transport]
 - [Complex tissue organization enables vertical growth]
-
 ][
   #figure(
     image(images.at("19.14").path),
@@ -312,11 +312,11 @@
 
 == Secondary Vascular Tissue Development
 
+#slide[
 - [Primary growth precedes secondary growth in woody stems]
 - [Anticlinal divisions produce new initials]
 - [Periclinal divisions generate vascular mother cells]
 - [Each division leaves behind an initial cell]
-
 ][
   #figure(
     image(images.at("19.15").path),
@@ -332,11 +332,11 @@
 
 == Root Cambium Development
 
+#slide[
 - [Procambial cells separate protophloem and protoxylem initially]
 - [Cambium activation produces secondary vascular tissues]
 - [Organizer cells signal to specify initial cells]
 - [Initial cells divide to produce xylem and phloem]
-
 ][
   #figure(
     image(images.at("19.16").path),
@@ -353,11 +353,11 @@
 
 == Convergent Meristem Regulation
 
+#slide[
 - [WUS responds to CLV3 peptide in SAM]
 - [WOX5 maintains root stem cells in RAM]
 - [WOX4 responds to CLE40 peptide in cambium]
 - [Similar molecular mechanisms in different contexts]
-
 ][
   #figure(
     image(images.at("19.17").path),
@@ -373,11 +373,11 @@
 
 == Manipulating Radial Growth
 
+#slide[
 - [WOX4 overexpression increases wood production]
 - [ptl mutations remove growth inhibition]
 - [Combined manipulation dramatically enhances radial growth]
 - [Biotechnology applications for forestry]
-
 ][
   #figure(
     image(images.at("19.18").path),
@@ -393,11 +393,11 @@
 
 == Hormone Signaling in Vascular Development
 
+#slide[
 - [*ARABIDOPSIS HISTIDINE PHOSPHOTRANSFER PROTEIN 6* (AHP6) restricts cytokinin activity]
 - [Spatial restriction allows protoxylem differentiation]
 - [Auxin-cytokinin balance controls tissue patterning]
 - [*Brassinosteroids* (油菜素甾醇) also promote cambial activity]
-
 ][
   #figure(
     image(images.at("19.19").path),
@@ -413,11 +413,11 @@
 
 == Periderm Development Stages
 
+#slide[
 - [Originates from pericycle in roots]
 - [Endodermis undergoes *programmed cell death* (程序性细胞死亡)]
 - [Cortex and epidermis slough off]
 - [*Suberized cells* (栓质化细胞) form protective layer]
-
 ][
   #figure(
     image(images.at("19.20").path),
@@ -433,11 +433,11 @@
 
 == Stress Recovery Through Epicormic Growth
 
+#slide[
 - [Eucalyptus shows vigorous epicormic growth after fire]
 - [Buds embedded in bark maintain vascular connections]
 - [Activation allows rapid canopy recovery]
 - [Important survival mechanism in fire-prone environments]
-
 ][
   #figure(
     image(images.at("19.21").path),
