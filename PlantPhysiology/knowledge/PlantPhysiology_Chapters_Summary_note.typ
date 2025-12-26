@@ -53,17 +53,73 @@
 == 生长素运输和信号
 
 - *极性运输* (Polar Transport)：定向的细胞间生长素移动
-- *PIN蛋白*介导生长素流出
-- *TIR1/AFB*是F-box蛋白受体
-- 激素促进受体-抑制子相互作用
-- 抑制子降解激活响应
+- *PIN蛋白*介导生长素流出: 
+  PIN蛋白是一类极性定位于细胞膜上的生长素输出载体。它们决定生长素从细胞流出的方向，从而控制生长素在组织中的分布和极性运输。不同PIN蛋白在细胞中的定位（如顶端或基端）决定了生长素流动的方向性，是植物发育和向性反应的关键调控因子。
+- *TIR1/AFB*是F-box蛋白受体，定位在*细胞核*中
+  - 具体作用
+    1. 生长素分子进入细胞并与TIR1/AFB受体结合。
+    2. 结合后的复合物促进Aux/IAA抑制子蛋白的泛素化。
+    3. 泛素化的Aux/IAA被26S蛋白酶体识别并降解。
+    4. 抑制子降解后，ARF转录因子得以激活。
+    5. 激活的ARF调控生长素响应基因的表达，介导生长素的生物学效应。
+  - 生物学效应
+    - 促进细胞伸长，具体机制为：
+      - 生长素促进质膜H+-ATPase活性，导致细胞壁酸化（酸生长理论）
+      - 酸化激活膨胀素（Expansins），松弛细胞壁结构
+      - 细胞内渗透压驱动水分进入，细胞体积增大，实现伸长
+    - 调控分生组织活动
+    - 介导向性反应（如向光性和重力向性）
 
 == 其他激素信号机制
 
 - *细胞分裂素*：通过*双组分信号* (Two-Component Signaling)
-- *乙烯*：使用双重负调控
-- *油菜素类固醇*：BRI1受体激酶与BAK1共受体形成异源二聚体
-- *脱落酸*：PYR/PYL/RCAR受体抑制PP2C磷酸酶，释放SnRK2激酶
+  - 机制：
+    1. 细胞分裂素与质膜上的受体激酶（Histidine Kinase， HK）结合，激活受体的激酶活性。
+    2. 受体激酶自磷酸化并将磷酸基团转移到*组分H* (Histidine-containing Phosphotransfer Protein, HP)。
+    3. HP将磷酸基团转移到*响应调节蛋白* (Response Regulator, RR)。
+    4. 磷酸化的RR作为转录因子调控细胞分裂素响应基因的表达。
+  - 生物学效应：
+    - 促进细胞分裂和分生组织活动
+    - 调控器官形成（如根、芽、叶）
+    - 延缓叶片衰老（抗衰老作用）
+- *乙烯*：气体激素，通过*内质网受体* (ER Receptors)介导信号传导
+  - 机制：
+    1. 乙烯与内质网上的受体（如ETR1，*Ethylene Response 1*）结合，抑制受体的激酶活性。
+    2. 在无乙烯时，受体激活CTR1激酶（*Constitutive Triple Response 1*），抑制下游信号传导。
+    3. 乙烯结合后，受体失活，CTR1失去抑制作用。
+    4. 下游信号分子EIN2（*Ethylene Insensitive 2*）被激活，促进EIN3/EIL（*Ethylene Insensitive 3/EIN3-Like*）转录因子的稳定和积累。
+    5. EIN3/EIL调控乙烯响应基因的表达。
+  - 生物学效应：
+    - 促进果实成熟
+    - 介导叶片和花的衰老
+    - 调控应激响应
+    - 三重反应：暗生长幼苗的典型反应
+      - 下胚轴缩短
+      - 下胚轴增粗
+      - 顶端钩形成
+- *赤霉素*： 通过*DELLA蛋白*（*Asp-Glu-Leu-Leu-Ala*）介导信号传导
+  - 机制：
+    1. 赤霉素与GID1受体（*Gibberellin Insensitive Dwarf 1*）结合，形成赤霉素-GID1复合物。
+    2. 该复合物与DELLA抑制蛋白结合，促进其泛素化和降解。
+    3. DELLAs降解后，释放对生长相关基因的抑制作用。
+    4. 激活的转录因子调控赤霉素响应基因的表达。
+  - 生物学效应：
+    - 促进种子萌发
+    - 刺激茎和叶的伸长
+    - 促进开花和果实发育
+
+- *脱落酸*： 通过*PYR/PYL/RCAR受体*（*Pyrabactin Resistance/PYR1-Like/Regulatory Component of ABA Receptor*）介导信号传导
+  - 机制：
+    1. 脱落酸与PYR/PYL/RCAR受体结合，形成复合物。
+    2. 该复合物抑制PP2C磷酸酶（*Protein Phosphatase 2C*）的活性。
+    3. 抑制PP2C后，SnRK2激酶（*SNF1-Related Protein Kinase 2*）被激活。
+    4. 激活的SnRK2磷酸化下游效应器蛋白，包括转录因子和离子通道。
+    5. 调控脱落酸响应基因的表达和生理反应。
+  - 生物学效应：
+    - 促进气孔关闭，减少水分蒸腾
+      - 脱落酸通过激活SnRK2激酶，磷酸化并激活SLAC1（*Slow Anion Channel-Associated 1*）等离子通道，促进负离子（如#ce[Cl-]、#ce[NO3-]、#ce[malate #sub[2] #super[-]]）流出保卫细胞，进而导致#ce[K+]导致细胞渗透势降低，水分外流，气孔关闭，从而减少水分蒸腾，帮助植物应对干旱胁迫。
+    - 诱导种子休眠
+    - 增强对干旱和盐胁迫的耐受性
 
 = 第九章：光合作用——光反应 (Photosynthesis: The Light Reactions)
 
@@ -118,9 +174,15 @@
 
 == 光保护
 
+- 防止过量光能损伤光合系统
 - 三道防线：*非光化学淬灭* (NPQ)、*清除系统* (Scavenging Systems)、修复
+- 三道防线的具体作用：
+  1. *非光化学淬灭* (Non-Photochemical Quenching, NPQ)：通过耗散多余的激发能为热，防止激发态叶绿素产生活性氧，保护光系统II免受光抑制。
+  2. *清除系统* (Scavenging Systems)：包括抗氧化酶（如超氧化物歧化酶SOD、过氧化氢酶CAT、抗坏血酸过氧化物酶APX）和非酶抗氧化剂（如抗坏血酸、谷胱甘肽、类胡萝卜素），清除已生成的活性氧（ROS），减轻氧化损伤。
+  3. *修复* (Repair)：主要指对受损的光系统II反应中心蛋白（如D1蛋白）的快速降解与再合成，恢复光合功能，维持光系统的稳定性。
 - *玉米黄质循环* (Xanthophyll Cycle)提供动态光保护
-- *紫黄质* (Violaxanthin) ↔ *花药黄质* (Antheraxanthin) ↔ *玉米黄质* (Zeaxanthin)
+  - 玉米黄质循环通过可逆转化三种类胡萝卜素（紫黄质、花药黄质、玉米黄质）实现动态光保护。当光强增强时，紫黄质依次转化为花药黄质和玉米黄质，玉米黄质能高效耗散多余激发能为热（非光化学淬灭NPQ），防止活性氧产生，保护光系统II免受光抑制。光强降低时，反应逆转，恢复光捕获能力，实现对不同光环境的快速适应。
+  - *紫黄质* (Violaxanthin) ↔ *花药黄质* (Antheraxanthin) ↔ *玉米黄质* (Zeaxanthin)
 
 = 第十章：光合作用——碳反应 (Photosynthesis: The Carbon Reactions)
 
@@ -156,9 +218,13 @@
 
 - 一种生化机制，在Rubisco周围浓缩#ce("CO_2")
 - 抑制光呼吸并提高光合效率
-- 在*叶肉细胞* (Mesophyll Cells)和*维管束鞘细胞* (Bundle Sheath Cells)之间空间分离
-- *PEP羧化酶* (PEPCase)固定#ce("HCO_3^-")形成四碳酸
-- 需要*克兰兹结构* (Kranz Anatomy)
+- 在*叶肉细胞* (Mesophyll Cells)和*维管束鞘细胞* (Bundle Sheath Cells)之间空间分离  
+  - *叶肉细胞*首先利用*PEP羧化酶* (PEPCase)将大气中的#ce("CO_2")（以#ce("HCO_3^-")形式）固定为四碳化合物（如草酰乙酸OAA，随后转化为苹果酸或天冬氨酸）。
+  - 这些四碳化合物随后被运输到*维管束鞘细胞*，在这里释放出#ce("CO_2")，供*Rubisco*进行卡尔文循环，极大提高了#ce("CO_2")浓度，抑制光呼吸。
+- *PEP羧化酶* (PEPCase)固定#ce("HCO_3^-")形成四碳酸  
+  - PEPCase对#ce("CO_2")/HCO_3^-有高亲和力，且不与#ce("O_2")竞争，因此在高温、低#ce("CO_2")环境下仍能高效固定碳。
+- 需要*克兰兹结构* (Kranz Anatomy)  
+  - 叶片具有明显的解剖结构特征：叶肉细胞环绕维管束鞘细胞，形成“花环”状（Kranz意为“花环”），保证两类细胞间的代谢分工和物质运输。
 
 == CAM光合作用
 
@@ -198,21 +264,70 @@
 
 == 糖酵解
 
-- *糖酵解* (Glycolysis)是糖氧化分解为*丙酮酸* (Pyruvate)
-- 在*细胞质* (Cytosol)和*质体* (Plastids)中都发生
-- 产生ATP和NADH
+- 特点：
+  - *糖酵解* (Glycolysis)是糖氧化分解为*丙酮酸* (Pyruvate)
+  - 在*细胞质* (Cytosol)和*质体* (Plastids)中都发生
+  - 产生ATP和NADH
+- 具体过程 (Detailed Steps):
+  1. 葡萄糖磷酸化为葡萄糖-6-磷酸（己糖激酶/葡萄糖激酶，消耗1 ATP）
+     - Glucose is phosphorylated to glucose-6-phosphate (Hexokinase/Glucokinase, consumes 1 ATP)
+  2. 葡萄糖-6-磷酸异构为果糖-6-磷酸
+     - Glucose-6-phosphate isomerized to fructose-6-phosphate
+  3. 果糖-6-磷酸磷酸化为果糖-1,6-二磷酸（磷酸果糖激酶，消耗1 ATP）
+     - Fructose-6-phosphate phosphorylated to fructose-1,6-bisphosphate (Phosphofructokinase, consumes 1 ATP)
+  4. 果糖-1,6-二磷酸裂解为甘油醛-3-磷酸和二羟基丙酮磷酸
+     - Fructose-1,6-bisphosphate split into glyceraldehyde-3-phosphate and dihydroxyacetone phosphate
+  5. 二羟基丙酮磷酸转化为甘油醛-3-磷酸（两分子进入后续步骤）
+     - Dihydroxyacetone phosphate converted to glyceraldehyde-3-phosphate (two molecules proceed)
+  6. 甘油醛-3-磷酸氧化磷酸化为1,3-二磷酸甘油酸（生成NADH）
+     - Glyceraldehyde-3-phosphate oxidized and phosphorylated to 1,3-bisphosphoglycerate (produces NADH)
+  7. 1,3-二磷酸甘油酸转变为3-磷酸甘油酸（生成ATP）
+     - 1,3-bisphosphoglycerate converted to 3-phosphoglycerate (produces ATP)
+  8. 3-磷酸甘油酸转变为2-磷酸甘油酸
+     - 3-phosphoglycerate converted to 2-phosphoglycerate
+  9. 2-磷酸甘油酸脱水为磷酸烯醇式丙酮酸
+     - 2-phosphoglycerate dehydrated to phosphoenolpyruvate
+  10. 磷酸烯醇式丙酮酸转变为丙酮酸（生成ATP）
+      - Phosphoenolpyruvate converted to pyruvate (produces ATP)
+  - 总结：每1分子葡萄糖净生成2分子ATP、2分子NADH和2分子丙酮酸
+    - Summary: Each glucose yields net 2 ATP, 2 NADH, and 2 pyruvate
 - 在*缺氧条件* (Anaerobic Conditions)下，*发酵* (Fermentation)途径再生NAD+
+- 两种主要的发酵途径：
+  1. *乳酸发酵* (Lactic Acid Fermentation)
+     - 过程：丙酮酸 (*Pyruvate*) 被乳酸脱氢酶 (*Lactate Dehydrogenase*) 还原为乳酸 (*Lactate*)，同时NADH被氧化为NAD+，实现NAD+ (*Nicotinamide Adenine Dinucleotide*) 再生。
+     - 特点：不产生气体，常见于动物肌肉和某些细菌（如乳酸菌）；产物为乳酸 (*Lactate*)。
+  2. *酒精发酵* (Alcoholic Fermentation)
+     - 过程：丙酮酸 (*Pyruvate*) 先脱羧生成乙醛 (*Acetaldehyde*) 和#ce("CO_2") (*Carbon Dioxide*)，乙醛再被乙醇脱氢酶 (*Alcohol Dehydrogenase*) 还原为乙醇 (*Ethanol*)，同时NADH被氧化为NAD+ (*Nicotinamide Adenine Dinucleotide*)。
+     - 特点：产生乙醇 (*Ethanol*) 和#ce("CO_2") (*Carbon Dioxide*) 气体，常见于酵母和部分植物组织；产物为乙醇和二氧化碳。
+- 两种发酵途径的共同点：均在无氧条件下进行，目的是再生NAD+以维持糖酵解的持续进行。
 
 == 氧化戊糖磷酸途径
 
 - 葡萄糖氧化的替代途径
 - 产生*NADPH*用于生物合成反应
 - 产生*戊糖* (Pentose Sugars)用于核苷酸合成
+- 具体过程 (Detailed Steps):
+  1. 葡萄糖-6-磷酸 (*Glucose-6-Phosphate*) 被*葡萄糖-6-磷酸脱氢酶* (*Glucose-6-Phosphate Dehydrogenase*) 氧化为6-磷酸葡萄糖酸内酯 (*6-Phosphoglucono-δ-Lactone*)，生成NADPH。
+  2. 6-磷酸葡萄糖酸内酯 (*6-Phosphoglucono-δ-Lactone*) 被*内酯酶* (*Lactonase*) 水解为6-磷酸葡萄糖酸 (*6-Phosphogluconate*)。
+  3. 6-磷酸葡萄糖酸 (*6-Phosphogluconate*) 被*6-磷酸葡萄糖酸脱氢酶* (*6-Phosphogluconate Dehydrogenase*) 脱羧为核酮糖-5-磷酸 (*Ribulose-5-Phosphate*)，同时生成NADPH和#ce("CO_2")。
+  4. 核酮糖-5-磷酸 (*Ribulose-5-Phosphate*) 可异构化为核糖-5-磷酸 (*Ribose-5-Phosphate*) 或酮糖-5-磷酸 (*Xylulose-5-Phosphate*)，用于核苷酸和其他代谢物合成。
+  5. 非氧化阶段通过*转酮酶* (*Transketolase*) 和*转醛酶* (*Transaldolase*) 产生三碳、四碳、七碳等中间产物，可与糖酵解和卡尔文循环互通。
 
 == 三羧酸循环
 
 - *TCA循环* (TCA Cycle)，也称为*克雷布斯循环* (Krebs Cycle)或*柠檬酸循环* (Citric Acid Cycle)
 - 在线粒体基质中发生
+- 过程：
+  - 
+1. 丙酮酸 (*Pyruvate*) 在线粒体中被*丙酮酸脱氢酶复合体* (*Pyruvate Dehydrogenase Complex*) 脱羧为*乙酰辅酶A* (*Acetyl-CoA*)，生成NADH和#ce("CO_2")。
+2. 乙酰辅酶A (*Acetyl-CoA*) 与*草酰乙酸* (*Oxaloacetate*) 结合生成*柠檬酸* (*Citrate*)。
+3. 柠檬酸 (*Citrate*) 异构化为*异柠檬酸* (*Isocitrate*)。
+4. 异柠檬酸 (*Isocitrate*) 被*异柠檬酸脱氢酶* (*Isocitrate Dehydrogenase*) 脱羧为*α-酮戊二酸* (*α-Ketoglutarate*)，生成NADH和#ce("CO_2")。
+5. α-酮戊二酸 (*α-Ketoglutarate*) 被*α-酮戊二酸脱氢酶复合体* (*α-Ketoglutarate Dehydrogenase Complex*) 脱羧为*琥珀酰辅酶A* (*Succinyl-CoA*)，生成NADH和#ce("CO_2")。
+6. 琥珀酰辅酶A (*Succinyl-CoA*) 转化为*琥珀酸* (*Succinate*)，同时底物水平磷酸化生成ATP（或GTP）。
+7. 琥珀酸 (*Succinate*) 被*琥珀酸脱氢酶* (*Succinate Dehydrogenase*) 氧化为*延胡索酸* (*Fumarate*)，生成FADH2。
+8. 延胡索酸 (*Fumarate*) 被*延胡索酸水合酶* (*Fumarase*) 水合为*苹果酸* (*Malate*)。
+9. 苹果酸 (*Malate*) 被*苹果酸脱氢酶* (*Malate Dehydrogenase*) 氧化为*草酰乙酸* (*Oxaloacetate*)，生成NADH。
 - 完成碳化合物氧化为#ce("CO_2")
 - 每个循环产生3 NADH、1 FADH#sub[2]和1 ATP
 - *乙酰辅酶A* (Acetyl-CoA)与*草酰乙酸* (Oxaloacetate)结合形成柠檬酸
@@ -223,11 +338,30 @@
 - 四个主要蛋白质复合体(I, II, III, IV)在线粒体内膜
 - 三个复合体(I, III, IV)泵质子创建*电化学梯度* (Electrochemical Gradient)
 - *质子动力* (Proton-Motive Force)驱动ATP合酶
+- ATP Synthase
+  - 结构：F1（催化部分）和F0（质子通道）
+  - 机制：质子通过F0流动引起F1旋转，促进ATP合成
+  - 每NADH产生约2.5 ATP，每FADH2产生约1.5 ATP
+  - 效率受*解偶联蛋白* (Uncoupling Proteins)调节：允许质子泄漏，产生热量而非ATP
+    - *解耦联蛋白* (Uncoupling Proteins, UCPs) 是线粒体内膜上的特殊蛋白质，能够使质子跨膜流动而不经过ATP合酶，从而“解耦”电子传递链与ATP合成过程。
+    - 主要功能：
+      - 通过允许质子回流，减少ATP的合成效率，将部分能量以热的形式释放，有助于植物在低温环境下维持细胞温度（热发生）。
+      - 降低活性氧（ROS）的产生，保护细胞免受氧化损伤。
+      - 调节能量代谢的灵活性，适应不同的生理和胁迫条件。
+    - 植物UCPs家族成员较多，广泛表达于不同组织，尤其在种子萌发、胁迫响应和发育过程中表达上调。
+    - UCP的活性受多种因子调控，如脂肪酸激活、核苷酸抑制等。
+  - 主要抑制剂分子：
+    - *寡霉素* (Oligomycin)：抑制ATP合酶F0部分，阻止质子通过，停止ATP合成。
+    - *氰化物* (Cyanide) 和 *一氧化碳* (Carbon Monoxide)：抑制复合体IV（细胞色素氧化酶），阻断电子传递链的末端，导致电子积累和呼吸停止。
+    - *抗霉素A* (Antimycin A)：抑制复合体III（细胞色素bc1复合体），阻断电子从辅酶Q到细胞色素c的传递。
+    - *罗通定* (Rotenone)：抑制复合体I（NADH脱氢酶），阻断NADH向辅酶Q的电子传递。
+    - 这些抑制剂通过不同机制干扰电子传递链和ATP合成过程，常用于研究线粒体功能和呼吸机制。
 
 == 替代氧化酶系统
 
 - 植物线粒体具有独特的替代电子传递途径
 - *替代氧化酶* (Alternative Oxidase, AOX)绕过复合体III和IV
+  与*解耦联蛋白* (Uncoupling Proteins, UCPs)不同，AOX直接将电子从泛醌传递给氧气生成水，绕过了复合体III和IV，但不参与质子泵，因此不驱动ATP合成；而UCPs则是通过在线粒体内膜上形成质子通道，使质子回流内膜间隙，同样降低ATP合成效率并释放热量。两者都能耗散能量、减少活性氧产生，但机制不同：AOX改变电子流路径，UCPs改变质子流路径。
 - 这些途径不泵质子，以热量形式耗散能量
 - 提供代谢灵活性和应激响应
 
@@ -264,6 +398,10 @@
 
 - *ROS* (活性氧)是部分还原的分子氧形式
 - 包括超氧化物(#ce("O_2^-"))、过氧化氢(#ce("H_2O_2"))、羟基自由基(#ce("OH^•"))
+- 清除系统
+  - *超氧化物歧化酶* (Superoxide Dismutase, SOD)：将#ce("O_2^-")转化为#ce("H_2O_2")
+  - *过氧化氢酶* (Catalase, CAT)和*抗坏血酸过氧化物酶* (Ascorbate Peroxidase, APX)：分解#ce("H_2O_2")
+  - *谷胱甘肽还原酶* (Glutathione Reductase, GR)：维持还原型谷胱甘肽水平
 - 具有双重作用：损伤细胞成分但也作为信号分子
 - 生成与清除之间的平衡至关重要
 
@@ -273,6 +411,10 @@
 - 胁迫引起细胞质钙快速增加
 - 不同胁迫产生独特的*钙信号特征* (Calcium Signatures)
 - *钙调蛋白* (Calmodulin, CaM)、*钙依赖蛋白激酶* (CDPKs)和*CBL/CIPK*系统传感钙
+  - 钙信号通过调节多种胁迫响应基因的表达，参与渗透调节、抗氧化防御、细胞死亡等过程。
+  - 钙调蛋白（CaM）与钙结合后激活多种靶蛋白（如蛋白激酶、磷酸酶、转录因子），调控信号转导网络。
+  - CDPKs（钙依赖蛋白激酶）直接感受钙信号并磷酸化下游效应蛋白，快速介导胁迫响应。
+  - CBL/CIPK系统通过特异性识别不同钙信号，实现对离子通道、转运蛋白等的精细调控，增强胁迫耐受性。
 
 == ROS信号
 
@@ -641,8 +783,11 @@
 - *光周期现象* (Photoperiodism)：检测和响应日长
 - 使季节性响应成为可能
 - *短日植物* (Short-Day Plants, SDPs)：当天短于临界长度时开花
+  - 光敏色素机制：在SDPs中，夜间较长，光敏色素主要处于Pr（红光吸收型）状态，远红光信号较弱，Pfr（远红光吸收型）含量低。Pfr在SDPs中通常抑制开花，因此长夜导致Pfr减少，解除对开花的抑制，促进FT等成花基因表达，诱导开花。
 - *长日植物* (Long-Day Plants, LDPs)：当天长于临界长度时开花
+  - 光敏色素机制：在LDPs中，白天较长，红光充足，Pr被转化为Pfr，Pfr含量高。Pfr在LDPs中促进开花，激活CO和FT等基因的表达，Pfr积累到一定水平后，诱导开花信号产生。
 - *日中性植物* (Day-Neutral Plants, DNPs)：独立于光周期开花
+  - 光敏色素机制：DNPs的开花不依赖于光敏色素介导的日长信号，主要受内源发育信号（如年龄、激素）调控，FT等成花基因的表达与光敏色素状态无直接关系。
 
 == 测量夜晚
 

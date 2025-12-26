@@ -28,17 +28,60 @@
   - *Pseudounipolar* (假单极)、*Bipolar* (双极)、*Multipolar* (多极)神经元
 
 - *Neuroglial cells* (神经胶质细胞)：
-  - PNS: *Schwann cells* (施万细胞)、*Satellite cells* (卫星细胞)
-  - CNS: *Oligodendrocytes* (少突胶质细胞)、*Microglia* (小胶质细胞)、*Astrocytes* (星形胶质细胞)、*Ependymal cells* (室管膜细胞)
+  - PNS:
+    - *Schwann cells* (施万细胞)：形成PNS髓鞘，促进轴突再生与修复，支持神经纤维代谢
+    - *Satellite cells* (卫星细胞)：包绕神经节细胞体，维持微环境与离子/营养平衡，参与保护与调节神经元兴奋性
+  - CNS:
+    - *Oligodendrocytes* (少突胶质细胞)：形成CNS髓鞘（一个细胞可髓鞘化多条轴突），提高传导速度
+    - *Microglia* (小胶质细胞)：CNS免疫细胞；吞噬清除病原体与细胞碎片，介导炎症反应与损伤后修复
+    - *Astrocytes* (星形胶质细胞)：结构与代谢支持；维持细胞外#ce("K+")与递质稳态（摄取/回收谷氨酸等）；参与血脑屏障（BBB）维持；损伤后形成胶质瘢痕
+    - *Ependymal cells* (室管膜细胞)：衬覆脑室与脊髓中央管；参与脑脊液（CSF）生成/循环（与脉络丛相关）
 
 - *Myelin sheath* (髓鞘)：脂肪绝缘层，加速神经冲动传导
 - *Nodes of Ranvier* (郎飞结)：髓鞘间隙，动作电位再生部位
 
 == 电特性与动作电位 (Electrical Properties and Action Potentials)
 
-- *Resting membrane potential* (静息膜电位)：约-70 mV
-  - 由*sodium-potassium pump* (#ce("Na+/K+")-ATPase)维持
-  - *Goldman equation* (高曼方程)：描述多离子对膜电位的贡献
+- *Resting membrane potential* (静息膜电位)：约 -70 mV（典型神经元范围 -60 ~ -80 mV）
+  - 核心决定因素：膜对离子的*选择性通透性* + *离子浓度梯度* + 少量*电生泵*贡献
+  - 主要离子梯度（典型细胞内/外，单位 mM，近似）：
+    - #ce("K+")：内高外低（~140 / ~4）
+    - #ce("Na+")：内低外高（~10–15 / ~145）
+    - #ce("Cl-")：内低外高（~5–30 / ~110）
+    - #ce("Ca2+")：内极低外较高（~0.0001 / ~1–2）
+  - 离子通道 (*Ion channels*)：决定“谁更容易过膜”
+    - *Leak channels* (漏通道)：静息时最重要
+      - #ce("K+")漏通道通透性最大 → 静息膜电位更接近#ce("K+")平衡电位
+      - #ce("Na+")漏通道少量存在 → 使膜电位略偏离#ce("K+")平衡电位（更“正”一点）
+    - *Voltage-gated channels* (电压门控通道)：膜电位变化时开启（动作电位的主角）
+      - 电压门控#ce("Na+")通道：快速激活/失活 → 去极化
+      - 电压门控#ce("K+")通道：较慢激活 → 复极化与后超极化
+    - *Ligand-gated channels* (配体门控通道)：递质结合开启（突触后电位）
+      - 例：阳离子通道 → EPSP；#ce("Cl-")或#ce("K+")通道 → IPSP
+    - *Mechanically-gated channels* (机械门控通道)：牵拉/压力开启（触觉等感受器）
+  - *Sodium–potassium pump* (钠钾泵，#ce("Na+/K+")-ATPase)：维持梯度、具轻度生电性
+    - 每次循环：3#ce("Na+")泵出 + 2#ce("K+")泵入（耗1 ATP）→ 使膜内相对更负（轻度“超极化”贡献）
+    - 更重要作用：*长期维持*#ce("Na+")、#ce("K+")浓度梯度（为通道电流提供“势能”）
+
+- *Equilibrium potential* (平衡电位 / 反转电位的一离子理想情况)：
+  - 定义：某一离子在“浓度梯度驱动力 = 电场驱动力”时的膜电位；该离子净通量为0
+  - *Nernst equation* (能斯特方程)：
+    - 通式：$E_("ion") = (R T) / (z F) * ln(["ion"]_("out") / ["ion"]_("in"))$
+    - 37°C近似（mV）：
+      - 阳离子：$E ≈ (61.5 / z) * log_10(["out"] / ["in"])$
+      - 阴离子（如#ce("Cl-")）：$E_("Cl") ≈ (61.5 / (-1)) * log_10(["Cl"^-]_("out") / ["Cl"^-]_("in"))$
+  - 典型平衡电位（神经元近似值，用于理解方向）：
+    - $E_K ≈ -90 "mV"$；$E_("Na") ≈ +60 "mV"$；$E_("Cl") ≈ -65 "mV"$；$E_("Ca") ≈ +120 "mV"$
+  - 驱动力 (*driving force*)：离子电流方向由 $(V_m - E_("ion"))$ 决定
+    - 若 $V_m < E_("Na")$：#ce("Na+")内流（去极化倾向）
+    - 若 $V_m > E_K$：#ce("K+")外流（复极化/超极化倾向）
+
+- *Goldman equation* (高曼/Goldman–Hodgkin–Katz, GHK 方程)：描述多离子共同决定的膜电位
+  - 适用前提：膜对多种离子通透，且各离子以其*相对通透性*加权贡献
+  - GHK电压方程（单价离子常用形式）：
+    - $V_m = (R T) / F * ln((P_K [K^+]_("out") + P_("Na") ["Na"^+]_("out") + P_("Cl") ["Cl"^-]_("in")) / (P_K [K^+]_("in") + P_("Na") ["Na"^+]_("in") + P_("Cl") ["Cl"^-]_("out")))$
+    - 关键点：#ce("Cl-")为阴离子，分子/分母位置与阳离子相反
+  - 静息时的经验结论：$P_K ≫ P_("Na")$（且#ce("Cl-")常接近平衡）→ $V_m$ 更接近 $E_K$，但比$E_K$略更“正”（接近 -70 mV）
 
 - *Action potential* (动作电位)：神经元的电信号
   - *Depolarization* (去极化)：#ce("Na+")通道开放，膜电位升至+30 mV
@@ -58,15 +101,20 @@
   - *Postsynaptic receptors* (突触后受体)：与神经递质结合
 
 - 突触后电位：
-  - *EPSP* (兴奋性突触后电位)：使突触后膜去极化
-  - *IPSP* (抑制性突触后电位)：使突触后膜超极化
-  - *Summation* (总和)：时间总和和空间总和
+  - *EPSP* (兴奋性突触后电位)：神经递质（如谷氨酸、乙酰胆碱）作用于突触后膜上的阳离子通道（如#ce("Na+"), #ce("Ca2+")），导致膜去极化，使膜电位更接近动作电位阈值，增加神经元兴奋性。
+  - *IPSP* (抑制性突触后电位)：神经递质（如GABA、甘氨酸）作用于#ce("Cl-")或#ce("K+")通道，导致膜超极化，使膜电位远离阈值，降低神经元兴奋性。
+  - *Summation* (总和)：单个EPSP或IPSP通常不足以引发动作电位，多个突触后电位可叠加：
+    - *Temporal summation* (时间总和)：同一突触短时间内连续释放递质，突触后电位累积。
+    - *Spatial summation* (空间总和)：多个不同突触同时释放递质，突触后电位在突触后膜上空间叠加。
+  - EPSP与IPSP在轴丘整合，决定是否产生动作电位。
 
 - 主要神经递质：
   - *Acetylcholine* (乙酰胆碱)：神经肌肉接头
   - *Catecholamines* (儿茶酚胺)：多巴胺、去甲肾上腺素、肾上腺素
   - *Amino acids* (氨基酸)：谷氨酸(兴奋)、GABA(抑制)、甘氨酸
   - *Neuropeptides* (神经肽)：内啡肽、P物质
+    - *Endorphins* (内啡肽)：具有镇痛和愉悦作用，能减少疼痛感并提升情绪，参与应激和奖赏机制。
+    - *Substance P* (P物质)：主要介导疼痛信号的传递，促进炎症反应，在中枢和外周神经系统中调节痛觉和其他感觉。
 
 = 第8章 中枢神经系统 (Chapter 8: The Central Nervous System)
 
@@ -111,7 +159,20 @@
 - *Short-term memory* (短期记忆)：工作记忆
 - *Long-term memory* (长期记忆)：陈述性记忆和程序性记忆
 - *Long-term potentiation* (LTP, 长时程增强)：突触可塑性的基础
+  - NMDA受体：NMDA受体是一种谷氨酸能离子型受体，具有以下特征：
+    - 既是配体门控又是电压门控的离子通道，只有在谷氨酸结合且膜去极化时才开放。
+    - 对#ce("Ca2+"), #ce("Na+"), #ce("K+")通透，尤其#ce("Ca2+")流入在LTP中至关重要。
+    - 通道在静息电位下被#ce("Mg^{2+}")离子堵塞，膜去极化时#ce("Mg^{2+}")移除，通道开放。
+    - 参与突触可塑性（如LTP和LTD），是学习和记忆的分子基础。
+    - 过度激活可导致兴奋性毒性（excitotoxicity），与神经退行性疾病相关。
+  - *分子/离子基础*：
+    - *长时程增强 (LTP)*：主要发生在海马和大脑皮层的谷氨酸能突触。LTP的诱导依赖于突触前高频刺激导致大量谷氨酸释放，激活突触后膜上的*NMDA受体*。NMDA受体只有在膜去极化和谷氨酸同时存在时才开放，允许#ce("Ca2+")流入突触后神经元。#ce("Ca2+")作为第二信使，激活蛋白激酶（如CaMKII、PKC），促进AMPA受体插入突触后膜，增强突触传递效率，并启动基因表达和蛋白合成，巩固突触结构变化。
+    - *长时程抑制 (LTD)*：通常由低频刺激诱导，导致突触后膜#ce("Ca2+")缓慢升高。较低浓度的#ce("Ca2+")激活磷酸酶（如PP1、PP2B），促使AMPA受体从突触后膜移除，降低突触传递效率。LTD有助于突触可塑性和信息筛选。
+    - 总结：LTP和LTD均依赖突触后膜#ce("Ca2+")浓度变化，但激活的信号通路和分子效应器不同，决定突触强度的持久性改变。
 - *Hippocampus* (海马)：记忆形成关键区域
+  - 功能：学习与记忆的巩固，空间导航
+  - 三联体环路（trisynaptic circuit）：齿状回→CA3区→CA1区
+  - 空间导航：海马中的位置细胞（place cells）在空间记忆和导航中发挥重要作用，通过编码环境中的特定位置，帮助个体形成认知地图。Grid cells（网格细胞）位于内嗅皮层，与位置细胞协同工作，提供空间定位信息。
 
 = 第9章 自主神经系统 (Chapter 9: The Autonomic Nervous System)
 
@@ -148,7 +209,11 @@
 == 自主神经系统的受体 (ANS Receptors)
 
 - *Adrenergic receptors* (肾上腺素能受体)：α和β受体
+  - α受体：主要介导血管收缩、瞳孔扩大、汗腺分泌等作用。激活后使血压升高，常见于交感神经系统的血管平滑肌。
+  - β受体：分为β1和β2。β1主要分布于心脏，激活后增强心率和收缩力；β2主要分布于支气管和血管平滑肌，激活后引起支气管扩张和血管舒张。两者对靶器官的调节作用不同。
 - *Cholinergic receptors* (胆碱能受体)：*Nicotinic* (烟碱型)和*muscarinic* (毒蕈碱型)
+  - *Nicotinic receptors* (烟碱型受体)：分布于自主神经节、骨骼肌神经肌肉接头和中枢神经系统。为配体门控离子通道，乙酰胆碱结合后开放，允许#ce("Na+")和#ce("K+")通过，快速产生去极化，介导快速兴奋性信号。
+  - *Muscarinic receptors* (毒蕈碱型受体)：分布于副交感靶器官（如心脏、平滑肌、腺体）和部分中枢神经系统。为G蛋白偶联受体，乙酰胆碱结合后通过信号转导调节细胞功能，产生慢性调节作用，如心率降低、腺体分泌增加、平滑肌收缩等。
 
 = 第10章 感觉生理学 (Chapter 10: Sensory Physiology)
 
@@ -187,11 +252,13 @@
 - *Ear* (耳)结构：
   - *External ear* (外耳)：收集声波
   - *Middle ear* (中耳)：*ossicles* (听小骨)放大振动
+    - 听小骨（ossicles）：由三块小骨组成，分别为锤骨（malleus）、砧骨（incus）和镫骨（stapes）。锤骨与鼓膜连接，接受声波振动；砧骨连接锤骨和镫骨；镫骨与卵圆窗相连，将振动传递到内耳。听小骨的作用是放大和传递声波，使其有效进入内耳。
   - *Inner ear* (内耳)：*cochlea* (耳蜗)含听觉感受器
+    - 耳蜗(cochlea)是内耳的螺旋状结构，负责将声波转化为神经信号。耳蜗内部分为三个腔道：前庭阶(vestibular duct)、鼓阶(tympanic duct)、蜗管(cochlear duct)。蜗管内含有柯蒂器(Organ of Corti)，是听觉感受器的所在。柯蒂器上排列着毛细胞(hair cells)，当基底膜(basilar membrane)因声波振动而移动时，毛细胞的纤毛弯曲，产生电信号，经听神经传递至大脑。耳蜗的不同部位对不同频率的声音最敏感，实现了声音的频率分辨。
 
-- *Organ of Corti* (柯蒂器)：
-  - *Hair cells* (毛细胞)：机械感受器
-  - 声波→耳蜗→*basilar membrane* (基底膜)振动→毛细胞弯曲→神经冲动
+  - *Organ of Corti* (柯蒂器)：
+    - *Hair cells* (毛细胞)：机械感受器
+    - 声波→耳蜗→*basilar membrane* (基底膜)振动→毛细胞弯曲→神经冲动
 
 == 平衡觉 (Balance/Equilibrium)
 
@@ -203,6 +270,13 @@
 
 - *Taste buds* (味蕾)：舌头、软腭
   - 五种基本味觉：甜、咸、酸、苦、鲜味(*umami*)
+
+    - 甜味：由糖类等激活味蕾上的G蛋白偶联受体（如T1R2/T1R3），启动第二信使（cAMP或IP3），导致细胞去极化，释放神经递质。
+    - 咸味：主要由#ce("Na+")离子通过味细胞膜上的上皮钠通道（ENaC）直接进入细胞，引发去极化，产生神经信号。
+    - 酸味：由#ce("H+")离子作用于味细胞上的酸敏感离子通道（如PKD2L1），或阻断钾通道，导致细胞去极化。
+    - 苦味：由多种苦味物质激活G蛋白偶联受体（如T2R家族），通过第二信使（IP3/Ca2+）途径，促使神经递质释放。
+    - 鲜味（umami）：由谷氨酸等氨基酸激活T1R1/T1R3受体，启动G蛋白和第二信使途径，引发味细胞去极化。
+    - 所有味觉信号最终通过味觉神经（舌咽神经、面神经、迷走神经）传递至延髓味觉核，再投射至丘脑和大脑皮层，形成味觉感知。
 - *Olfactory receptors* (嗅觉感受器)：鼻腔上皮
   - 直接投射至大脑边缘系统
 
@@ -227,34 +301,34 @@
 
 === 下丘脑激素 (Hypothalamic Hormones)
 
-- *TRH* (促甲状腺激素释放激素)：刺激TSH和催乳素释放
-- *CRH* (促肾上腺皮质激素释放激素)：刺激ACTH释放
-- *GnRH* (促性腺激素释放激素)：刺激FSH和LH释放
-- *GHRH* (生长激素释放激素)：刺激GH释放
-- *Somatostatin* (生长抑素/GHIH)：抑制GH和TSH释放
-- *PIH* (催乳素抑制激素，即dopamine多巴胺)：抑制催乳素释放
+- *TRH* (Thyrotropin-Releasing Hormone, 促甲状腺激素释放激素)：刺激TSH和催乳素释放
+- *CRH* (Corticotropin-Releasing Hormone, 促肾上腺皮质激素释放激素)：刺激ACTH释放
+- *GnRH* (Gonadotropin-Releasing Hormone, 促性腺激素释放激素)：刺激FSH和LH释放
+- *GHRH* (Growth Hormone-Releasing Hormone, 生长激素释放激素)：刺激GH释放
+- *Somatostatin* (Growth Hormone-Inhibiting Hormone, 生长抑素/GHIH)：抑制GH和TSH释放
+- *PIH* (Prolactin-Inhibiting Hormone, 催乳素抑制激素，即dopamine多巴胺)：抑制催乳素释放
 
 === 下丘脑-垂体-靶腺轴 (Hypothalamic-Pituitary-Target Gland Axes)
 
-1. **下丘脑-垂体-甲状腺轴**：
+1. *下丘脑-垂体-甲状腺轴*：
    - 下丘脑(TRH) → 腺垂体(TSH) → 甲状腺(#ce("T3"), #ce("T4"))
    - 负反馈：#ce("T3"), #ce("T4")抑制TRH和TSH分泌
 
-2. **下丘脑-垂体-肾上腺轴 (HPA轴)**：
+2. *下丘脑-垂体-肾上腺轴 (HPA轴)*：
    - 下丘脑(CRH) → 腺垂体(ACTH) → 肾上腺皮质(cortisol)
    - 负反馈：cortisol抑制CRH和ACTH分泌
    - 应激反应的核心机制
 
-3. **下丘脑-垂体-性腺轴 (HPG轴)**：
+3. *下丘脑-垂体-性腺轴 (HPG轴)*：
    - 下丘脑(GnRH) → 腺垂体(FSH, LH) → 性腺(性激素)
    - 负反馈：性激素抑制GnRH, FSH, LH分泌
    - 例外：排卵前正反馈(雌激素高峰→LH激增)
 
-4. **下丘脑-垂体-生长轴**：
+4. *下丘脑-垂体-生长轴*：
    - 下丘脑(GHRH, Somatostatin) → 腺垂体(GH) → 肝脏/组织(IGF-1/somatomedins)
    - 负反馈：GH和IGF-1抑制GHRH，刺激somatostatin
 
-5. **下丘脑-垂体-泌乳调控**：
+5. *下丘脑-垂体-泌乳调控*：
    - 下丘脑(PIH/dopamine, TRH) → 腺垂体(Prolactin)
    - 独特：主要受抑制性控制(dopamine持续抑制)
 
@@ -270,7 +344,7 @@
 
 - *Posterior pituitary* (神经垂体)：储存和释放下丘脑神经元产生的激素
   - *ADH* (抗利尿激素/vasopressin)：保水(集合管)，升压(血管收缩)
-  - *Oxytocin* (催产素)：子宫收缩(分娩)，射乳反射，正反馈机制
+  - *Oxytocin* (催产素)：子宫收缩(分娩)，射乳反射，正反馈机制（恋爱激素）
 
 == 甲状腺 (Thyroid)
 
@@ -300,29 +374,29 @@
 
 === 钙调节激素 (Calcium-Regulating Hormones)
 
-1. **Parathyroid Hormone (PTH, 甲状旁腺激素)**：
+1. *Parathyroid Hormone (PTH, 甲状旁腺激素)*：
    - 主要升高血钙的激素
    - 分泌调节：低血钙刺激PTH分泌(负反馈)
    - 作用机制：
-     - **骨骼**：刺激破骨细胞活性 → 骨吸收 → 释放#ce("Ca2+")和#ce("PO4^{3-}")
-     - **肾脏**：
+     - *骨骼*：刺激破骨细胞活性 → 骨吸收 → 释放#ce("Ca2+")和#ce("PO4^{3-}")
+     - *肾脏*：
        - 增加#ce("Ca2+")重吸收(远端小管)
        - 减少#ce("PO4^{3-}")重吸收(增加尿磷排泄)
        - 激活1α-hydroxylase → 维生素#ce("D3")活化
-     - **肠道**(间接)：通过活化维生素D增加#ce("Ca2+")吸收
+     - *肠道*(间接)：通过活化维生素D增加#ce("Ca2+")吸收
 
-2. **1,25-Dihydroxyvitamin #ce("D3")** (活性维生素D/骨化三醇/calcitriol)：
+2. *1,25-Dihydroxyvitamin #ce("D3")* (活性维生素D/骨化三醇/calcitriol)：
    - 合成途径：
      - 皮肤(紫外线)：7-dehydrocholesterol → 维生素#ce("D3")
      - 肝脏：维生素#ce("D3") → 25-hydroxyvitamin #ce("D3")
      - 肾脏(PTH刺激)：25-hydroxyvitamin #ce("D3") → 1,25-dihydroxyvitamin #ce("D3")
    - 作用：
-     - **肠道**：促进#ce("Ca2+")和#ce("PO4^{3-}")吸收(主要作用)
-     - **骨骼**：与PTH协同促进骨吸收
-     - **肾脏**：促进#ce("Ca2+")重吸收
+     - *肠道*：促进#ce("Ca2+")和#ce("PO4^{3-}")吸收(主要作用)
+     - *骨骼*：与PTH协同促进骨吸收
+     - *肾脏*：促进#ce("Ca2+")重吸收
    - 本质：类固醇激素(脂溶性)
 
-3. **Calcitonin (降钙素)**：
+3. *Calcitonin (降钙素)*：
    - 降低血钙(作用相对较弱)
    - 抑制破骨细胞活性
    - 分泌调节：高血钙刺激分泌
@@ -558,7 +632,7 @@
 
 == 抗体与免疫球蛋白 (Antibodies and Immunoglobulins)
 
-- *Antibodies* (抗体/*Immunoglobulins*, Ig)：Y形蛋白
+- *Antibodies* (抗体*Immunoglobulins*, Ig)：Y形蛋白
   - *IgG*：主要抗体，可穿过胎盘
   - *IgM*：最早产生，五聚体
   - *IgA*：黏膜免疫，乳汁中
@@ -632,7 +706,7 @@
 - #ce("CO2")运输：
   - 7%溶解于血浆
   - 23%与血红蛋白结合(*carbaminohemoglobin* 氨基甲酰血红蛋白)
-  - 70%转化为#ce("HCO3-")(*bicarbonate* 碳酸氢根)
+  - 70%转化为#ce("HCO3-") (*bicarbonate* 碳酸氢根)
   - *Carbonic anhydrase* (碳酸酐酶)催化：#ce("CO2 + H2O ↔ H2CO3 ↔ H+ + HCO3-")
 
 == 呼吸调节 (Control of Respiration)
@@ -773,7 +847,7 @@
   - *Ketogenesis* (酮体生成)：饥饿或糖尿病时
 
 - 蛋白质代谢：
-  - *Deamination* (脱氨)：氨基酸→#ce("NH3")(尿素)+ 碳骨架
+  - *Deamination* (脱氨)：氨基酸→#ce("NH3") (尿素)+ 碳骨架
   - *Transamination* (转氨)：氨基转移
   - 蛋白质合成
 
