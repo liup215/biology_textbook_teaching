@@ -140,7 +140,7 @@
 
 - *KNOX* (KNOTTED-LIKE HOMEOBOX) transcription factors maintain meristematic state
 - *STM* (SHOOT MERISTEMLESS): Key KNOX gene required for SAM formation and maintenance
-- KNOX genes promote cytokinin biosynthesis while repressing gibberellin (GA) accumulation
+- KNOX genes promote cytokinin biosynthesis while repressing *gibberellin* (GA, 赤霉素) accumulation
 - High cytokinin and low GA maintain undifferentiated state in SAM
 - KNOX expression is repressed in initiating leaf primordia, allowing differentiation
 
@@ -474,7 +474,7 @@
 
 - Vegetative growth and organogenesis depend on coordinated activities of root and shoot apical meristems
 - Meristems maintain populations of stem cells while continuously producing differentiated tissues
-- Hormonal gradients (auxin, cytokinin, gibberellin) and transcription factor networks regulate meristem function
+- Hormonal gradients (auxin, cytokinin, *gibberellin* 赤霉素) and transcription factor networks regulate meristem function
 - Leaf development involves establishment of multiple polarity axes through gene regulatory networks
 - Compound leaves form by reactivating developmental programs within leaf primordia
 - Stomatal development is regulated by transcription factors and peptide signaling to ensure proper spacing
