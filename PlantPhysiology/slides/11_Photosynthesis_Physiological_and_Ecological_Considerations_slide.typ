@@ -40,21 +40,6 @@
 - Full sunlight: ~2000 #ce("μmol m^(-2) s^(-1)") at canopy top
 - Forest floor: May be only 10 #ce("μmol m^(-2) s^(-1)")
 
-== Energy Conversion Efficiency
-
-- Only ~5% of incident solar energy converts to carbohydrates
-- Major energy losses include non-absorbable wavelengths, reflection, transmission, heat dissipation, and metabolic costs
-
-#slide[
-  - Solar energy conversion through photosynthesis is relatively inefficient
-  - Multiple energy loss pathways reduce final carbohydrate yield
-  - Understanding these losses helps identify targets for improving photosynthetic efficiency
-][
-  #figure(
-    image(images.at("11.2").path),
-  )
-]
-
 == Leaf Anatomical Specialization
 
 - *Palisade cells* (栅栏细胞): Column-like cells packed with chloroplasts for light absorption
@@ -69,6 +54,21 @@
 ][
   #figure(
     image(images.at("11.1").path),
+  )
+]
+
+== Energy Conversion Efficiency
+
+- Only ~5% of incident solar energy converts to carbohydrates
+- Major energy losses include non-absorbable wavelengths, reflection, transmission, heat dissipation, and metabolic costs
+
+#slide[
+  - Solar energy conversion through photosynthesis is relatively inefficient
+  - Multiple energy loss pathways reduce final carbohydrate yield
+  - Understanding these losses helps identify targets for improving photosynthetic efficiency
+][
+  #figure(
+    image(images.at("11.2").path),
   )
 ]
 

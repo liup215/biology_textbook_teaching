@@ -36,6 +36,16 @@
 
 == Leaf Anatomy and Light Absorption
 
+- *Epidermis* (表皮): Outermost transparent cell layer
+- *Convex epidermal cells* (凸形表皮细胞) act as lenses, focusing light onto chloroplasts
+- *Palisade cells* (栅栏细胞): Column-like cells with high chloroplast density for light absorption
+- *Spongy mesophyll* (海绵状叶肉): Cells with air spaces for gas exchange
+- Sun leaves are thicker with longer palisade cells than shade leaves
+
+#figure(
+  image(images.at("11.1").path, width: 50%),
+)
+
 - Only ~5% of incident solar energy is converted to carbohydrates
 - Energy losses occur through:
   - ~50% is non-absorbable wavelengths (outside PAR range)
@@ -45,16 +55,6 @@
 
 #figure(
   image(images.at("11.2").path, width: 50%),
-)
-
-- *Epidermis* (表皮): Outermost transparent cell layer
-- *Convex epidermal cells* (凸形表皮细胞) act as lenses, focusing light onto chloroplasts
-- *Palisade cells* (栅栏细胞): Column-like cells with high chloroplast density for light absorption
-- *Spongy mesophyll* (海绵状叶肉): Cells with air spaces for gas exchange
-- Sun leaves are thicker with longer palisade cells than shade leaves
-
-#figure(
-  image(images.at("11.1").path, width: 50%),
 )
 
 - Chlorophyll absorbs strongly in blue (400-500 nm) and red (600-700 nm) regions
