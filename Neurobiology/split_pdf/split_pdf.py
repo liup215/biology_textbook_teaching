@@ -22,26 +22,26 @@ def split_pdf_by_bookmarks(bookmark_file, pdf_file):
     tree = ET.parse(bookmark_file)
     root = tree.getroot()
 
-    bookmarks = []
+    all_bookmarks = []
     for item in root.findall('ITEM'):
         name = item.get('NAME')
         page_str = item.get('PAGE')
-        # Filter for items that look like chapters
-        if name and page_str and 'chapter' in name.lower():
+        
+        if name and page_str:
             try:
                 # Page numbers in the XML seem to be the actual page number.
                 # pypdf uses 0-based indexing, so we subtract 1.
                 page = int(page_str)
-                bookmarks.append({'name': name, 'page': page})
+                all_bookmarks.append({'name': name, 'page': page})
             except (ValueError, TypeError):
                 print(f"Skipping bookmark with invalid page number: {name}")
 
-    if not bookmarks:
-        print("No chapter bookmarks found. Exiting.")
+    if not all_bookmarks:
+        print("No bookmarks found. Exiting.")
         return
 
     # Sort bookmarks by page number to handle them in order
-    bookmarks.sort(key=lambda x: x['page'])
+    all_bookmarks.sort(key=lambda x: x['page'])
 
     # 2. Create output directory
     output_dir = 'chapters'
@@ -62,13 +62,25 @@ def split_pdf_by_bookmarks(bookmark_file, pdf_file):
         return
 
     # 4. Split the PDF chapter by chapter
-    for i, bookmark in enumerate(bookmarks):
+    for i, bookmark in enumerate(all_bookmarks):
+        name = bookmark['name']
+        
+        # Determine if this bookmark is a chapter we want to extract
+        is_chapter = False
+        if 'chapter' in name.lower():
+            is_chapter = True
+        elif re.match(r'^\d+\s', name):
+            is_chapter = True
+            
+        if not is_chapter:
+            continue
+
         try:
             start_page = bookmark['page']
             
             # Determine the end page
-            if i + 1 < len(bookmarks):
-                end_page = bookmarks[i+1]['page'] - 1
+            if i + 1 < len(all_bookmarks):
+                end_page = all_bookmarks[i+1]['page'] - 1
             else:
                 end_page = total_pages - 1
 
@@ -102,4 +114,4 @@ def split_pdf_by_bookmarks(bookmark_file, pdf_file):
             print(f"Error writing PDF file '{output_path}': {e}")
 
 if __name__ == '__main__':
-    split_pdf_by_bookmarks('MolecularBiologyBookmark.xml', 'MolecularBiology.pdf')
+    split_pdf_by_bookmarks('Bookmark_PrinciplesofNeurobiology.xml', 'PrinciplesofNeurobiology.pdf')
