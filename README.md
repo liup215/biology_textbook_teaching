@@ -26,6 +26,8 @@ The repository covers the following biological disciplines:
 - **Evolution**: Evolutionary biology.
 - **Human Physiology**: Functions and mechanisms of the human body.
 - **Molecular Biology**: Biology at the molecular level.
+- **Neurobiology**: Principles of neurobiology, neural signaling, sensory systems, and brain function.
+- **Plant Physiology**: Plant physiology and growth mechanisms.
 - **Zoology**: Animal biology.
 
 ### Project Structure
@@ -73,6 +75,8 @@ Each subject folder typically follows this structure:
 - **Evolution (进化论)**：进化生物学。
 - **Human Physiology (人体生理学)**：人体功能与机制。
 - **Molecular Biology (分子生物学)**：分子水平的生物学。
+- **Neurobiology (神经生物学)**：神经生物学原理、神经信号传导、感觉系统与脑功能。
+- **Plant Physiology (植物生理学)**：植物生理与生长机制。
 - **Zoology (动物学)**：动物生物学。
 
 ### 项目结构
