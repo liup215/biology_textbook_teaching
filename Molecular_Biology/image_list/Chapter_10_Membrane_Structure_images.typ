@@ -1,42 +1,162 @@
-#set text(font: "Arial")
-
-- *Figure 10-1:* Two views of a cell membrane: an electron micrograph of the plasma membrane of a human red blood cell in cross section showing the bilayer structure, and a three-dimensional schematic of the general disposition of lipid and protein constituents.
-- *Figure 10-2:* The parts of a typical phospholipid molecule (phosphatidylcholine), represented as a structural formula, a space-filling model, a schematic diagram, and a symbol, highlighting the polar head group and the two nonpolar hydrocarbon tails.
-- *Figure 10-3:* Four major phospholipids in mammalian plasma membranes: phosphatidylethanolamine, phosphatidylserine, and phosphatidylcholine (glycerophospholipids), plus sphingomyelin (a sphingolipid derived from sphingosine), showing their different head groups and charge states.
-- *Figure 10-4:* The structure of cholesterol shown as a structural formula, a space-filling model, and a schematic drawing, illustrating its rigid planar steroid ring structure, polar hydroxyl head group, and short nonpolar hydrocarbon tail.
-- *Figure 10-5:* Cholesterol in a lipid bilayer: a schematic drawing to scale showing a cholesterol molecule interacting with two phospholipid molecules in one monolayer, with cholesterol stiffening the region of hydrocarbon chains near the polar head groups while leaving the inner region more fluid.
-- *Figure 10-6:* How hydrophilic and hydrophobic molecules interact differently with water: acetone forming hydrogen bonds and electrostatic interactions with water (hydrophilic), versus 2-methylpropane forcing adjacent water molecules to reorganize into ordered icelike cage structures (hydrophobic effect).
-- *Figure 10-7:* Packing arrangements of amphiphilic molecules in aqueous environments: cone-shaped amphiphiles forming spherical micelles, and cylinder-shaped phospholipids forming lipid bilayers, shown both schematically and in cross-sectional views.
-- *Figure 10-8:* The spontaneous closure of a phospholipid bilayer to form a sealed compartment, illustrating why a planar bilayer is energetically unfavorable (exposing hydrophobic tails at edges) and why a sealed vesicular compartment is energetically favorable.
-- *Figure 10-9:* Liposomes: a drawing of a small spherical liposome in cross section, and an electron micrograph of a rapidly frozen, unfixed, unstained synthetic phospholipid vesicle in water.
-- *Figure 10-10:* The mobility of phospholipid molecules in an artificial lipid bilayer: (A) a computer simulation showing the disordered arrangement of 100 phosphatidylcholine molecules after 300 picoseconds, and (B) a diagram of the different motions a lipid molecule can undergo, including lateral diffusion, flexion, rotation, and (rarely) flip-flop.
-- *Figure 10-11:* The influence of cis-double bonds in hydrocarbon chains on membrane fluidity: unsaturated chains with cis-double bonds create kinks that prevent tight packing, making the bilayer more difficult to freeze and thinner than a bilayer of saturated lipids.
-- *Figure 10-12:* Lateral phase separation in artificial lipid bilayers: giant liposomes from a 1:1 mixture of phosphatidylcholine and sphingomyelin form uniform bilayers, whereas a 1:1:1 mixture with cholesterol produces distinct separated phases stained with a fluorescent dye.
-- *Figure 10-13:* A model of a raft domain showing how weak protein-protein, protein-lipid, and lipid-lipid interactions reinforce one another to concentrate cholesterol, sphingolipids, glycolipids, GPI-anchored proteins, and certain transmembrane proteins in specialized, thickened membrane microdomains.
-- *Figure 10-14:* A model for the formation of lipid droplets from the endoplasmic reticulum membrane, showing neutral lipids accumulating between the two leaflets, seipin ring assembly, dissociation of the assembly factor, and budding of a droplet surrounded by a phospholipid monolayer and associated proteins.
-- *Figure 10-15:* The asymmetric distribution of phospholipids and glycolipids in the lipid bilayer of human red blood cells, showing phosphatidylcholine and sphingomyelin concentrated in the outer monolayer, while phosphatidylethanolamine and negatively charged phosphatidylserine are confined to the inner (cytosolic) monolayer.
-- *Figure 10-16:* Glycolipid molecules: (A) galactocerebroside, a neutral glycolipid with an uncharged sugar head group, and (B) GM1 ganglioside, containing negatively charged sialic acid (NANA) moieties, with (C) the structure of N-acetylneuraminic acid shown.
-- *Figure 10-17:* The various ways in which proteins associate with the lipid bilayer, including single-pass and multipass transmembrane α-helices, β-barrels, amphiphilic α-helices at the cytosolic surface, covalent lipid anchors (fatty acid or prenyl chains), GPI anchors, and peripheral proteins bound by noncovalent interactions.
-- *Figure 10-18:* Membrane protein attachment by fatty acid chains or prenyl groups: (A) myristoyl anchor via amide linkage to N-terminal glycine, (B) palmitoyl anchor via thioester linkage to cysteine, and (C) farnesyl anchor via thioether linkage to cysteine, with the structures of each lipid anchor shown below.
-- *Figure 10-19:* A segment of a membrane-spanning polypeptide chain (from glycophorin) crossing the lipid bilayer as a right-handed α helix, with hydrophobic amino acids (green) in the bilayer core and hydrophilic amino acids (yellow) exposed at the surfaces.
-- *Figure 10-20:* Hydropathy plots used to identify potential α-helical membrane-spanning segments: (A) glycophorin with one peak corresponding to its single transmembrane helix, and (B) bacteriorhodopsin with seven peaks corresponding to its seven transmembrane helices.
-- *Figure 10-21:* Two short α helices in the aquaporin water channel monomer, each of which spans only halfway through the lipid bilayer and contributes to the hydrophilic pore that allows water molecules to cross in single file.
-- *Figure 10-22:* Steps in the folding of a multipass transmembrane protein, showing how polar and charged amino acids within transmembrane helices are energetically disfavored in the bilayer and become buried at interfaces between adjacent helices, creating hydrophilic pathways across the hydrophobic barrier.
-- *Figure 10-23:* β-barrels formed from different numbers of β-strands in bacterial outer membrane proteins: (A) 8-stranded OmpA (virus receptor), (B) 12-stranded OMPLA (lipase enzyme), (C) 16-stranded porin (water-filled channel), and (D) 22-stranded FepA (iron transporter with a globular plug domain).
-- *Figure 10-24:* A single-pass transmembrane protein showing that the polypeptide chain traverses the lipid bilayer as a right-handed α helix, with oligosaccharide chains and disulfide bonds exclusively on the noncytosolic (extracellular) surface, while sulfhydryl groups on the cytosolic side remain reduced.
-- *Figure 10-25:* The carbohydrate layer (glycocalyx) on the cell surface: (A) electron micrograph of a lymphocyte stained with ruthenium red showing the thick carbohydrate-rich layer, and (B) a diagram showing its composition from oligosaccharide chains of membrane glycolipids, glycoproteins, proteoglycans, and adsorbed extracellular matrix molecules.
-- *Figure 10-26:* The structure and function of detergents: (A) structures of SDS (anionic), Triton X-100, and β-octylglucoside (nonionic); (B) graph of monomer and micelle concentrations versus total detergent concentration showing the critical micelle concentration (CMC); (C) schematic of detergent micelle structure; and (D) space-filling model of a β-octylglucoside micelle.
-- *Figure 10-27:* Solubilizing a membrane protein with a mild nonionic detergent: detergent monomers disrupt the lipid bilayer, displace lipid molecules from the protein, and bring the membrane protein into solution as protein-lipid-detergent complexes, while free lipids form lipid-detergent micelles.
-- *Figure 10-28:* The use of mild nonionic detergents for solubilizing, purifying, and reconstituting functional membrane protein systems, illustrated with the Na+-K+ pump being extracted, purified, and incorporated back into phospholipid vesicles that retain pump activity.
-- *Figure 10-29:* A model of a membrane protein reconstituted into a nanodisc, showing the multipass membrane protein embedded in a small patch of lipid bilayer encircled by a belt of high-density lipoprotein (HDL) protein that shields the hydrophobic bilayer edges and maintains water solubility.
-- *Figure 10-30:* Patches of purple membrane containing bacteriorhodopsin in the archaeon Halobacterium salinarum: (A) the archaea in their saltwater habitat, (B) electron micrograph of two-dimensional crystalline arrays of bacteriorhodopsin, (C) atomic force microscopy image of individual molecules, and (D) outline of the monomer and its seven α helices.
-- *Figure 10-31:* The three-dimensional structure of a bacteriorhodopsin molecule: (A) the polypeptide chain crossing the lipid bilayer seven times as α helices with the retinal chromophore and the sequential H+ transfer pathway during light-activated pumping shown, and (B) the high-resolution crystal structure revealing tightly bound lipid molecules on the protein surface.
-- *Figure 10-32:* An experiment demonstrating the diffusion of proteins in the plasma membrane: mouse and human cells were fused into hybrid cells; immediately after fusion the mouse and human proteins were segregated, but within about 30 minutes the two sets of proteins completely intermixed across the entire cell surface.
-- *Figure 10-33:* Measuring the rate of lateral diffusion of a membrane protein by fluorescence recovery after photobleaching (FRAP): a laser bleaches fluorescent molecules in a small membrane area, and the rate of fluorescence recovery as unbleached molecules diffuse in is used to calculate the diffusion coefficient.
-- *Figure 10-34:* How membrane molecules can be restricted to a particular membrane domain in an epithelial cell: protein A in the apical domain and protein B in the basal/lateral domain are each unable to cross the tight junction barrier that separates the two domains; lipids in the outer leaflet are similarly restricted.
-- *Figure 10-35:* Three distinct plasma membrane domains in the guinea pig sperm cell: immunofluorescence micrographs with monoclonal antibodies selectively label the anterior head, posterior head, and tail domains, demonstrating compartmentalization within a continuous plasma membrane.
-- *Figure 10-36:* Four mechanisms for restricting the lateral mobility of specific plasma membrane proteins: (A) self-assembly into large aggregates, (B) tethering to extracellular macromolecular assemblies, (C) tethering to intracellular cytoskeletal assemblies, and (D) interaction with proteins on the surface of an adjacent cell.
-- *Figure 10-37:* A scanning electron micrograph of human red blood cells showing their characteristic biconcave disc shape, which is maintained by the spectrin-based cytoskeleton underlying the plasma membrane.
-- *Figure 10-38:* The spectrin-based cytoskeleton on the cytosolic side of the human red blood cell plasma membrane: (A) diagram showing spectrin tetramers linked by junctional complexes of actin, band 4.1, and adducin, tethered to the membrane via ankyrin (binding band 3) and band 4.1 (binding glycophorin); (B) electron micrograph of the stretched spectrin meshwork.
-- *Figure 10-39:* Corralling of plasma membrane proteins by cortical cytoskeletal filaments: (A) diagram showing cytoskeletal filaments forming barriers that divide the membrane into corrals, and (B) high-speed single-particle tracking trace of a single membrane protein diffusing within a corral and occasionally escaping into adjacent corrals.
-- *Figure 10-40:* Three mechanisms by which membrane-bending proteins shape membranes: (A) undeformed lipid bilayer, (B) insertion of a hydrophobic wedge into one monolayer to expand its area, (C) a curved protein scaffold that stabilizes or induces membrane curvature, and (D) clustering of cone-shaped lipids with large head groups (e.g., phosphoinositides) to induce positive membrane curvature.
+#let images = (
+  "10-1": (
+    caption: [Two views of a cell membrane: an electron micrograph of the plasma membrane of a human red blood cell in cross section showing the bilayer structure, and a three-dimensional schematic of the general disposition of lipid and protein constituents.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-2": (
+    caption: [The parts of a typical phospholipid molecule (phosphatidylcholine), represented as a structural formula, a space-filling model, a schematic diagram, and a symbol, highlighting the polar head group and the two nonpolar hydrocarbon tails.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-3": (
+    caption: [Four major phospholipids in mammalian plasma membranes: phosphatidylethanolamine, phosphatidylserine, and phosphatidylcholine (glycerophospholipids), plus sphingomyelin (a sphingolipid derived from sphingosine), showing their different head groups and charge states.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-4": (
+    caption: [The structure of cholesterol shown as a structural formula, a space-filling model, and a schematic drawing, illustrating its rigid planar steroid ring structure, polar hydroxyl head group, and short nonpolar hydrocarbon tail.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-5": (
+    caption: [Cholesterol in a lipid bilayer: a schematic drawing to scale showing a cholesterol molecule interacting with two phospholipid molecules in one monolayer, with cholesterol stiffening the region of hydrocarbon chains near the polar head groups while leaving the inner region more fluid.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-6": (
+    caption: [How hydrophilic and hydrophobic molecules interact differently with water: acetone forming hydrogen bonds and electrostatic interactions with water (hydrophilic), versus 2-methylpropane forcing adjacent water molecules to reorganize into ordered icelike cage structures (hydrophobic effect).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-7": (
+    caption: [Packing arrangements of amphiphilic molecules in aqueous environments: cone-shaped amphiphiles forming spherical micelles, and cylinder-shaped phospholipids forming lipid bilayers, shown both schematically and in cross-sectional views.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-8": (
+    caption: [The spontaneous closure of a phospholipid bilayer to form a sealed compartment, illustrating why a planar bilayer is energetically unfavorable (exposing hydrophobic tails at edges) and why a sealed vesicular compartment is energetically favorable.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-9": (
+    caption: [Liposomes: a drawing of a small spherical liposome in cross section, and an electron micrograph of a rapidly frozen, unfixed, unstained synthetic phospholipid vesicle in water.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-10": (
+    caption: [The mobility of phospholipid molecules in an artificial lipid bilayer: (A) a computer simulation showing the disordered arrangement of 100 phosphatidylcholine molecules after 300 picoseconds, and (B) a diagram of the different motions a lipid molecule can undergo, including lateral diffusion, flexion, rotation, and (rarely) flip-flop.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-11": (
+    caption: [The influence of cis-double bonds in hydrocarbon chains on membrane fluidity: unsaturated chains with cis-double bonds create kinks that prevent tight packing, making the bilayer more difficult to freeze and thinner than a bilayer of saturated lipids.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-12": (
+    caption: [Lateral phase separation in artificial lipid bilayers: giant liposomes from a 1:1 mixture of phosphatidylcholine and sphingomyelin form uniform bilayers, whereas a 1:1:1 mixture with cholesterol produces distinct separated phases stained with a fluorescent dye.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-13": (
+    caption: [A model of a raft domain showing how weak protein-protein, protein-lipid, and lipid-lipid interactions reinforce one another to concentrate cholesterol, sphingolipids, glycolipids, GPI-anchored proteins, and certain transmembrane proteins in specialized, thickened membrane microdomains.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-14": (
+    caption: [A model for the formation of lipid droplets from the endoplasmic reticulum membrane, showing neutral lipids accumulating between the two leaflets, seipin ring assembly, dissociation of the assembly factor, and budding of a droplet surrounded by a phospholipid monolayer and associated proteins.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-15": (
+    caption: [The asymmetric distribution of phospholipids and glycolipids in the lipid bilayer of human red blood cells, showing phosphatidylcholine and sphingomyelin concentrated in the outer monolayer, while phosphatidylethanolamine and negatively charged phosphatidylserine are confined to the inner (cytosolic) monolayer.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-16": (
+    caption: [Glycolipid molecules: (A) galactocerebroside, a neutral glycolipid with an uncharged sugar head group, and (B) GM1 ganglioside, containing negatively charged sialic acid (NANA) moieties, with (C) the structure of N-acetylneuraminic acid shown.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-17": (
+    caption: [The various ways in which proteins associate with the lipid bilayer, including single-pass and multipass transmembrane α-helices, β-barrels, amphiphilic α-helices at the cytosolic surface, covalent lipid anchors (fatty acid or prenyl chains), GPI anchors, and peripheral proteins bound by noncovalent interactions.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-18": (
+    caption: [Membrane protein attachment by fatty acid chains or prenyl groups: (A) myristoyl anchor via amide linkage to N-terminal glycine, (B) palmitoyl anchor via thioester linkage to cysteine, and (C) farnesyl anchor via thioether linkage to cysteine, with the structures of each lipid anchor shown below.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-19": (
+    caption: [A segment of a membrane-spanning polypeptide chain (from glycophorin) crossing the lipid bilayer as a right-handed α helix, with hydrophobic amino acids (green) in the bilayer core and hydrophilic amino acids (yellow) exposed at the surfaces.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-20": (
+    caption: [Hydropathy plots used to identify potential α-helical membrane-spanning segments: (A) glycophorin with one peak corresponding to its single transmembrane helix, and (B) bacteriorhodopsin with seven peaks corresponding to its seven transmembrane helices.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-21": (
+    caption: [Two short α helices in the aquaporin water channel monomer, each of which spans only halfway through the lipid bilayer and contributes to the hydrophilic pore that allows water molecules to cross in single file.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-22": (
+    caption: [Steps in the folding of a multipass transmembrane protein, showing how polar and charged amino acids within transmembrane helices are energetically disfavored in the bilayer and become buried at interfaces between adjacent helices, creating hydrophilic pathways across the hydrophobic barrier.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-23": (
+    caption: [β-barrels formed from different numbers of β-strands in bacterial outer membrane proteins: (A) 8-stranded OmpA (virus receptor), (B) 12-stranded OMPLA (lipase enzyme), (C) 16-stranded porin (water-filled channel), and (D) 22-stranded FepA (iron transporter with a globular plug domain).],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-24": (
+    caption: [A single-pass transmembrane protein showing that the polypeptide chain traverses the lipid bilayer as a right-handed α helix, with oligosaccharide chains and disulfide bonds exclusively on the noncytosolic (extracellular) surface, while sulfhydryl groups on the cytosolic side remain reduced.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-25": (
+    caption: [The carbohydrate layer (glycocalyx) on the cell surface: (A) electron micrograph of a lymphocyte stained with ruthenium red showing the thick carbohydrate-rich layer, and (B) a diagram showing its composition from oligosaccharide chains of membrane glycolipids, glycoproteins, proteoglycans, and adsorbed extracellular matrix molecules.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-26": (
+    caption: [The structure and function of detergents: (A) structures of SDS (anionic), Triton X-100, and β-octylglucoside (nonionic); (B) graph of monomer and micelle concentrations versus total detergent concentration showing the critical micelle concentration (CMC); (C) schematic of detergent micelle structure; and (D) space-filling model of a β-octylglucoside micelle.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-27": (
+    caption: [Solubilizing a membrane protein with a mild nonionic detergent: detergent monomers disrupt the lipid bilayer, displace lipid molecules from the protein, and bring the membrane protein into solution as protein-lipid-detergent complexes, while free lipids form lipid-detergent micelles.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-28": (
+    caption: [The use of mild nonionic detergents for solubilizing, purifying, and reconstituting functional membrane protein systems, illustrated with the Na+-K+ pump being extracted, purified, and incorporated back into phospholipid vesicles that retain pump activity.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-29": (
+    caption: [A model of a membrane protein reconstituted into a nanodisc, showing the multipass membrane protein embedded in a small patch of lipid bilayer encircled by a belt of high-density lipoprotein (HDL) protein that shields the hydrophobic bilayer edges and maintains water solubility.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-30": (
+    caption: [Patches of purple membrane containing bacteriorhodopsin in the archaeon Halobacterium salinarum: (A) the archaea in their saltwater habitat, (B) electron micrograph of two-dimensional crystalline arrays of bacteriorhodopsin, (C) atomic force microscopy image of individual molecules, and (D) outline of the monomer and its seven α helices.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-31": (
+    caption: [The three-dimensional structure of a bacteriorhodopsin molecule: (A) the polypeptide chain crossing the lipid bilayer seven times as α helices with the retinal chromophore and the sequential H+ transfer pathway during light-activated pumping shown, and (B) the high-resolution crystal structure revealing tightly bound lipid molecules on the protein surface.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-32": (
+    caption: [An experiment demonstrating the diffusion of proteins in the plasma membrane: mouse and human cells were fused into hybrid cells; immediately after fusion the mouse and human proteins were segregated, but within about 30 minutes the two sets of proteins completely intermixed across the entire cell surface.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-33": (
+    caption: [Measuring the rate of lateral diffusion of a membrane protein by fluorescence recovery after photobleaching (FRAP): a laser bleaches fluorescent molecules in a small membrane area, and the rate of fluorescence recovery as unbleached molecules diffuse in is used to calculate the diffusion coefficient.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-34": (
+    caption: [How membrane molecules can be restricted to a particular membrane domain in an epithelial cell: protein A in the apical domain and protein B in the basal/lateral domain are each unable to cross the tight junction barrier that separates the two domains; lipids in the outer leaflet are similarly restricted.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-35": (
+    caption: [Three distinct plasma membrane domains in the guinea pig sperm cell: immunofluorescence micrographs with monoclonal antibodies selectively label the anterior head, posterior head, and tail domains, demonstrating compartmentalization within a continuous plasma membrane.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-36": (
+    caption: [Four mechanisms for restricting the lateral mobility of specific plasma membrane proteins: (A) self-assembly into large aggregates, (B) tethering to extracellular macromolecular assemblies, (C) tethering to intracellular cytoskeletal assemblies, and (D) interaction with proteins on the surface of an adjacent cell.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-37": (
+    caption: [A scanning electron micrograph of human red blood cells showing their characteristic biconcave disc shape, which is maintained by the spectrin-based cytoskeleton underlying the plasma membrane.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-38": (
+    caption: [The spectrin-based cytoskeleton on the cytosolic side of the human red blood cell plasma membrane: (A) diagram showing spectrin tetramers linked by junctional complexes of actin, band 4.1, and adducin, tethered to the membrane via ankyrin (binding band 3) and band 4.1 (binding glycophorin); (B) electron micrograph of the stretched spectrin meshwork.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-39": (
+    caption: [Corralling of plasma membrane proteins by cortical cytoskeletal filaments: (A) diagram showing cytoskeletal filaments forming barriers that divide the membrane into corrals, and (B) high-speed single-particle tracking trace of a single membrane protein diffusing within a corral and occasionally escaping into adjacent corrals.],
+    path: "../fig/image_place_holder.png"
+  ),
+  "10-40": (
+    caption: [Three mechanisms by which membrane-bending proteins shape membranes: (A) undeformed lipid bilayer, (B) insertion of a hydrophobic wedge into one monolayer to expand its area, (C) a curved protein scaffold that stabilizes or induces membrane curvature, and (D) clustering of cone-shaped lipids with large head groups (e.g., phosphoinositides) to induce positive membrane curvature.],
+    path: "../fig/image_place_holder.png"
+  ),
+)
