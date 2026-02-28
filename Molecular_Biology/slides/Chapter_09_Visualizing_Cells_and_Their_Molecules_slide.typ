@@ -1,5 +1,7 @@
 #import "@preview/touying:0.6.1": *
 #import themes.stargazer: *
+#import "../image_list/Chapter_09_Visualizing_Cells_and_Their_Molecules_images.typ": images
+#import "@preview/typsium:0.3.0": *
 
 #show: stargazer-theme.with(
   config-info(
@@ -13,635 +15,844 @@
 #set text(font: "Arial")
 
 #title-slide()
-
 #outline-slide()
 
-= Looking at Cells and Molecules in the Light Microscope
+= Looking at Cells in the Light Microscope
 
-== Scale and the Limits of Microscopy
+== Scale of Cells and Microscopy
 
-#slide(title: "Why We Need Microscopes")[
-  - A typical animal cell is *10–20 μm* in diameter — just below the threshold of naked-eye visibility.
-  - The *cell doctrine* (细胞学说, Schleiden & Schwann, 1838) was only possible with the light microscope.
-  - *Resolution* (分辨率): the minimum distance between two distinguishable points; for light microscopes, ~*200 nm* due to the *diffraction limit* (衍射极限).
-  - *Numerical aperture (NA)* (数值孔径) = $n sin theta$; higher NA gives better resolution and brighter images.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-1: A sense of scale between living cells and atoms.]
-    #rect(width: 100%, height: 15em)
-  ])
+#slide[
+  - A typical animal cell is *10--20 um* in diameter -- just below the threshold of naked-eye visibility
+  - The *cell doctrine* (细胞学说) proposed by Schleiden and Schwann in 1838 was the formal birth of cell biology
+  - Different techniques cover vastly different scales: naked eye (~0.2 mm), light microscope (~0.2 um), superresolution fluorescence (~20 nm), electron microscope (~1 nm)
 ]
 
-== How a Light Microscope Works
+== Scale: From Thumb to Atom (Figure 9-1)
 
-#slide(title: "Optics and Wave Interference")[
-  - Light is focused on the specimen by the *condenser* (聚光镜), then passes through the *objective* (物镜) and *eyepiece* (目镜) to form a magnified image.
-  - *Interference* (干涉): waves in phase → increased brightness; out of phase → reduced brightness. This underlies contrast in phase-contrast and DIC microscopy.
-  - *Diffraction* causes every point source to produce a blurred *Airy disc*; two points are just resolved when the Airy disc centers are separated by ~200 nm.
+#slide[
+  - A sense of scale progressing from a human thumb through skin cells to a ribosome to individual protein atoms
+  - Light microscopy resolves at about the fifth panel; electron microscopy reaches the eighth or ninth
+  - The *logarithmic scale* (对数刻度) shows the ranges of structures resolvable by each type of microscope
+  - New *superresolution techniques* (超分辨技术) improve over conventional light microscopy by an order of magnitude
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-2: A light microscope.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-1").path),
+  )
 ]
 
-#slide(title: "Wave Interference and Image Formation")[
-  - *Wave interference* (波的干涉) is fundamental to image contrast: waves combining *in phase* produce constructive interference (brighter regions); waves *out of phase* produce destructive interference (darker regions).
-  - This principle underlies *phase-contrast* and *DIC* microscopy, which convert invisible refractive index differences within transparent living cells into visible amplitude (brightness) differences.
-  - Understanding interference also explains why the image of any point source appears as a blurred disc rather than a perfect point.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-3: Interference between light waves — constructive and destructive combinations.]
-    #rect(width: 100%, height: 15em)
-  ])
+== The Light Microscope: Optics and Design
+
+#slide[
+  - A *compound microscope* (复合显微镜) uses multiple lens systems: *condenser* (聚光镜), *objective* (物镜), tube lens, and eyepiece lens
+  - The condenser and objective together determine the *numerical aperture* (数值孔径, NA), which governs both resolution and brightness
+  - Modern research microscopes support upright (fixed specimens) and *inverted* (倒置) configurations (cells in culture dishes)
+  - *Fluorescence imaging* (荧光成像) requires appropriate high-power light sources and filter sets
 ]
 
-#slide(title: "Diffraction and the Limit of Resolution")[
-  - *Diffraction* (衍射) causes the image of any point source to spread into a blurred disc (*Airy disc*) surrounded by faint rings, rather than a perfect point.
-  - Two adjacent points can just be *resolved* (分辨) when the center of one Airy disc falls within the first dark ring of the other — defining the ~200 nm diffraction limit.
-  - Edge diffraction produces interference fringes. Understanding the PSF (point spread function) is essential for all deconvolution and superresolution methods.
+== The Light Microscope (Figure 9-2)
+
+#slide[
+  - The light path in an upright compound microscope: condenser focuses illumination; objective collects light; tube lens and eyepiece focus the image on the retina
+  - The *inverted microscope* (倒置显微镜) is particularly useful for observing living cells in culture dishes
+  - Both configurations can be equipped for fluorescence imaging by adding appropriate filter sets
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-4: Diffraction fringes at an edge and the blurred image of a point source — defining resolution.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-2").path),
+  )
 ]
 
-#slide(title: "Numerical Aperture and Resolution")[
-  - *Resolution* depends on both *wavelength* (λ, 波长) and *numerical aperture (NA)*: $"resolution" = lambda / (2 "NA")$.
-  - High-NA objective lenses gather more light and produce sharper, brighter images.
-  - *Shorter wavelength* → better resolution; this is why electron beams (λ < 0.01 nm) resolve atoms, whereas visible light (λ ≈ 400–700 nm) cannot.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-5: Basic principles of light microscopy — numerical aperture and resolution.]
-    #rect(width: 100%, height: 15em)
-  ])
+== Wave Nature of Light and Interference
+
+#slide[
+  - Light behaves as a wave; when waves from different paths arrive at the same point, they *interfere* (干涉)
+  - *Constructive interference* (相长干涉): waves in phase add together, increasing brightness
+  - *Destructive interference* (相消干涉): waves out of phase cancel each other, decreasing brightness
+  - This wave interference creates *diffraction effects* (衍射效应) that fundamentally limit the resolution of any optical instrument
 ]
 
-== Contrast Techniques for Light Microscopy
+== Interference Between Light Waves (Figure 9-3)
 
-#slide(title: "Four Ways to Generate Image Contrast")[
-  - *Bright-field* (明视野): transmitted light; stained specimens absorb specific wavelengths, creating color contrast — requires dead, fixed cells.
-  - *Dark-field* (暗视野): only scattered light enters the objective; bright cells on a dark background — works with living cells.
-  - *Phase-contrast* (相差): converts refractive index differences into brightness changes; widely used for *living, unstained cells*.
-  - *DIC* (微分干涉差): detects optical path gradients, producing a 3D shadow-cast appearance excellent for living cells and thick specimens.
+#slide[
+  - When two waves combine in phase, amplitude and brightness increase (constructive interference)
+  - When two waves combine out of phase, they partially or fully cancel (destructive interference)
+  - These effects explain why a point source is imaged as a blurred disc rather than a sharp point
+  - This is the physical origin of the *diffraction limit* (衍射极限) that applies to all conventional light microscopes
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-6: Contrast in light microscopy — bright-field, dark-field, and phase-contrast principles.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-3").path),
+  )
 ]
 
-#slide(title: "Generating Contrast in Unstained Cells")[
-  - *Bright-field* (明视野): stained specimens absorb light; colored image visible. Requires fixed, dead cells.
-  - *Dark-field* (暗视野): only scattered light collected; bright objects on dark background; works with living cells.
-  - *Phase-contrast* (相差): converts refractive index differences into brightness differences; widely used for *living cells*.
-  - *DIC (Differential Interference Contrast)* (微分干涉差): detects optical path gradients; gives a 3D shadow-cast appearance; excellent for living cells and thick specimens.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-7: Four types of light microscopy — same fibroblast cell in bright-field, phase-contrast, DIC, and dark-field.]
-    #rect(width: 100%, height: 15em)
-  ])
+== The Diffraction Limit and Airy Disc
+
+#slide[
+  - The *diffraction limit* (衍射极限) of a conventional light microscope is about *0.2 um (200 nm)* under optimal conditions
+  - Resolution = 0.61 * wavelength / (n sin theta), where n sin theta is the *numerical aperture* (数值孔径) NA
+  - Oil-immersion lenses (NA up to 1.4) provide the best resolution
+  - *Resolution* vs *detection* (检测): a fluorescent microtubule can be detected even though it is below the resolution limit, but its apparent width is ~200 nm (the PSF width), not its true width of ~25 nm
 ]
 
-#slide(title: "Tissue Sectioning and Staining")[
-  - For light microscopy, tissues are embedded in paraffin or resin and sliced (0.5–10 μm) with a *microtome* (切片机).
-  - *Hematoxylin and eosin (H&E)* staining: nuclei purple, cytoplasm pink — the most widely used histological stain.
-  - Specific dyes reveal specific structures (e.g., safranin for lignified cell walls, fast green for cellulosic walls in plants).
-  - *Fixation* (固定) must precede staining to preserve structure and prevent autolysis.
+== Diffraction Images of Edge and Point (Figure 9-4)
+
+#slide[
+  - (A) Diffraction fringes at the edge of a solid object -- bands of alternating bright and dark due to wave interference
+  - (B) A point source of light appears as an *Airy disc* (艾里斑): a central bright spot surrounded by concentric rings rather than a sharp point
+  - Two points closer than ~200 nm merge into a single blurred spot and cannot be resolved as separate objects
+  - This defines the *Rayleigh criterion* (瑞利准则) for resolution
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-8: Making tissue sections — embedding and microtome sectioning procedure.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-4").path),
+  )
 ]
 
-#slide(title: "Staining of Cell Components")[
-  - *Hematoxylin and eosin (H&E)* staining: nuclei purple, cytoplasm pink — the most widely used histological stain.
-  - Specific dyes reveal specific structures (e.g., safranin for lignified cell walls, fast green for cellulosic walls in plants).
-  - Staining reveals major tissue architecture and cell types but cannot identify specific proteins.
+== Numerical Aperture and Resolution (Figure 9-5)
+
+#slide[
+  - The diagram illustrates how the cone of light accepted by the objective lens determines NA and resolution
+  - Higher NA = brighter image AND better resolution
+  - *Oil-immersion objectives* (油浸物镜) use immersion oil (n = 1.515) to increase NA above 1.0 (up to NA 1.4)
+  - In *fluorescence microscopy* (荧光显微镜), brightness is proportional to NA to the fourth power, making a high-NA objective critical
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-9: Staining of cell components — H&E stained salivary gland and plant root sections.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-5").path),
+  )
 ]
 
-== Fluorescence Microscopy
+== Contrast Methods for Living Cells
 
-#slide(title: "The Principle of Fluorescence")[
-  - A *fluorochrome* (荧光色素) absorbs a photon (*excitation*) and emits a photon of *longer wavelength* (*emission*) — the energy difference is the *Stokes shift* (斯托克斯位移).
-  - Excessive illumination causes *photobleaching* (光漂白) — irreversible fluorochrome destruction.
-  - The fluorescence microscope uses a *dichroic mirror* (二向色镜) and two *barrier filters* to separate excitation and emission light, detecting even faint signals against a dark background.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-10: Fluorescence principle and the fluorescence microscope filter set.]
-    #rect(width: 100%, height: 15em)
-  ])
+#slide[
+  - Animal cells are colorless and transparent; contrast must be generated to reveal internal structure
+  - *Bright-field microscopy* (明场显微镜): requires chemical staining
+  - *Dark-field microscopy* (暗场显微镜): only scattered light enters objective; structures appear bright on black background
+  - *Phase-contrast microscopy* (相差显微镜): converts refractive-index differences into brightness differences
+  - *DIC (differential-interference-contrast)* (微分干涉差) microscopy: highlights edges with steep refractive-index gradients, giving a 3D appearance
 ]
 
-#slide(title: "RNA In Situ Hybridization")[
-  - *RNA in situ hybridization* (RNA原位杂交): fluorescently labeled nucleotide probes hybridize to specific mRNA sequences in fixed cells or tissues.
-  - Up to five distinct gene expression patterns can be detected simultaneously in a single *Drosophila* embryo using differently colored probes.
-  - Individual mRNA transcripts can be detected as single fluorescent spots in yeast cells, revealing transcript numbers per cell.
+== Contrast in Light Microscopy (Figure 9-6)
+
+#slide[
+  - (A) Bright-field: stained cell absorbs specific wavelengths producing color contrast
+  - (B) Dark-field: scattered light from unstained structures produces bright images on black background
+  - (C) Phase-contrast/DIC: refractive-index phase differences converted to amplitude (brightness) differences
+  - These techniques enable imaging of *living cells* (活细胞) without fixation and staining artifacts
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-11: RNA in situ hybridization — five gene patterns in a fly embryo and single transcripts in yeast.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-6").path),
+  )
 ]
 
-#slide(title: "A Palette of Fluorescent Probes")[
-  - Many fluorescent dyes with different excitation/emission spectra are available: *DAPI* (DNA, blue), *FITC/fluorescein* (green), *rhodamine* (red), *CFP, GFP, YFP, RFP* (fluorescent protein variants).
-  - Non-overlapping spectra allow *multi-color imaging* of multiple targets simultaneously in the same cell.
-  - Choice of probe depends on: available laser lines, spectral overlap with other labels, photostability, and cell toxicity.
+== Comparing Four Microscopy Modes (Figure 9-7)
+
+#slide[
+  - The same fibroblast imaged by bright-field, phase-contrast, DIC, and dark-field microscopy
+  - Each method reveals different features of the same living cell
+  - All four modes available on a modern research microscope by interchanging optical components
+  - *Time-lapse video microscopy* (延时录像显微镜) using these methods captures slow cell movements such as mitosis and migration
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-12: Excitation and emission wavelengths of commonly used fluorescent probes.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-7").path),
+  )
 ]
 
-#slide(title: "Multi-Color Labeling of Organelles")[
-  - Multiple probes can be used simultaneously in a single cell to reveal the spatial relationships of different structures.
-  - Example: actin filaments (green), mitochondria (red), nucleus (blue) all imaged in one epithelial cell.
-  - Each probe must be introduced independently: via antibody conjugation, organelle-specific dyes, or genetically encoded fusion proteins.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-13: Three fluorescent probes used simultaneously in one cell.]
-    #rect(width: 100%, height: 15em)
-  ])
+== Preparing Tissue: Fixation and Sectioning
+
+#slide[
+  - Most tissues must be *fixed* (固定) and *sectioned* (切片) before high-resolution observation
+  - *Chemical fixation* (化学固定) with glutaraldehyde cross-links proteins, locking them in position
+  - *Embedding* (包埋) in wax or resin provides mechanical support for sectioning
+  - A *microtome* (切片机) cuts sections typically 0.5--10 um thick for light microscopy
+  - *Rapid freezing* (快速冷冻) to form *vitreous ice* (玻璃态冰) better preserves native structure
 ]
 
-== Fluorescent Labeling Strategies
+== Making Tissue Sections (Figure 9-8)
 
-#slide(title: "Immunofluorescence and Indirect Immunocytochemistry")[
-  - *Immunofluorescence* (免疫荧光): fluorescent-dye-conjugated antibodies bind to specific proteins.
-  - *Indirect immunocytochemistry* (间接免疫细胞化学): a primary antibody binds the target; multiple labeled *secondary antibodies* (二抗) then bind the primary antibody, amplifying the signal greatly.
-  - Resolution is diffraction-limited (~200 nm) — fine details seen by EM are not resolved by immunofluorescence.
+#slide[
+  - The microtome advances the embedded tissue block stepwise past a fixed sharp blade, producing a ribbon of sections
+  - Sections are laid flat on glass slides, stained, and mounted under a cover slip
+  - Very rapidly frozen specimens can be sectioned directly on a *cryomicrotome* (冷冻切片机) without embedding to preserve near-native cell structure
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-14: Immunofluorescence — TEM and fluorescent antibody comparison of microtubules.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-8").path),
+  )
 ]
 
-#slide(title: "Indirect Immunocytochemistry: Signal Amplification")[
-  - In *indirect immunocytochemistry* (间接免疫细胞化学), the labeled molecule is a *secondary antibody* that recognizes the (unlabeled) primary antibody.
-  - Many secondary antibody molecules bind to each primary antibody, providing strong *signal amplification* — a key advantage for detecting low-abundance proteins.
-  - Secondary antibodies can be conjugated to *fluorescent dyes* (for fluorescence microscopy) or to *colloidal gold* (for electron microscopy), making the method versatile across both platforms.
+== Classical Staining Methods (Figure 9-9)
+
+#slide[
+  - *Hematoxylin* (苏木精) stains DNA, RNA, and acidic proteins purple; *eosin* (伊红) stains cytoplasm and proteins pink/red
+  - H&E staining is the most widely used stain in histology and diagnostic pathology
+  - For plant tissues: *safranin* stains lignified xylem cell walls red; *fast green* stains cellulosic walls
+  - Classical staining is robust, fast, inexpensive, and provides invaluable chemical contrast
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-15: Indirect immunocytochemistry — signal amplification by secondary antibodies.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-9").path),
+  )
 ]
 
-#slide(title: "Green Fluorescent Protein (GFP)")[
-  - *GFP* (绿色荧光蛋白) from the jellyfish *Aequorea victoria* fluoresces intrinsically; its chromophore forms *autocatalytically* from residues buried inside an 11-stranded β-barrel.
-  - GFP can be genetically fused to any protein of interest and expressed in *living cells* — allowing proteins to be observed in their native environment without antibody staining.
-  - A spectrum of variants (CFP, YFP, RFP, mCherry) enables multi-color imaging of several proteins simultaneously.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-16: GFP structure — the β-barrel and the autocatalytic chromophore.]
-    #rect(width: 100%, height: 15em)
-  ])
+= Fluorescence Microscopy
+
+== Principles of Fluorescence
+
+#slide[
+  - *Fluorescence* (荧光): a molecule absorbs a photon at an *excitation wavelength* (激发波长), reaches an excited state, then emits a photon at a longer *emission wavelength* (发射波长) -- the *Stokes shift* (斯托克斯位移)
+  - *Photobleaching* (光漂白): irreversible destruction of the fluorochrome by intense excitation light; a major practical limitation
+  - *Signal-to-noise ratio* (信噪比): fluorescence produces bright signals against a dark background, making it far more sensitive than absorbance staining for small quantities of molecules
+  - The fluorescence microscope uses two barrier filters and a dichroic mirror to separate excitation from emission light
 ]
 
-#slide(title: "Fluorescent Proteins as Reporters in Living Organisms")[
-  - GFP fused to tissue-specific promoters labels defined cell populations in living organisms, e.g., ~20 sensory neurons in a live *Drosophila* embryo with all their axons and dendrites visible (Figure 9-17A).
-  - *Brainbow* technique: random expression of three distinct fluorescent proteins (red, yellow, cyan) marks individual neurons in different colors, allowing the tracing of each cell's projections within a dense tissue (Figure 9-17B).
+== The Fluorescence Microscope (Figure 9-10)
+
+#slide[
+  - (A) *Jablonski diagram* (雅布隆斯基图): photon absorption lifts electron to excited state; emission occurs at longer wavelength when electron returns to ground state
+  - (B) Excitation and emission spectra for *FITC* (fluorescein isothiocyanate, 荧光素异硫氰酸酯), showing the Stokes shift
+  - (C) The filter set: first barrier filter selects excitation wavelength; *dichroic mirror* (二向色镜) reflects excitation and transmits emission; second barrier filter passes only emission to the detector
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-17: Fluorescent proteins as reporter molecules in live Drosophila embryo neurons.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-10").path),
+  )
 ]
 
-#slide(title: "Tagging Proteins with GFP Variants")[
-  - A protein of interest fused to GFP can be tracked in real time in living cells as it goes about its normal function.
-  - Example: EB3-BFP (a microtubule plus-end tracking protein) reveals the dynamic growth of microtubule tips as bright moving spots inside a mammalian cell.
-  - This approach is now a standard tool in cell biology; it avoids the fixation artifacts inherent in immunofluorescence.
+== RNA In Situ Hybridization (Figure 9-11)
+
+#slide[
+  - *Fluorescence in situ hybridization (FISH)* (荧光原位杂交): fluorescently labeled nucleic acid probes hybridize to complementary RNA/DNA sequences in fixed specimens
+  - (A) Five patterning genes in a Drosophila embryo detected simultaneously in false colors by five differently labeled probes, mapping combinatorial gene expression
+  - (B) Individual RNA transcripts detected as single spots in yeast cells using multiple oligonucleotide probes per transcript -- *single-molecule RNA detection* (单分子RNA检测) sensitivity
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-18: GFP-tagged EB3 labeling growing microtubule plus-ends in a live cell.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-11").path),
+  )
 ]
 
-== Monitoring Dynamics and Interactions
+== Fluorescent Probes Across the Spectrum (Figure 9-12)
 
-#slide(title: "FRET: Detecting Protein Interactions In Vivo")[
-  - *FRET (Fluorescence Resonance Energy Transfer)* (荧光共振能量转移): non-radiative energy transfer from a *donor* to an *acceptor* fluorochrome occurs only when they are *1–5 nm* apart.
-  - Two proteins of interest are each tagged with different GFP variants. If the proteins interact, FRET occurs: exciting the donor produces acceptor emission. No interaction → only donor emission.
-  - FRET reports on *molecular proximity* in real time inside living cells, making it the primary tool for studying protein–protein interactions in vivo.
+#slide[
+  - A wide range of synthetic fluorescent probes cover the entire visible spectrum: *DAPI* (UV/blue), *CFP*, *GFP*, *FITC* (green), *YFP*, *rhodamine* (red), *Cy3*, *Alexa 568*, *RFP*, *Cy5* (far red)
+  - Each probe has defined excitation and emission peaks with a characteristic Stokes shift
+  - Probes must be chosen with non-overlapping emission spectra for multicolor experiments; the actual color seen depends on the barrier filter used
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-19: FRET between blue and green fluorescent protein-tagged proteins that interact.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-12").path),
+  )
 ]
 
-#slide(title: "FRAP: Measuring Protein Mobility")[
-  - *FRAP (Fluorescence Recovery After Photobleaching)* (荧光漂白后恢复): a laser pulse irreversibly bleaches fluorescent proteins in a defined region; fluorescence recovery as unbleached molecules move in is monitored over time.
-  - The *recovery rate* gives the *diffusion coefficient* (扩散系数) or active transport rate; the *immobile fraction* indicates how many molecules are stably bound.
-  - Example: membrane protein CD86 diffuses laterally in the plasma membrane; its diffusion constant is measured from the FRAP recovery curve.
+== Multicolor Fluorescence Imaging (Figure 9-13)
+
+#slide[
+  - Three cellular components labeled with three different fluorochromes visualized simultaneously in the same cell
+  - *Actin filaments* (肌动蛋白丝) of the cytoskeleton labeled green; *mitochondria* (线粒体) labeled red; *nucleus* (细胞核) labeled blue
+  - Each color channel is imaged separately using its specific filter set, then merged into a composite image
+  - This multicolor approach reveals the spatial relationships between different cellular structures simultaneously
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-20: FRAP — photobleaching a membrane protein and measuring fluorescence recovery.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-13").path),
+  )
 ]
 
-#slide(title: "Fluorescent Biosensors: Monitoring Ca2+ with Chemical Dyes")[
-  - *Ion-sensitive fluorescent indicators* like *fura-2* change their emission spectrum depending on [Ca²⁺], enabling real-time concentration mapping.
-  - False-color images display the Ca²⁺ concentration distribution across a cell: red = high [Ca²⁺], blue = low [Ca²⁺].
-  - Example: a *Purkinje cell* (浦肯野细胞) from the cerebellum shows the highest Ca²⁺ concentrations in its thousands of branching dendrites — consistent with their role in receiving synaptic input.
+== Immunofluorescence Localization (Figure 9-14)
+
+#slide[
+  - *Immunofluorescence* (免疫荧光): fluorescently labeled antibodies bind with high specificity to target proteins, revealing their distribution in cells
+  - Comparison of TEM image (left) and immunofluorescence image (right) of the same cell confirms that antibodies correctly identify the structures (red arrows)
+  - Diffraction causes microtubules (true width ~25 nm) to appear ~200 nm wide in the fluorescence image -- an illustration of the resolution limit in practice
+  - *Individual microtubules* (单个微管) visible in both images provide direct validation of the method
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-21: Visualizing intracellular Ca2+ with the fluorescent indicator fura-2 in a Purkinje cell.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-14").path),
+  )
 ]
 
-#slide(title: "Fluorescent Biosensors for Cell Signaling")[
-  - *Fluorescent biosensors* (荧光生物传感器) report on the concentration of signaling molecules in real time.
-  - *Chemical dyes* like fura-2 are Ca²⁺-sensitive; their emission ratio changes with [Ca²⁺], enabling concentration mapping in single neurons (e.g., Purkinje cell dendrites, Figure 9-21).
-  - *Genetically encoded FRET biosensors* (Figure 9-22): a conformational sensor (e.g., calmodulin for Ca²⁺) flanked by donor and acceptor fluorescent proteins changes FRET efficiency upon binding the target molecule — emission ratio switches from blue to yellow when Ca²⁺ is bound.
+== Indirect Immunocytochemistry (Figure 9-15)
+
+#slide[
+  - *Indirect immunocytochemistry* (间接免疫细胞化学) greatly amplifies signal compared to direct labeling
+  - Step 1: an unlabeled *primary antibody* (一抗) binds specifically to the target antigen
+  - Step 2: many molecules of a labeled *secondary antibody* (二抗) bind to each primary antibody, multiplying signal
+  - The secondary antibody carries the marker: a fluorescent dye (light microscopy) or *colloidal gold* (胶体金, electron microscopy)
+  - This two-step amplification is standard practice in most immunofluorescence experiments
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-22: Genetically encoded FRET biosensors for Ca2+ and cAMP in living cells.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-15").path),
+  )
 ]
 
-== Three-Dimensional Imaging and Optical Sectioning
+== Green Fluorescent Protein Structure (Figure 9-16)
 
-#slide(title: "The Problem of Out-of-Focus Fluorescence")[
-  - In a conventional fluorescence microscope, every fluorescent molecule in the specimen — above, below, and in the focal plane — contributes to the image, causing *blur*.
-  - *Image deconvolution* (图像反卷积): uses the known *point spread function (PSF)* (点扩散函数) to mathematically remove out-of-focus contributions from a Z-stack of images, yielding crisp optical sections.
-  - Very efficient photon collection by CCD/CMOS cameras makes deconvolution ideal for weakly labeled or photosensitive specimens.
+#slide[
+  - *GFP* (绿色荧光蛋白) is encoded by a single gene from the jellyfish Aequorea victoria; no cofactors needed
+  - Structure: eleven *beta-strands* (beta链) form a barrel; the *chromophore* (发色团) is buried inside, protected from quenching by solvent
+  - The chromophore forms *post-translationally* (翻译后) by autocatalytic reaction involving serine, tyrosine, and glycine side chains
+  - Variants include *BFP*, *CFP*, *YFP*, *RFP*, providing a full color palette for multicolor live-cell imaging
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-23: Image deconvolution — C. elegans embryo before and after computational processing.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-16").path),
+  )
 ]
 
-#slide(title: "Confocal Fluorescence Microscopy")[
-  - *Confocal microscopy* (激光共聚焦显微镜): a focused laser spot illuminates a single point in the specimen; a *pinhole* (小孔) in front of the detector physically blocks all out-of-focus light. Only light from the exact focal plane is detected.
-  - Raster scanning builds a sharp 2D optical section; sequential sections at different depths are assembled into a 3D image.
-  - Better than deconvolution for thick, heavily stained specimens (usable to ~150 μm depth); more photodamaging.
+== GFP as Reporter and in Brainbow (Figure 9-17)
+
+#slide[
+  - *Reporter molecule* (报告基因): GFP placed under a gene's promoter gives a directly visible readout of gene expression in a living organism
+  - (A) Approximately 20 GFP-labeled sensory neurons in a live fly embryo, showing their axons and dendrites
+  - (B) *Brainbow technique* (脑弓箭技术): stochastic expression of three fluorescent proteins gives each neuron a unique color, enabling individual cells and their processes to be distinguished in dense tissue
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-24: The confocal fluorescence microscope — pinhole rejects out-of-focus light.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-17").path),
+  )
 ]
 
-#slide(title: "Confocal 3D Reconstruction")[
-  - A complete 3D data set is assembled from many sequential confocal optical sections (*Z-stack*).
-  - Examples: 452 optical sections assembled into the complex cup-shaped trap of the carnivorous plant *Utricularia* (Figure 9-25A); the branching mitochondrial network in a single live yeast cell (Figure 9-25B).
-  - 3D reconstructions reveal spatial relationships between organelles invisible in single 2D images.
+== GFP Fusion Proteins in Living Cells (Figure 9-18)
+
+#slide[
+  - A *GFP fusion protein* (GFP融合蛋白) is made by inserting GFP in-frame with the coding sequence of a protein of interest
+  - The chimeric protein retains normal function while being directly fluorescent
+  - EB3-BFP fusion protein labels *growing microtubule plus ends* (微管正端) as they move dynamically around the cell -- a real-time readout of microtubule dynamics
+  - GFP tagging is the most direct way to observe protein *localization* (定位) and *dynamics* (动力学) in a living organism
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-25: Confocal 3D reconstruction — Utricularia trap and yeast mitochondrial network.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-18").path),
+  )
 ]
 
-#slide(title: "Multiphoton Microscopy")[
-  - *Two-photon (multiphoton) microscopy* (双光子显微镜): a fluorochrome can be excited by *two simultaneous infrared photons* (each carrying half the energy). Excitation occurs only at the tight focus of a pulsed infrared laser, confining both excitation and photobleaching to the focal plane.
-  - Near-infrared light penetrates deeper into tissue than visible light, enabling imaging *~0.5 mm deep* in a live mouse brain.
-  - Allows long-term imaging of synaptic dynamics (active synapses in yellow, dendritic spines in red) over days, with minimal photodamage.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-26: Multiphoton imaging of synaptic activity deep in a live mouse brain cortex.]
-    #rect(width: 100%, height: 15em)
-  ])
+= Monitoring Protein Dynamics
+
+== FRET: Detecting Molecular Interactions
+
+#slide[
+  - *FRET (Forster/fluorescence resonance energy transfer)* (荧光共振能量转移): two proteins each tagged with a different fluorochrome; if they interact within *1--5 nm*, energy transfers non-radiatively from the *donor* (供体) to the *acceptor* (受体)
+  - The acceptor emits fluorescence even though it was not directly excited -- this is the FRET signal
+  - FRET efficiency varies with the *sixth power of the inverse distance* between donor and acceptor, making it extremely sensitive to small changes in molecular proximity
+  - Used in living cells to detect protein interactions, conformational changes, and signaling events in real time
 ]
 
-= Superresolution Microscopy
+== FRET Diagram (Figure 9-19)
 
-== Overcoming the Diffraction Barrier
-
-#slide(title: "Why 200 nm Is Not Enough")[
-  - Many cellular structures are below the ~200 nm diffraction limit: nuclear pores (~120 nm), ribosomes (~25 nm), actin filaments (~7 nm).
-  - The *point spread function (PSF)* (点扩散函数): a single point source appears as a Gaussian blurred disc ~200 nm across. Two molecules closer than this cannot be resolved.
-  - Several families of techniques have now broken the diffraction barrier: *SIM, STED, PALM/STORM*, and *expansion microscopy*.
+#slide[
+  - (A) Protein X tagged with *blue fluorescent protein* (BFP, excited by violet, emits blue) and protein Y tagged with *GFP* (excited by blue, emits green)
+  - (B) No interaction: violet excitation yields blue emission from BFP only; no green light detected
+  - (C) Interaction brings fluorochromes within 1--5 nm: FRET occurs; violet excitation now yields green emission from GFP; blue emission falls as green emission rises
+  - FRET with CFP/YFP pairs is widely used to monitor signaling molecule interactions inside living cells
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-27: Structured illumination — moiré pattern principle for superresolution imaging.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-19").path),
+  )
 ]
 
-#slide(title: "SIM for 3D Chromosome Imaging")[
-  - 3D-SIM resolves the *lateral elements* (~100 nm across) of the *synaptonemal complex* in meiotic chromosomes (Figure 9-28B) — impossible with conventional fluorescence (Figure 9-28A) because the inter-element distance is ~200 nm, exactly at the diffraction limit.
-  - Full 3D data enables the path of each chromosome pair to be traced and color-coded independently (Figure 9-28C).
-  - SIM is particularly powerful for nuclear architecture, chromosome organization, and cytoskeletal studies.
+== FRAP: Measuring Molecular Mobility (Figure 9-20)
+
+#slide[
+  - *FRAP (fluorescence recovery after photobleaching)* (荧光漂白后恢复): a focused laser pulse irreversibly bleaches GFP in a defined region; unbleached fluorescent molecules diffuse in and fluorescence recovers
+  - From the *recovery curve* (恢复曲线), quantitative parameters are extracted: *diffusion coefficient* (扩散系数), *mobile fraction* (可动分数), and binding/dissociation rates
+  - FRAP reveals whether a protein is freely diffusing, actively transported, or immobilized by binding to a partner
+  - (A) CD86 membrane protein photobleaching experiment; (C) fluorescence recovery plotted against time
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-28: 3D-SIM of meiotic chromosomes — resolving synaptonemal complex lateral elements.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-20").path),
+  )
 ]
 
-#slide(title: "The Point Spread Function and the Diffraction Limit")[
-  - Many cellular structures are below the ~200 nm diffraction limit: nuclear pores (~120 nm), ribosomes (~25 nm), actin filaments (~7 nm).
-  - The *PSF* is elongated along the Z-axis, meaning axial resolution (~500 nm) is worse than lateral resolution (~200 nm).
-  - To be resolved, two points must be separated by at least the half-maximum width of the PSF (~200 nm) in the focal plane.
+== Visualizing Intracellular Calcium (Figure 9-21)
+
+#slide[
+  - *Ca2+-sensitive fluorescent indicators* (钙敏感荧光探针) such as *fura-2* report free Ca2+ concentration by changing their spectral properties when Ca2+ binds
+  - False-color image of a *Purkinje cell* (浦肯野细胞) in the cerebellum: red regions (dendritic branches) have the highest free Ca2+, reflecting high synaptic activity
+  - Enables real-time monitoring of intracellular Ca2+ dynamics during neural signaling, muscle contraction, and other Ca2+-dependent processes
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-29: The point spread function and the classical resolution limit of ~200 nm.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-21").path),
+  )
 ]
 
-#slide(title: "STED Microscopy: Shrinking the Point Spread Function")[
-  - *STED (Stimulated Emission Depletion) microscopy* (受激辐射损耗显微镜): a torus-shaped ("doughnut") *depletion laser* drives all fluorescent molecules surrounding the excitation spot back to the ground state, leaving only those at the very center able to fluoresce.
-  - The effective fluorescent spot shrinks to *~20 nm*. As the specimen is scanned, a superresolution image is built up.
-  - Example: STED resolves the *eightfold symmetry* of nuclear pore membrane ring proteins and the central fibrillar region at ~20 nm resolution (Figure 9-30D, E).
+== Genetically Encoded Biosensors (Figure 9-22)
+
+#slide[
+  - *Genetically encoded biosensors* (基因编码生物传感器): a *sensing module* (感应模块) undergoes a conformational change on binding a target molecule, modulating FRET between two attached fluorescent proteins
+  - (A) Ca2+ biosensor: calmodulin brings BFP and YFP close for FRET when Ca2+ binds; ratio of yellow/blue emission reports free Ca2+ concentration
+  - (B) cAMP biosensor: cAMP binding separates the two fluorescent proteins, abolishing FRET
+  - (C) Ca2+ biosensor expressed in an Arabidopsis seedling shows a propagating Ca2+ wave across the meristem after mechanical stimulation
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-30: STED microscopy — doughnut depletion beam reduces the point spread function to ~20 nm.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-22").path),
+  )
 ]
 
-#slide(title: "Pinpointing Single Molecules with Nanometer Precision")[
-  - The *image* of a single fluorescent molecule always appears as a ~200 nm blurred disc due to diffraction — but its mathematical *center* can be located with nanometer precision if enough photons are detected.
-  - This is the key principle behind all *single-molecule localization* methods: the molecule's position is determined far more accurately than its apparent image size would suggest.
-  - The more photons collected, the more precisely the center is determined: with 10,000 photons, position accuracy can reach ~1–2 nm.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-31: Single fluorescent molecule localization — center can be pinpointed to within a nanometer.]
-    #rect(width: 100%, height: 15em)
-  ])
+= Three-Dimensional Imaging
+
+== Image Deconvolution
+
+#slide[
+  - When imaging a thick specimen, every focal plane is contaminated by *out-of-focus blur* (失焦模糊) from structures above and below
+  - *Image deconvolution* (图像去卷积): a computational method that uses the known *point spread function* (PSF, 点扩散函数) of the microscope to mathematically reverse the blurring in a 3D image stack
+  - Produces clean optical sections from a widefield fluorescence microscope
+  - Best for weakly fluorescent specimens sensitive to photodamage; CMOS cameras capture nearly every emitted photon
 ]
 
-#slide(title: "Single-Molecule Localization Microscopy (SMLM)")[
-  - *PALM/STORM*: photoswitchable fluorophores are activated sparsely and randomly; the exact position of each isolated molecule is determined from the center of its blurred image with nanometer precision. The molecule is then bleached and the next sparse subset activated. After thousands of cycles, tens of thousands of positions build a *superresolution map* at ~*20 nm* resolution.
-  - *PALM* uses photoactivatable fluorescent proteins; *STORM* uses photoswitchable chemical dyes.
+== Image Deconvolution Example (Figure 9-23)
+
+#slide[
+  - (A) Raw widefield fluorescence image of a C. elegans embryo labeled for microtubules (green), mitochondria (red), and DNA (blue) -- severe out-of-focus blur obscures detail
+  - (B) After deconvolution: the same optical section shows dramatically reduced blurring, higher contrast, and clearly resolved structures throughout the embryo
+  - The improvement demonstrates how computational processing can extract information present but hidden in raw microscopy data
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-32: SMLM — sparse activation cycles build a superresolution image; microtubules at 25 nm vs. 250 nm.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-23").path),
+  )
 ]
 
-#slide(title: "Multi-Color SMLM Reveals Nanoscale Cell Architecture")[
-  - SMLM in multiple colors resolves structures that conventional microscopy cannot: membrane, DNA, and chromosome ends in dividing *E. coli* at 20 nm (Figure 9-33A).
-  - In neurons, SMLM reveals the *periodic actin ring scaffold* (~190 nm spacing, just below the diffraction limit) wrapped around the axon, interspersed with spectrin (Figure 9-33B).
-  - This cytoskeletal framework supports the mechanical integrity of long, thin axons — a discovery only possible through superresolution microscopy.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-33: Multi-color SMLM — E. coli cell architecture and periodic actin rings in a nerve axon.]
-    #rect(width: 100%, height: 15em)
-  ])
+== The Confocal Microscope: Principle
+
+#slide[
+  - The *confocal microscope* (共聚焦显微镜) achieves optical sectioning by optical means: a focused laser illuminates one point; a confocal pinhole rejects out-of-focus light before it reaches the detector
+  - Scanning the laser spot builds up a sharp 2D optical section point-by-point
+  - Confocal is better than deconvolution for thick specimens with high out-of-focus background
+  - Deconvolution is better for fragile specimens sensitive to intense laser light
+  - Both methods reconstruct 3D images from stacks of optical sections
 ]
 
-#slide(title: "Expansion Microscopy: Making the Specimen Bigger")[
-  - *Expansion microscopy (ExM)* (扩展显微镜): fluorescent labels are covalently anchored to a polyelectrolyte gel; after protein digestion, the gel expands *4–10×* uniformly in water.
-  - Two fluorophores initially 100 nm apart become 0.4–1.0 μm apart — easily resolved by a *conventional* fluorescence microscope. Effective resolution: *~25 nm*.
-  - Accessible, low-cost superresolution; compatible with confocal and light-sheet microscopy; can be combined with sequential RNA in situ hybridization for transcriptome mapping (Figure 9-35C, D).
+== Confocal Microscope Optics (Figure 9-24)
+
+#slide[
+  - (A) Similar to standard fluorescence microscope but with a focused laser pinhole and a second confocal pinhole in front of the detector
+  - (B) Emitted fluorescence from the in-focus point converges on the confocal pinhole and reaches the detector
+  - (C) Out-of-focus fluorescence diverges at the pinhole and is blocked -- this is the key innovation
+  - (D) A commercial laser-scanning confocal microscope; scanning done by oscillating mirrors
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-34: Expansion microscopy principle — gel embedding, expansion, and resolving a peroxisome membrane.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-24").path),
+  )
 ]
 
-#slide(title: "Expansion Microscopy in Brain Tissue")[
-  - 10× expansion of human nasal epithelial cells reveals *hollow ciliary basal bodies* that are invisible by conventional confocal microscopy (Figure 9-35A, B).
-  - Combined with sequential RNA FISH and light-sheet imaging, expansion microscopy maps six RNA species simultaneously across an 800×800×300 μm mouse brain region, identifying cell types by their gene expression patterns (Figure 9-35C, D).
-  - This approach bridges single-cell transcriptomics and spatial anatomy.
+== 3D Confocal Imaging Applications (Figure 9-25)
+
+#slide[
+  - (A) The carnivorous plant Utricularia gibba trap reconstructed from 452 confocal sections, showing intricate multicellular architecture
+  - (B) The branching *mitochondrial network* (线粒体网络) in a single live yeast cell, reconstructed in 3D from confocal sections -- highly dynamic organelle morphology revealed
+  - Confocal microscopy bridges scales from millimeter-scale tissue architecture to micrometer-scale organelle dynamics
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-35: Expansion microscopy — ciliary basal bodies and brain RNA mapping.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-25").path),
+  )
 ]
 
-#slide(title: "Light-Sheet Microscopy")[
-  - *Light-sheet microscopy (LSM/SPIM)* (光片显微镜): a thin sheet of laser light (~1 μm) is projected *perpendicular* to the detection axis, exciting only fluorescent molecules in that single plane.
-  - Very *low photobleaching and photodamage* because most of the specimen is never illuminated. Hundreds of planes per second → fastest 3D fluorescence method.
-  - Enables *long-term live imaging* of embryo development (flies, zebrafish) over days and 3D imaging of optically cleared, large fixed tissues like entire mouse brains.
+== Multiphoton Microscopy (Figure 9-26)
+
+#slide[
+  - *Two-photon (multiphoton) microscopy* (双光子显微镜): fluorescent molecules are excited by simultaneous absorption of two lower-energy infrared photons instead of one visible photon
+  - Infrared light penetrates deeper into tissue (up to 0.5 mm in living brain cortex) and causes less photodamage per unit depth than visible light
+  - Active *synapses* (突触, yellow) on *dendritic spines* (树突棘, red) visible in a live mouse brain ~0.5 mm deep; consecutive days of imaging reveal synapse remodeling
+  - Invaluable for long-term in vivo imaging of neural activity and development
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-36: Light-sheet microscopy — perpendicular illumination and detection for low-damage 3D imaging.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-26").path),
+  )
 ]
 
-#slide(title: "Light-Sheet Microscopy in the Brain")[
-  - Combined with *expansion microscopy* (扩展显微镜), light-sheet microscopy allows tracing of individual neurons and all their connections in a 1-mm-thick mouse brain section.
-  - Individual *pyramidal neurons* (锥体神经元) and their full dendritic trees, including basal dendrites and spines, are clearly resolved.
-  - This approach is transforming our understanding of *neural circuit architecture* (神经环路结构) at the mesoscale, between single-cell and whole-brain imaging.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-37: Light-sheet microscopy in the brain — individual neurons traced in expanded mouse brain tissue.]
-    #rect(width: 100%, height: 15em)
-  ])
+= Superresolution Fluorescence Microscopy
+
+== Beyond the Diffraction Limit: Overview
+
+#slide[
+  - The *diffraction limit* (~200 nm) was long considered an insurmountable barrier in light microscopy
+  - Several *superresolution* (超分辨率) techniques now bypass this limit:
+    - *SIM* (结构光照明显微镜): ~100 nm, twofold improvement, uses patterned illumination
+    - *STED* (受激辐射损耗显微镜): ~20 nm, reduces effective PSF with depletion beam
+    - *PALM/STORM* (单分子定位显微镜): ~20 nm, sequential single-molecule localization
+    - *Expansion microscopy* (扩展显微镜): ~25 nm, physical enlargement of specimen
+  - Each technique involves distinct trade-offs in speed, sample preparation, and hardware cost
 ]
 
-#slide(title: "TIRF Microscopy: Surface-Specific Single-Molecule Detection")[
-  - *TIRF (Total Internal Reflection Fluorescence) microscopy* (全内反射荧光显微镜): laser light at the critical angle undergoes *total internal reflection*, generating an *evanescent wave* (倏逝波) that penetrates only *~100 nm* above the coverslip.
-  - Only molecules at or very near the cell surface are excited; the interior background is eliminated. This allows *single fluorescent molecules* to be detected in living cells.
-  - Application: tracking assembly and *endocytosis* (内吞) of individual *clathrin-coated pits* (网格蛋白包被小窝) in real time over ~10 seconds (Figure 9-38B, C).
+== Structured Illumination Microscopy Principle (Figure 9-27)
+
+#slide[
+  - *SIM* (结构光照明显微镜) uses a *patterned (grid) illumination* rather than uniform illumination
+  - The interference (moire) between the known illuminating grid and the sample's fine structure produces a *moire pattern* (摩尔纹) encoding sub-diffraction-limit information
+  - Computer processing extracts the encoded information and reconstructs an image with ~twofold improved resolution (~100 nm)
+  - SIM is compatible with any fluorescent dye or protein, and can generate full 3D data sets
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-38: TIRF microscopy — evanescent wave detection of single molecules at the cell surface.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-27").path),
+  )
 ]
 
-= Looking at Cells and Molecules in the Electron Microscope
+== 3D-SIM of Meiotic Chromosomes (Figure 9-28)
 
-== Principles of Electron Microscopy
-
-#slide(title: "The Power of Electron Microscopy")[
-  - Electrons have wavelengths far shorter than visible light (~0.004 nm at 100 kV), enabling resolution in the *sub-nanometer* range.
-  - A graphene monolayer imaged by TEM resolves individual carbon–carbon bonds at *0.14 nm* (Figure 9-39).
-  - *Magnetic coil lenses* focus electrons; the specimen must be in a *high vacuum* (高真空).
-  - Major cost: specimens must be dead (fixed or frozen), and preparation artifacts must be carefully controlled.
+#slide[
+  - *Synaptonemal complexes* (联会复合体) hold paired homologous chromosomes together during meiosis; each complex has two *lateral elements* (侧向元件) separated by ~200 nm
+  - (A) Conventional fluorescence: the two lateral elements are unresolved -- they appear as a single thick line
+  - (B) 3D-SIM at ~100 nm resolution: both lateral elements are individually resolved, and chromosome coiling is visible
+  - (C) Full 3D data set: each chromosome pair is color-coded and its path traced throughout the nucleus
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-39: Graphene imaged by TEM — individual carbon atoms at 0.14 nm resolution.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-28").path),
+  )
 ]
 
-#slide(title: "TEM vs. Light Microscope Design")[
-  - *TEM* and *light microscope* share the same basic optical design: condenser → specimen → objective → projector. The fundamental difference is electrons vs. photons and magnetic vs. glass lenses.
-  - Biological tissues have low inherent electron contrast (low atomic number atoms); *heavy-metal staining* is required.
-  - The specimen must be placed in a *high vacuum* (高真空) because electrons are scattered by air molecules.
+== The Point Spread Function and Resolution (Figure 9-29)
+
+#slide[
+  - The *point spread function (PSF)* (点扩散函数) is the 3D distribution of light intensity that forms the image of a single point source
+  - PSF is elongated along the Z axis: axial resolution (~600 nm) is worse than lateral resolution (~200 nm)
+  - In the focal plane, the PSF approximates a Gaussian with a half-maximum width of ~200 nm
+  - Two points can be resolved only if their PSFs do not overlap too much -- this defines the resolution limit
+  - All superresolution techniques work by reducing the effective PSF size
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-40: Comparison of a light microscope and a transmission electron microscope design.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-29").path),
+  )
 ]
 
-#slide(title: "Specimen Support Grids for TEM")[
-  - Ultra-thin sections (50–100 nm) cut from resin-embedded specimens must be placed on *support grids* — fine copper or gold mesh (~3 mm diameter) coated with a thin carbon film.
-  - The mesh bars support the specimen; the transparent carbon film supports the section areas between bars.
-  - Grid choice (square vs. hexagonal mesh, bar spacing) depends on the specimen size and the type of analysis needed.
+== STED Superresolution Microscopy (Figure 9-30)
+
+#slide[
+  - *STED (stimulated emission depletion) microscopy* (受激辐射损耗显微镜): a doughnut-shaped *depletion beam* (耗尽激光束) quenches fluorescence everywhere in the excitation spot except at the very center
+  - The effective fluorescence spot shrinks from ~200 nm to as small as *20 nm*
+  - STED image of *nuclear pore complexes* (核孔复合体): membrane ring proteins (red) and central FC-repeat fibril proteins (green) resolved with ~20 nm resolution
+  - The *eightfold symmetry* (八重对称) of the pore ring is clearly visible -- completely hidden in conventional fluorescence microscopy
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-41: Specimen support grid for TEM — copper mesh coated with thin carbon film.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-30").path),
+  )
 ]
 
-== Specimen Preparation for Electron Microscopy
+== Single-Molecule Localization Principle (Figure 9-31)
 
-#slide(title: "Preserving Ultrastructure for TEM")[
-  - *Rapid freezing* (快速冷冻) → *freeze substitution* (冷冻替代): frozen water is replaced with organic solvent then plastic resin at low temperature, preserving native ultrastructure better than chemical fixation.
-  - A thin section of freeze-substituted yeast shows nucleus, mitochondria, Golgi stacks, cell wall, and ribosomes in a near-living state.
-  - *Osmium tetroxide* stains lipid membranes darkly (high affinity for double bonds), making membranes the most visible feature in most TEM images.
+#slide[
+  - A *single fluorescent molecule* (单个荧光分子) appears as a ~200 nm blurred disc (set by the PSF)
+  - However, the *mathematical center* (数学中心) of the disc -- the true molecular position -- can be determined with nanometer precision given enough photons
+  - With 10,000 photons, position can be pinpointed to within ~1 nm -- far better than the diffraction limit
+  - This principle of *single-molecule localization* (单分子定位) is the basis of PALM and STORM superresolution microscopy
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-42: Freeze-substituted thin section of yeast — nucleus, mitochondria, and Golgi visible.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-31").path),
+  )
 ]
 
-#slide(title: "Immunogold Electron Microscopy")[
-  - *Immunogold EM* (免疫金电镜): antibodies coupled to colloidal gold particles (5–20 nm) localize specific proteins to precise ultrastructural locations within thin sections.
-  - Gold particles appear as dense, perfectly spherical *black dots* in the TEM — easy to distinguish from biological structures.
-  - Example: a protein targeted to the *trans-Golgi network* (高尔基体反面网络) is localized by gold dots at that specific membrane system, not elsewhere in the cell.
+== PALM and STORM Methods (Figure 9-32)
+
+#slide[
+  - *PALM (photoactivated localization microscopy)* (光激活定位显微镜) and *STORM (stochastic optical reconstruction microscopy)* (随机光学重建显微镜)
+  - Photoswitchable fluorescent molecules are randomly activated in sparse subsets, precisely localized, then bleached; repeating this cycle builds up a superresolution image
+  - Microtubule true diameter (~25 nm) now visible rather than the diffraction-limited apparent diameter (~250 nm)
+  - PALM uses *photoactivatable fluorescent proteins* (光可激活荧光蛋白); STORM uses *photoswitchable organic dyes* (光开关有机染料)
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-43: Immunogold EM — 10 nm gold particles locating a protein at the trans-Golgi network.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-32").path),
+  )
 ]
 
-#slide(title: "Metal Shadowing and Negative Staining")[
-  - *Metal shadowing* (金属投影): platinum evaporated at an angle coats one side of macromolecules, creating highlights and shadows that reveal 3D surface topology, e.g., RecA protein helices wrapping around DNA (Figure 9-44A).
-  - *Negative staining* (负染色): uranyl acetate fills the space around molecules; the molecule appears light against a dark background. Reveals helical subunit arrangement of actin filaments at ~2 nm resolution (Figure 9-44B).
-  - Both methods work on isolated molecules or small macromolecular assemblies adsorbed to a carbon-coated grid.
+== Multicolor SMLM Applications (Figure 9-33)
+
+#slide[
+  - SMLM can incorporate multicolor imaging to simultaneously resolve multiple labeled structures below the diffraction limit
+  - (A) Two E. coli cells imaged by STORM at ~20 nm resolution: membrane (green), DNA (blue), chromosome ends (white dots) -- the nucleoid organization is directly visualized
+  - (B) In a nerve cell axon, STORM reveals a *periodic actin-spectrin skeleton* (周期性肌动蛋白-血影蛋白骨架) with ~190 nm repeat spacing that supports the thin axon -- discovered only with superresolution microscopy
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-44: Metal contrast methods — platinum shadowing of RecA-DNA and negative staining of actin filaments.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-33").path),
+  )
 ]
 
-== Scanning Electron Microscopy
+== Expansion Microscopy Principle (Figure 9-34)
 
-#slide(title: "How a Scanning Electron Microscope Works")[
-  - In *SEM* (扫描电子显微镜), a focused *primary electron beam* scans the specimen surface point by point. The quantity of *secondary and scattered electrons* emitted at each point is measured and used to build the final image.
-  - Specimens are usually fixed, dried, and coated with a thin conductive metal (gold, platinum) layer — or kept frozen.
-  - Unlike TEM, the SEM uses *surface-emitted* electrons rather than transmitted ones, so only the surface can be examined, not the interior.
-  - Resolution ranges from *0.5 nm (field-emission SEM)* to ~*10 nm (standard SEM)*.
+#slide[
+  - *Expansion microscopy (ExM)* (扩展显微镜): the specimen is physically enlarged rather than the microscope improved
+  - Workflow: fluorescently label the fixed specimen; embed in a swellable *polyacrylamide gel* (聚丙烯酰胺凝胶) with labels covalently anchored; digest cellular proteins; swell in water *4--10 times* uniformly
+  - Structures previously below the diffraction limit (~100 nm apart) are now resolved with a conventional fluorescence microscope at ~25 nm effective resolution
+  - Cost-effective: superresolution without expensive hardware
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-45: The scanning electron microscope — diagram of electron beam scanning and signal detection.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-34").path),
+  )
 ]
 
-#slide(title: "SEM: Three-Dimensional Surface Imaging")[
-  - *SEM* (扫描电子显微镜): a focused electron beam scans the metal-coated specimen surface; scattered/secondary electrons build a 3D-appearing surface image with great *depth of field* (景深).
-  - Typical resolution: ~10 nm for standard SEM. Used for whole cells and tissues: pollen grain surfaces, bacteria in food, flowering structures.
-  - *Field-emission SEM* (场发射扫描电子显微镜) uses a brighter, more coherent electron source, reaching resolution comparable to TEM.
+== Expansion Microscopy Applications (Figure 9-35)
+
+#slide[
+  - (A, B) Human nasal epithelial cells after 10-fold expansion: the hollow centers (*lumen*, 内腔) of *ciliary basal bodies* (纤毛基体) are visible as rings (red arrows) in both top-view and side-view
+  - (C, D) Mouse brain lateral hypothalamus after 2-fold expansion, probed by sequential *RNA FISH* (RNA荧光原位杂交): six cell-type marker genes visualized simultaneously in individual cells within intact brain tissue
+  - Expansion is compatible with confocal, light-sheet, and deconvolution imaging
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-46: SEM surface images with great depth of field — wheat spike, pollen grains, and bacteria.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-35").path),
+  )
 ]
 
-#slide(title: "High-Resolution SEM of Macromolecular Assemblies")[
-  - A *field-emission SEM* (场发射扫描电子显微镜) with a tungsten-shadowed specimen can achieve resolution rivaling negatively stained TEM.
-  - Example (A): an *actin filament* showing the right-handed helical arrangement of individual actin monomers along the filament axis.
-  - Example (B): *clathrin-coated vesicles* (网格蛋白包被囊泡) showing the characteristic polygonal lattice of clathrin triskelion subunits on the vesicle surface.
+== Light-Sheet Microscopy Principle (Figure 9-36)
+
+#slide[
+  - *Light-sheet microscopy* (光片显微镜): a thin laser light sheet (<1 um thick) illuminates a single plane of the specimen from the side; fluorescence is collected perpendicular to the sheet
+  - Key advantages: no out-of-focus fluorescence, minimal photobleaching and phototoxicity, rapid 3D imaging
+  - Enables long-term live imaging of entire embryos (fly, zebrafish) over days to weeks
+  - Multiple sheets can scan at hundreds of planes per second for rapid 3D data acquisition
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-47: Higher-resolution SEM — actin filament helix and clathrin-coated vesicle structure.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-36").path),
+  )
 ]
 
-== EM Tomography and CryoEM
+== Light-Sheet Microscopy of the Brain (Figure 9-37)
 
-#slide(title: "EM Tomography: 3D Molecular Architecture In Situ")[
-  - *EM tomography* (电子显微镜断层扫描): the specimen is tilted ±60° in the TEM to capture projections from many angles; a computer reconstructs the 3D *tomogram*.
-  - *Subtomogram averaging* (子断层图平均化): identical complexes at multiple positions are aligned and averaged to achieve better than *2 nm* resolution, bridging the single-molecule and cellular scales.
-  - Example: the Golgi apparatus of *Chlamydomonas* reconstructed in 3D with COP1 vesicles, cisternae color-coded by identity, and COP1 coat structure resolved at molecular detail (Figure 9-48).
+#slide[
+  - A 1-mm-thick mouse brain section prepared by expansion microscopy and imaged with a light-sheet microscope
+  - Left: a complete *pyramidal neuron* (锥体神经元) from the visual cortex, with cell body, axon, and basal dendrites traced in 3D
+  - Right: a segment of a single basal dendrite (orange) with its *dendritic spines* (树突棘, yellow) in full cellular context
+  - This combined approach (ExM + light-sheet) is transforming *connectomics* (连接组学), the mapping of neural connections
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-48: EM tomography of the Golgi apparatus — 3D reconstruction and COP1 coat at 2 nm resolution.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-37").path),
+  )
 ]
 
-#slide(title: "CryoEM: Near-Atomic Structures Without Crystals")[
-  - *CryoEM* (冷冻电子显微镜): specimens are *vitrified* (玻璃化) by plunging into liquid ethane; examined at liquid nitrogen temperature in their native, hydrated state.
-  - *Single-particle analysis* (单颗粒分析): thousands of images of randomly oriented identical particles are classified and averaged to reconstruct a 3D structure.
-  - Key advantages over X-ray crystallography: no crystals needed, handles large/flexible/membrane complexes, captures multiple conformations, reveals glycan patterns, needs minimal sample.
+== TIRF Microscopy for Single Molecules (Figure 9-38)
+
+#slide[
+  - *TIRF (total internal reflection fluorescence) microscopy* (全内反射荧光显微镜): laser light strikes the cover slip at the critical angle; total internal reflection creates an *evanescent wave* (消逝波) extending only ~200 nm beyond the glass surface
+  - Only fluorescent molecules within this ~200 nm layer are excited -- all bulk cytoplasmic fluorescence remains dark, eliminating background
+  - Enables *single-molecule detection* (单分子检测) near the cell surface: individual *clathrin-coated pits* (网格蛋白包被小泡), motor proteins, and receptor molecules can be imaged
+  - (C) One pit forms and is endocytosed in ~10 seconds
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-49: CryoEM structure of microtubules at 0.35 nm — protofilaments and tubulin dimer resolved.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-38").path),
+  )
 ]
 
-#slide(title: "CryoEM: The COVID-19 Spike Protein")[
-  - The *SARS-CoV-2 trimeric spike protein* was determined directly from intact frozen virus particles by subtomogram averaging at *0.35 nm* resolution (Figure 9-50).
-  - The structure reveals receptor-binding domains, the three spike monomers (colored separately), extensive surface *N-glycosylation* (green) that helps shield the virus from immune recognition, and the insertion into the viral membrane.
-  - This cryoEM structure was obtained within weeks of the pandemic beginning and directly guided *vaccine development*.
-][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-50: CryoEM structure of the SARS-CoV-2 spike protein trimer at 0.35 nm resolution.]
-    #rect(width: 100%, height: 15em)
-  ])
+= Looking at Cells in the Electron Microscope
+
+== Resolution of the Electron Microscope
+
+#slide[
+  - The *wavelength of electrons* (电子波长) at 100,000 V is ~0.004 nm -- about 100,000 times shorter than visible light
+  - In practice, biological specimens are imaged at ~1 nm effective resolution due to radiation damage and specimen preparation
+  - Specially aberration-corrected microscopes reach ~0.05 nm (0.5 Angstroms), enabling imaging of individual atoms
+  - The resolution advantage over light microscopy (~200 nm) is about 200-fold for practical biological specimens
 ]
 
-#slide(title: "CryoEM at Atomic Resolution")[
-  - *Apoferritin* (铁蛋白笼) — a highly stable, symmetric 24-subunit cage — has been imaged by single-particle cryoEM at a record *0.12 nm (1.2 Å)* resolution (Figure 9-51).
-  - Individual *hydrogen atom* electron densities are visible in the structure, rivaling the best X-ray crystallography.
-  - This milestone, enabled by direct electron detectors and new computational algorithms, marks cryoEM as a universal method for macromolecular structure determination.
+== Graphene Imaged at Atomic Resolution (Figure 9-39)
+
+#slide[
+  - A TEM micrograph of *graphene* (石墨烯, single atomic layer of graphite) resolves individual *carbon atoms* (碳原子) as bright spots in a hexagonal lattice with a bond length of *0.14 nm (1.4 Angstroms)*
+  - This demonstrates the ultimate resolution capability of aberration-corrected TEMs
+  - Practical biological specimens are imaged at ~1 nm resolution due to radiation damage and staining limitations, but this is still ~200 times better than the light microscope
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-51: Atomic resolution cryoEM of apoferritin at 1.2 Å — hydrogen atom densities visible.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-39").path),
+  )
 ]
 
-#slide(title: "CryoEM of a Large Chromatin-Modifying Complex")[
-  - *PRC2 (Polycomb Repressive Complex 2)* (多梳抑制复合物2) methylates histone H3 lysine 27 (H3K27me3), establishing repressive *heterochromatin* (异染色质) and silencing developmental genes.
-  - CryoEM at 0.35 nm resolution (Figure 9-52) shows PRC2 with two cofactors clamped onto a nucleosome, with the EZH2 subunit threading histone H3's tail to direct K27 into the methylation active site.
-  - Such structures explain the molecular mechanism of epigenetic gene regulation and guide drug design for cancer therapeutics targeting PRC2.
+== Design of the Transmission Electron Microscope (Figure 9-40)
+
+#slide[
+  - The *TEM* (透射电子显微镜) has the same overall design logic as an inverted light microscope but uses an *electron gun* (电子枪) and *magnetic coil lenses* (磁场透镜)
+  - The entire electron path must be in *vacuum* (真空) to prevent electron scattering by air molecules
+  - Electrons scattered by heavy-metal stained structures are lost from the beam; dense regions appear dark in the image
+  - Image captured by a sensitive *CMOS electron detector* (CMOS电子探测器)
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-52: CryoEM of PRC2 bound to a nucleosome — H3 K27 directed to the methylation active site.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-40").path),
+  )
 ]
 
-== Correlative and Multi-Modal Microscopy
+== Specimen Support Grid for TEM (Figure 9-41)
 
-#slide(title: "CLEM: Combining Fluorescence and EM")[
-  - *CLEM (Correlated Light and Electron Microscopy)* (关联光电显微镜) combines the *molecular specificity* of fluorescence microscopy with the *ultrastructural resolution* of EM.
-  - Fluorescent IRE1 oligomers (ER stress sensor) are first detected as bright foci by fluorescence; EM tomography of the same frozen cell reveals that these foci correspond to dense clusters of IRE1 in specialized, convoluted ER tubules (Figure 9-53).
-  - CLEM bridges the gap between "where is my protein?" (light microscopy) and "what does its environment look like?" (electron microscopy).
+#slide[
+  - Ultrathin sections (25--100 nm thick) are mounted on a *metal grid* (铜网), 3 mm in diameter, covered with a thin *carbon support film* (碳膜)
+  - The grid is loaded into the TEM through an airlock to maintain vacuum
+  - Section thickness is critical: sections must be thin enough for electrons to pass through (25--100 nm), compared to 0.5--10 um sections in light microscopy
+  - The small size of the grid means that a tissue sample must be precisely localized before sectioning
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-53: CLEM — correlating fluorescent IRE1 foci with their EM ultrastructural context in the ER.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-41").path),
+  )
 ]
 
-#slide(title: "FIB-SEM: Full-Cell 3D Electron Microscopy")[
-  - *FIB-SEM (Focused Ion Beam–Scanning Electron Microscopy)* (聚焦离子束扫描电子显微镜): a gallium *focused ion beam* mills the block face of a frozen or resin-embedded cell ~10 nm at a time; an SEM images each face. Thousands of slices are assembled into a 3D volume of the *entire cell* at *~5 nm* resolution.
-  - Combined with prior superresolution fluorescence labeling (e.g., ER in green, mitochondria in magenta), FIB-SEM precisely localizes specific molecules within the full cellular context (Figure 9-54).
-  - This technique enables *connectomics* (连接组学) — mapping all synaptic connections in neural circuits — and comprehensive *organelle interaction* studies.
+== Freeze Substitution for Near-Native EM (Figure 9-42)
+
+#slide[
+  - *Rapid freezing* + *freeze substitution* (冷冻替代) is the gold standard for preserving cell ultrastructure for TEM
+  - Cells are plunged into liquid ethane at -180 degrees C, forming *vitreous ice* (玻璃态冰) that immobilizes all cellular components without ice crystal damage
+  - Ice is then replaced by organic solvents at low temperature, tissue embedded in plastic resin, and ultrathin sections cut
+  - The result: nucleus, *mitochondria* (线粒体), cell wall, *Golgi stacks* (高尔基体堆叠), and *ribosomes* (核糖体) clearly visible in a near-native state
 ][
-  #block(fill: luma(230), inset: 8pt, radius: 4pt, align(center)[
-    #text(weight: "bold")[Figure 9-54: FIB-SEM — ion beam milling reconstructs the full cell volume at 5 nm, correlated with fluorescence.]
-    #rect(width: 100%, height: 15em)
-  ])
+  #figure(
+    image(images.at("9-42").path),
+  )
+]
+
+== Immunogold Electron Microscopy (Figure 9-43)
+
+#slide[
+  - *Immunogold EM* (免疫金电镜): antibodies coupled to *colloidal gold* (胶体金) particles localize specific proteins in thin sections with ultrastructural precision
+  - Primary antibody binds the target protein; secondary antibody conjugated to gold (5, 10, or 15 nm spheres) binds to the primary antibody
+  - Gold particles appear as *electron-dense black dots* (电子致密黑点) of defined size in the electron micrograph
+  - Multiple proteins can be simultaneously localized using antibodies conjugated to different-sized gold particles
+][
+  #figure(
+    image(images.at("9-43").path),
+  )
+]
+
+== Metal Shadowing and Negative Staining (Figure 9-44)
+
+#slide[
+  - *Metal shadowing* (金属喷镀): platinum or tungsten atoms evaporated at a low angle onto dried macromolecules create a metal replica revealing surface topology at ~2 nm resolution; RecA helix around DNA clearly visible
+  - *Negative staining* (负染色): the macromolecule is surrounded by heavy-metal stain (uranyl acetate), producing a reverse-contrast image that reveals surface features at ~2 nm resolution
+  - Actin filament helical structure, virus surface proteins, and ribosome subunit organization are classic subjects for negative-stain EM
+  - Both techniques are fast, inexpensive, and require only small amounts of sample
+][
+  #figure(
+    image(images.at("9-44").path),
+  )
+]
+
+== The Scanning Electron Microscope (Figure 9-45)
+
+#slide[
+  - The *SEM* (扫描电子显微镜) uses electrons scattered or emitted from the specimen *surface* rather than transmitted electrons
+  - A focused electron beam scans across the metal-coated surface; a detector measures *secondary electrons* (二次电子) emitted at each point to build a surface image
+  - Resolution of 0.5--10 nm; great *depth of field* (景深); no need for ultrathin sectioning
+  - Specimens fixed, dried, and coated with heavy metal (or rapidly frozen); whole organisms or large tissue pieces can be imaged
+][
+  #figure(
+    image(images.at("9-45").path),
+  )
+]
+
+== SEM Surface Images at Multiple Scales (Figure 9-46)
+
+#slide[
+  - (A) Developing wheat flower (spike): low-magnification SEM demonstrating the extraordinary depth of field that keeps both near and far structures in sharp focus simultaneously
+  - (B) Hellebore pollen grains: SEM reveals intricate species-specific sculpted cell walls at high magnification
+  - (C) Chains of bacteria in Stilton cheese veins: SEM images biological samples from almost any environment
+  - These examples illustrate how SEM spans scales from millimeters to micrometers
+][
+  #figure(
+    image(images.at("9-46").path),
+  )
+]
+
+== High-Resolution Field-Emission SEM (Figure 9-47)
+
+#slide[
+  - *Field-emission SEM* (场发射扫描电子显微镜) uses a bright, coherent electron source to achieve resolution rivaling negatively stained TEM
+  - (A) An *actin filament* (肌动蛋白丝) shadowed with tungsten: the *helical arrangement* (螺旋排列) of actin monomers along the filament is clearly resolved
+  - (B) *Clathrin-coated vesicles* (网格蛋白包被囊泡): the characteristic polyhedral basket-like structure of the clathrin coat is visible on the vesicle surface
+  - High-resolution SEM is useful for studying surface architecture of macromolecular assemblies
+][
+  #figure(
+    image(images.at("9-47").path),
+  )
+]
+
+= Three-Dimensional Electron Microscopy
+
+== EM Tomography of the Golgi Apparatus (Figure 9-48)
+
+#slide[
+  - *EM tomography* (电子断层扫描): the specimen is tilted to many angles in the TEM; images at each angle are computationally combined to produce a 3D *tomogram* (断层图)
+  - The Golgi apparatus of Chlamydomonas is color-coded: ER (dark yellow), cis vesicles (yellow), cis cisternae (green), medial cisternae (red), trans cisterna (blue), TGN (purple)
+  - *Subtomogram averaging* (亚断层图平均) of 10,000+ COP1 subunits yields a 2-nm resolution molecular structure of the coat, bridging single-molecule and cellular scales
+][
+  #figure(
+    image(images.at("9-48").path),
+  )
+]
+
+== CryoEM Single-Particle Reconstruction
+
+#slide[
+  - *CryoEM* (冷冻电子显微镜): a ~100 nm thick film of purified macromolecular complex is rapidly frozen on an EM grid to form *vitreous ice* (玻璃态冰); examined at -160 degrees C without staining
+  - *Single-particle reconstruction* (单粒子重建): thousands of particle images in random orientations are sorted by orientation, averaged to improve signal-to-noise, and combined into a 3D structure
+  - Advances in direct electron detectors and image-processing have enabled structures of molecules as small as 100 kDa, with resolutions now reaching 0.2--0.3 nm
+  - CryoEM is especially powerful for large, flexible proteins and molecular machines that resist crystallization
+]
+
+== CryoEM Structure of Microtubules (Figure 9-49)
+
+#slide[
+  - (A) Intact microtubules embedded in vitreous ice; helical symmetry of the microtubule aids the reconstruction
+  - (B) Surface lattice of a single microtubule at 0.35 nm resolution showing the 13 protofilament arrangement and lateral interactions between protofilaments
+  - (C) The alpha-beta-tubulin dimer density map (alpha-tubulin darker, beta-tubulin lighter) extracted from the intact microtubule structure at 0.35 nm resolution
+  - CryoEM captures how tubulin dimers assemble and interact with associated proteins in the intact lattice
+][
+  #figure(
+    image(images.at("9-49").path),
+  )
+]
+
+== CryoEM of SARS-CoV-2 Spike Protein (Figure 9-50)
+
+#slide[
+  - The *trimeric spike protein* (三聚体刺突蛋白) of SARS-CoV-2 mediates receptor binding and cell entry; it is the primary target of vaccines and therapeutic antibodies
+  - Structure determined by *subtomogram averaging* (亚断层图平均) from rapidly frozen intact virus particles at 0.35 nm resolution
+  - (A) Top view showing three monomers (dark green, light blue, light brown) and N-glycan chains (green)
+  - (B) Side view showing spike emerging from the viral membrane
+  - This exemplifies the power of cryoEM for large, flexible, glycosylated membrane proteins
+][
+  #figure(
+    image(images.at("9-50").path),
+  )
+]
+
+== Atomic-Resolution CryoEM: Apoferritin (Figure 9-51)
+
+#slide[
+  - *Apoferritin* (脱铁铁蛋白) is a 474-kDa iron-storage cage protein with 24 symmetrical subunits -- its high symmetry and stability make it an ideal benchmark specimen
+  - CryoEM single-particle reconstruction achieved an unprecedented *0.12 nm (1.2 Angstroms) resolution*, rivaling the best X-ray crystallography
+  - At this resolution, electron densities corresponding to *hydrogen atoms* (氢原子) are visible in amino acid side chains (tyrosine, arginine, histidine)
+  - This landmark result confirmed that cryoEM has reached true atomic resolution
+][
+  #figure(
+    image(images.at("9-51").path),
+  )
+]
+
+== CryoEM of PRC2 Macromolecular Machine (Figure 9-52)
+
+#slide[
+  - *PRC2 (Polycomb repressive complex 2)* (多梳抑制复合体2): a histone methyltransferase that establishes *heterochromatin* (异染色质) and epigenetically silences gene expression
+  - CryoEM at 0.35 nm resolution: PRC2 and cofactors engage a single *nucleosome* (核小体); the EZH2 subunit binds nucleosomal DNA and the *histone H3 tail* (组蛋白H3尾部), positioning lysine 27 at the active site for methylation
+  - Flexible regions like the histone H3 tail, often disordered and invisible in X-ray structures, are captured in cryoEM
+  - Illustrates how cryoEM reveals dynamic regions of macromolecular machines
+][
+  #figure(
+    image(images.at("9-52").path),
+  )
+]
+
+= Correlative and Advanced Imaging
+
+== Correlative Light and Electron Microscopy (Figure 9-53)
+
+#slide[
+  - *CLEM (correlative light and electron microscopy)* (关联光电子显微镜): fluorescence microscopy provides molecular identity; EM provides ultrastructural context -- both on the same specimen
+  - IRE1, a transmembrane ER stress sensor, forms oligomers visible as fluorescent foci when activated
+  - Cells expressing fluorescent IRE1 are rapidly frozen; fluorescent spots located by light microscopy; same specimen examined by EM tomography
+  - (A) Fluorescent IRE1 spot precisely overlaid on EM tomogram slice. (B, C) Segmentation reveals IRE1 oligomers concentrated in specialized narrow ER tubules -- context impossible to obtain by fluorescence alone
+][
+  #figure(
+    image(images.at("9-53").path),
+  )
+]
+
+== FIB-SEM for Whole-Cell 3D Imaging (Figure 9-54)
+
+#slide[
+  - *FIB-SEM (focused ion beam-scanning electron microscopy)* (聚焦离子束扫描电子显微镜): a *gallium ion beam* (镓离子束) mills away ~10 nm at a time from the surface of a frozen cell; an SEM images each newly exposed face; the 3D volume of the entire cell is built up at ~5 nm resolution
+  - Fluorescent labels (ER lumen green, mitochondria magenta) from superresolution light microscopy are co-registered with the 3D EM data
+  - Enables comprehensive *3D organelle mapping* (三维细胞器图谱) throughout an entire cell, and is being used to map *neural circuits* (神经回路) in brain tissue
+][
+  #figure(
+    image(images.at("9-54").path),
+  )
+]
+
+== Summary: Microscopy Trade-offs
+
+#slide[
+  - Every imaging method involves trade-offs that must be considered when choosing an approach:
+    - *Resolution* (分辨率) vs. *specimen viability* (样品活性): higher resolution generally requires fixed or frozen specimens
+    - *Depth* (深度) vs. *resolution*: imaging deeper degrades resolution
+    - *Speed* (速度) vs. *signal-to-noise* (信噪比): faster imaging collects fewer photons per pixel
+    - *Molecular specificity* (分子特异性) vs. *structural context* (结构背景): fluorescence sees only labeled molecules; EM sees everything but requires additional labeling for molecular identity
+  - The best strategy always depends on the specific biological question: live or fixed? Single cell or tissue volume? Speed or resolution?
 ]
