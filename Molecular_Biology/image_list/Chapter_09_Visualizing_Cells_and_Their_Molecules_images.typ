@@ -1,4 +1,4 @@
-// Image List for Chapter 9: Visualizing Cells and Their Molecules
+#set text(font: "Arial")
 
 - *Figure 9-1:* A sense of scale between living cells and atoms. Each diagram shows an image magnified by a factor of 10 in an imaginary progression from a thumb, through skin cells, to a ribosome, to a cluster of atoms forming part of one of the many protein molecules in the ribosome.
 - *Figure 9-2:* A light microscope. Diagram showing the light path in an upright compound microscope, with condenser, objective, tube, and eyepiece lenses. Also shows a modern upright and inverted research light microscope.
