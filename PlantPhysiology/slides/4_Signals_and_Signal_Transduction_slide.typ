@@ -127,7 +127,7 @@
 #slide[
   - RLKs bridge extracellular signals to intracellular responses
   - Ligands include pathogen molecules (flg22), peptides, and small molecules
-  - *Heteromerization* with co-receptors increases specificity
+  - *Heteromerization* (异聚化) with co-receptors increases specificity
   - Over 600 RLKs in Arabidopsis genome
 ][
   #figure(
@@ -216,8 +216,8 @@
 
 == Chemical Structures of Phytohormones
 
-- Five classical hormones: Auxin, Gibberellin, Cytokinin, Ethylene, Abscisic acid
-- Additional hormones: Brassinosteroids, Strigolactones, Jasmonic acid, Salicylic acid
+- Five classical hormones: Auxin (生长素), Gibberellin (赤霉素), Cytokinin (细胞分裂素), Ethylene (乙烯), Abscisic acid (脱落酸)
+- Additional hormones: Brassinosteroids (油菜素类固醇), Strigolactones (独脚金内酯), Jasmonic acid (茉莉酸), Salicylic acid (水杨酸)
 - Chemically diverse: Small molecules to steroids
 - Each has distinct biosynthetic pathway
 - Structural specificity allows receptor discrimination
@@ -295,9 +295,9 @@
 == Ethylene Responses
 
 - *Triple response* (三重反应) in dark-grown seedlings
-- Radial swelling of stem
-- Inhibition of stem elongation
-- Horizontal growth (*diageotropism*, 横向生长)
+  - Radial swelling of stem
+  - Inhibition of stem elongation
+  - Horizontal growth (*diageotropism*, 横向生长)
 - *Epinasty* (叶柄下垂): downward leaf bending
 - Promotes fruit ripening and flower senescence
 
@@ -331,7 +331,7 @@
   )
 ]
 
-== Brassinosteroid Mutants
+== Brassinosteroid (油菜素类固醇, BR) Mutants
 
 - BR-deficient mutants show severe *dwarfism* (矮化)
 - Altered reproductive development
@@ -352,7 +352,7 @@
 
 == Strigolactones and Parasitic Plants
 
-- Strigolactones exuded from roots promote beneficial symbioses
+- Strigolactones (独脚金内酯) exuded from roots promote beneficial symbioses
 - Also trigger germination of *parasitic plants* (寄生植物)
 - *Striga* (witchweed) causes major crop losses in Africa
 - Parasitic plants detect host presence via strigolactones
@@ -392,21 +392,15 @@
 
 == Auxin Biosynthesis Pathway
 
+#slide[
+#figure(
+    image(images.at("4.19").path, width: 70%),
+  )
 - Primary pathway from *tryptophan* (色氨酸)
 - Two-step process: Trp → IPyA → IAA
 - *TAA* enzymes catalyze first step
 - *YUCCA* enzymes catalyze second step
 - Multiple pathways provide redundancy
-
-#slide[
-  - Tryptophan is common amino acid precursor
-  - *Indole-3-pyruvate* (IPyA) is key intermediate
-  - YUCCA enzymes are *flavin monooxygenases* (黄素单加氧酶)
-  - Localized synthesis creates auxin maxima
-][
-  #figure(
-    image(images.at("4.19").path),
-  )
 ]
 
 == Effects of Altered Auxin Biosynthesis
@@ -422,6 +416,7 @@
   - Elevated auxin affects multiple developmental processes
   - Phenotype differs from exogenous auxin application
   - Shows that endogenous biosynthesis location matters
+  - The dominant yuc6-1D activation mutant (right) contains elevated levels of free IAA relative to the wild type (left)
 ][
   #figure(
     image(images.at("4.20").path),
@@ -436,15 +431,15 @@
 - *Oxidation* irreversibly inactivates IAA
 - Balance between forms regulates active auxin levels
 
+#figure(
+  image(images.at("4.21").path),
+)
+
 #slide[
   - Conjugation provides rapid inactivation mechanism
   - Reversible conjugates act as auxin reservoirs
   - Oxidative degradation is irreversible endpoint
   - Different conjugates have different fates and functions
-][
-  #figure(
-    image(images.at("4.21").path),
-  )
 ]
 
 == Auxin Transport in Endomembranes
@@ -455,37 +450,38 @@
 - Endomembrane compartmentalization affects auxin homeostasis
 - Links biosynthesis to cellular distribution
 
-#slide[
-  - ER provides platform for auxin synthesis
-  - Internal compartmentalization regulates auxin access to receptors
-  - PILS proteins are intracellular auxin carriers
-  - Demonstrates importance of subcellular auxin distribution
-][
-  #figure(
-    image(images.at("4.22").path),
-  )
-]
+#figure(
+  image(images.at("4.22").path),
+)
+
 
 == Gibberellin Biosynthesis Stages
 
-- Three stages in different compartments
-- Stage 1 (*plastid*, 质体): GGDP → ent-kaurene
+
+
+#slide[
+  - Three stages in different compartments
+- Stage 1 (*plastid*, 质体): GGDP (geranylgeranyl diphosphate, 香叶基香叶基二磷酸) → ent-kaurene (赤霉烯)
 - Stage 2 (ER): ent-kaurene → GA12
 - Stage 3 (*cytosol*, 细胞质): GA12 → active GAs
 - Compartmentalization allows complex regulation
 
-#slide[
-  - Biosynthesis pathway is evolutionarily conserved
-  - Multiple active GAs with different potencies
-  - Pathway involves terpenoid, ER, and cytosolic enzymes
-  - Regulated at multiple steps to control GA levels
+  
 ][
   #figure(
     image(images.at("4.23").path),
   )
 ]
 
+- Biosynthesis pathway is evolutionarily conserved
+- Multiple active GAs with different potencies
+- Pathway involves terpenoid, ER, and cytosolic enzymes
+- Regulated at multiple steps to control GA levels
+
 == Cytokinin Biosynthesis
+
+
+#slide[
 
 - *Isopentenyl transferase* (IPT, 异戊烯基转移酶) catalyzes committed step
 - Adds isopentenyl group from *DMADP* to adenine nucleotides
@@ -493,18 +489,20 @@
 - Further modifications produce active cytokinins
 - IPT expression determines cytokinin levels
 
-#slide[
-  - First step is rate-limiting for biosynthesis
-  - Uses isoprenoid precursor from MEP pathway
-  - Can occur on free adenine or tRNA
-  - Different cytokinin forms have different activities
 ][
   #figure(
     image(images.at("4.24").path),
   )
 ]
 
+  - First step is rate-limiting for biosynthesis
+  - Uses isoprenoid precursor from MEP pathway
+  - Can occur on free adenine or tRNA
+  - Different cytokinin forms have different activities
+
 == Ethylene Biosynthesis and Yang Cycle
+
+#slide[
 
 - *Methionine* (蛋氨酸) is ultimate precursor
 - Converted to *SAM* (S-adenosylmethionine)
@@ -512,16 +510,16 @@
 - *ACC oxidase* converts ACC to ethylene
 - *Yang cycle* recycles methionine from byproducts
 
-#slide[
-  - ACC synthase is rate-limiting enzyme
-  - ACC is mobile and can be transported
-  - Ethylene diffuses freely as gas
-  - Yang cycle ensures methionine availability for continued synthesis
 ][
   #figure(
     image(images.at("4.25").path),
   )
 ]
+
+  - ACC synthase is rate-limiting enzyme
+  - ACC is mobile and can be transported
+  - Ethylene diffuses freely as gas
+  - Yang cycle ensures methionine availability for continued synthesis
 
 == ABA Biosynthesis
 
@@ -544,22 +542,25 @@
 
 == Brassinosteroid Biosynthesis
 
+#slide[
+
+
 - Derived from *campesterol* (菜油甾醇)
 - Multiple hydroxylation and oxidation steps
 - Produces *brassinolide*, most active BR
 - *Catabolism* (分解代谢) inactivates BR
 - Balance between synthesis and degradation
 
-#slide[
-  - BR pathway shares steps with other steroid biosynthesis
-  - Multiple intermediates with varying activity
-  - Some steps occur in ER, others in cytosol
-  - Feedback regulation maintains BR homeostasis
 ][
   #figure(
     image(images.at("4.27").path),
   )
 ]
+
+  - BR pathway shares steps with other steroid biosynthesis
+  - Multiple intermediates with varying activity
+  - Some steps occur in ER, others in cytosol
+  - Feedback regulation maintains BR homeostasis
 
 == Strigolactone Biosynthesis
 
@@ -700,24 +701,29 @@
 
 == ABA Signaling Mechanism
 
+#slide[
+
 - *PYR/PYL/RCAR* proteins are cytoplasmic ABA receptors
 - Without ABA: *PP2C* phosphatase inactivates *SnRK2* kinases
 - With ABA: ABA-receptor binds and inhibits PP2C
 - Active SnRK2 phosphorylates ion channels and transcription factors
 - Rapid stomatal closure and gene expression changes
 
-#slide[
-  - Double-negative regulation allows rapid switching
-  - PP2C acts as gate keeper
-  - ABA-receptor complex blocks PP2C active site
-  - SnRK2 targets include SLAC1 ion channel and ABF transcription factors
 ][
   #figure(
     image(images.at("4.35").path),
   )
 ]
 
+
+  - Double-negative regulation allows rapid switching
+  - PP2C acts as gate keeper
+  - ABA-receptor complex blocks PP2C active site
+  - SnRK2 targets include SLAC1 ion channel and ABF transcription factors
+
 == Ubiquitin-Proteasome System
+
+#slide[
 
 - Tags proteins for degradation
 - *SCF complex*: Skp1-Cullin-F-box protein
@@ -725,18 +731,22 @@
 - *26S proteasome* degrades tagged proteins
 - Many hormone pathways use this system
 
-#slide[
-  - Protein degradation allows irreversible responses
-  - F-box proteins provide substrate specificity
-  - Allows rapid removal of regulatory proteins
-  - Central to auxin, GA, and JA signaling
 ][
   #figure(
     image(images.at("4.36").path),
   )
 ]
 
+  - Protein degradation allows irreversible responses
+  - F-box proteins provide substrate specificity
+  - Allows rapid removal of regulatory proteins
+  - Central to auxin, GA, and JA signaling
+
 == Hormone Receptors as SCF Components
+
+#figure(
+  image(images.at("4.37").path),
+)
 
 - *TIR1/AFB* (auxin receptors) are F-box proteins
 - *GID1* (GA receptor) recruits DELLAs to SCF
@@ -749,10 +759,6 @@
   - Hormone acts as "molecular glue"
   - Increases affinity between receptor and repressor
   - Degradation of repressor activates responses
-][
-  #figure(
-    image(images.at("4.37").path),
-  )
 ]
 
 == Gibberellin Signaling and Feedback
