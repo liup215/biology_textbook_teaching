@@ -1,0 +1,84 @@
+// Image List for Chapter 7: Control of Gene Expression
+
+- Figure 7-1: A neuron and a liver cell share the same genome but express vastly different sets of RNAs and proteins.
+- Figure 7-2: Differentiated cells contain all the genetic instructions necessary to direct the formation of a complete organism.
+- Figure 7-3: Differences in RNA levels for two human genes across seven different tissues visualized by RNA-seq.
+- Figure 7-4: Differences in the proteins expressed by two human tissues, (A) brain and (B) liver, separated by two-dimensional gel electrophoresis (size and isoelectric point).
+- Figure 7-5: Classification of approximately 4000 individual neurons from the mouse brain into seven distinct subtypes using single-cell mRNA sequencing.
+- Figure 7-6: Seven steps at which eukaryotic gene expression can be controlled, from DNA to active protein.
+- Figure 7-7: Double-helical structure of DNA showing the major and minor grooves on the outside of the double helix.
+- Figure 7-8: How the four base-pair configurations in DNA can be recognized from their edges without opening the double helix.
+- Figure 7-9: The binding of a transcription regulator (a homeodomain protein) to its specific cis-regulatory DNA sequence.
+- Figure 7-10: Transcription regulators and cis-regulatory sequences.
+- Figure 7-11: Occupancy of a cis-regulatory sequence by a transcription regulator.
+- Figure 7-12: How nucleosomes affect the binding of transcription regulators to DNA.
+- Figure 7-13: Two cooperating transcription regulators (Oct4 and Sox2) bound to a nucleosome-wrapped DNA sequence.
+- Figure 7-14: Tracking single molecules of a transcription regulator in a living cell.
+- Figure 7-15: A cluster of bacterial genes (the tryptophan operon) transcribed from a single promoter as one long mRNA molecule.
+- Figure 7-16: Genes can be switched off by repressor proteins—illustrated by the tryptophan (Trp) repressor.
+- Figure 7-17: Genes can be switched on by activator proteins.
+- Figure 7-18: How the Lac operon is regulated by both negative and positive controls.
+- Figure 7-19: Transcriptional activation by the bacterial NtrC protein, which activates genes needed for nitrogen utilization.
+- Figure 7-20: Transcription is controlled by gene control regions.
+- Figure 7-21: Eukaryotic transcription regulators assemble into complexes on DNA.
+- Figure 7-22: Eukaryotic transcription activator proteins direct local alterations in chromatin structure.
+- Figure 7-23: Successive histone modifications during transcription initiation at the human interferon-β gene promoter.
+- Figure 7-24: Different transcription regulators can act at different steps of transcription initiation.
+- Figure 7-25: Transcriptional synergy: multiple transcription activators working together produce transcription rates far greater than the sum of their individual contributions.
+- Figure 7-26: Condensate formation at the transcription control region of the Nanog gene in a mouse embryonic stem cell, visualized by FISH (red, Nanog gene locus) and GFP-tagged Mediator (green).
+- Figure 7-27: Six mechanisms by which eukaryotic repressor proteins silence gene transcription: (A) competing with activators for the same DNA binding site; (B) "quenching" a nearby activator; (C) "poisoning" assem.
+- Figure 7-28: Schematic diagram summarizing the properties of insulators and barrier sequences.
+- Figure 7-29: The nonuniform distribution of transcription regulators (Bicoid, Hunchback, Giant, Krüppel) in an early Drosophila syncytial embryo.
+- Figure 7-30: Experiment demonstrating the modular construction of the Eve gene regulatory region.
+- Figure 7-31: The Eve stripe 2 regulatory module contains binding sites for four transcription regulators: two activators (Bicoid and Hunchback) and two repressors (Giant and Krüppel).
+- Figure 7-32: Distribution of the four transcription regulators (Bicoid, Hunchback, Giant, Krüppel) along the anterior-posterior axis of a Drosophila embryo, measured by antibody staining.
+- Figure 7-33: The integration of multiple inputs at a promoter.
+- Figure 7-34: Seven ways in which the activity of eukaryotic transcription regulators is controlled: (A) regulated synthesis; (B) ligand binding (e.
+- Figure 7-35: Modular structure of the control region of the mouse α-globin gene, containing five independent enhancer modules (R1–R5).
+- Figure 7-36: The importance of combinatorial gene control for development.
+- Figure 7-37: A small set of transcription regulators can convert one differentiated cell type into another.
+- Figure 7-38: Expression of the Drosophila Eyeless gene in precursor cells of the fly leg triggers ectopic eye development on the leg.
+- Figure 7-39: A combination of transcription regulators can induce a differentiated cell to de-differentiate into a pluripotent cell.
+- Figure 7-40: A portion of the transcription regulatory network specifying embryonic stem cells.
+- Figure 7-41: A single transcription regulator can coordinate the expression of many different genes.
+- Figure 7-42: A positive feedback loop can create cell memory.
+- Figure 7-43: Common types of network motifs in transcription circuits: (1) autoregulation (positive or negative feedback); (2) feed-forward loop, where transcription regulator A activates regulator B, and both A a.
+- Figure 7-44: How a feed-forward loop can measure the duration of a signal.
+- Figure 7-45: The exceedingly complex gene regulatory circuit specifying the mesoderm and endoderm of the developing sea urchin embryo.
+- Figure 7-46: Formation of 5-methylcytosine (5-methyl C) by methylation of cytosine bases in the DNA double helix.
+- Figure 7-47: How DNA methylation patterns are faithfully inherited after DNA replication.
+- Figure 7-48: Multiple mechanisms maintain epigenetic memory in eukaryotes.
+- Figure 7-49: CG islands surrounding gene promoters in the human genome.
+- Figure 7-50: A mechanism to explain both the marked overall deficiency of CG sequences in vertebrate genomes and the maintenance of CG islands at active promoters.
+- Figure 7-51: How genomic imprinting can cause a non-Mendelian pattern of inheritance.
+- Figure 7-52: Some mechanisms of epigenetic control in plants and animals.
+- Figure 7-53: X-inactivation in female mammals.
+- Figure 7-54: Photoreceptor cells in the retina of a female mouse showing mosaic patterns of gene expression due to X-inactivation.
+- Figure 7-55: Mammalian X-inactivation mechanism.
+- Figure 7-56: Four distinct mechanisms by which post-transcriptional controls can regulate the output of a gene after transcription has begun.
+- Figure 7-57: Post-transcriptional controls of gene expression, presented as a flowchart from RNA transcription to continued protein synthesis.
+- Figure 7-58: A riboswitch that responds to guanine in bacteria.
+- Figure 7-59: Patterns of alternative RNA splicing.
+- Figure 7-60: Alternative splicing of RNA transcripts of the Drosophila Dscam gene can theoretically generate 38,016 distinct mRNA isoforms by combinatorial selection of exon modules (exons 4, 6, 9, and 17 each hav.
+- Figure 7-61: Negative and positive control of alternative RNA splicing.
+- Figure 7-62: Regulation of the site of poly-A addition (cleavage and polyadenylation) in the pre-mRNA.
+- Figure 7-63: Four of the most prominent types of RNA editing: (1) A-to-I editing by ADAR enzymes; (2) C-to-U editing by APOBEC enzymes; (3) insertion or deletion of uridines (in kinetoplastid protozoa); (4) insert.
+- Figure 7-64: Mechanism of A-to-I (adenosine-to-inosine) RNA editing by ADAR (adenosine deaminase acting on RNA) enzymes.
+- Figure 7-65: C-to-U RNA editing produces a truncated form of apolipoprotein B (ApoB).
+- Figure 7-66: The compact genome of an RNA virus illustrates translational recoding strategies used to maximize coding capacity.
+- Figure 7-67: Regulation of nuclear export of mRNA.
+- Figure 7-68: Mechanisms for the subcellular localization of mRNAs in the cytoplasm.
+- Figure 7-69: An experiment demonstrating the importance of the 3' UTR in mRNA localization.
+- Figure 7-70: Mechanisms of translational control: (A) an inhibitory RNA-binding protein blocks translation initiation by binding the 5' cap or the ribosome-binding site; (B) secondary structure in the 5' UTR physi.
+- Figure 7-71: The eIF2 cycle and its role in global translational control.
+- Figure 7-72: Internal ribosome entry sites (IRES) allow cap-independent translation initiation.
+- Figure 7-73: Two mechanisms of mRNA degradation in eukaryotes.
+- Figure 7-74: Two post-translational mechanisms that control protein levels and activity: (1) proteasomal degradation, where ubiquitin-tagged proteins are degraded by the 26S proteasome; (2) protein activity contro.
+- Figure 7-75: Visualization of P-bodies (processing bodies) in a yeast cell by fluorescence microscopy.
+- Figure 7-76: Possible fates of an intact mRNA molecule in the cytoplasm.
+- Figure 7-77: RNA interference (RNAi) in eukaryotes.
+- Figure 7-78: miRNA (microRNA) processing and mechanism of action.
+- Figure 7-79: Structure of the human Argonaute protein (AGO2), the catalytic engine of the RISC complex.
+- Figure 7-80: RNA interference directed by siRNA (small interfering RNA).
+- Figure 7-81: CRISPR-mediated immunity in bacteria.
+- Figure 7-82: Roles of long noncoding RNAs (lncRNAs) in gene regulation.
